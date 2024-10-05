@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Список страниц - Сайт ТИЗ</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="stylesheet" href="css/plugins.min.css">
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
+    <link rel="stylesheet" href="css/custom.min.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <style>
+        html, body, .page-wrapper {
+        	height: 100%;
+        }
+        .page-wrapper { 
+        	overflow: auto;
+        }
+        .pages-intro {
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: center;
+        	width: 100%;
+        	margin: 0 auto;
+        	padding: 100px 40px;
+        }
+        .pages-intro__logo {
+        	display: flex;
+        	align-items: center;
+        	justify-content: center;
+        	max-width: 120px;
+        	padding: 16px;
+        	border: 2px solid #22313C;
+        }
+        .pages-intro__list {
+        	margin: 0;
+        	padding: 60px 0 0 20px;
+        	list-style-type: none;
+        	border-left: 2px solid #22313C;
+        }
+        .pages-intro__list > li {
+        	position: relative;
+        }
+        .pages-intro__list > li:not(:last-child) {
+        	margin-bottom: 16px;
+        }
+        .pages-intro__list > li:before {
+        	content: '';
+        	position: absolute;
+        	top: calc(50% - 2px);
+        	right: calc(100% + 10px);
+        	transform: translateY(-50%);
+        	display: block;
+        	width: 10px;
+        	height: 2px;
+        	background: #22313C;
+        }
+        .pages-intro__list > li > a {
+        	font-size: 24px;
+        	line-height: 1;
+        	font-weight: 600px;
+        }
+        .pages-intro__list > li > a:hover {
+        	text-decoration: underline;
+        }
+        
+      </style>
+      <div class="pages-intro">
+        <div class="pages-intro__logo"><img src="img/main-logo-red.png" alt="Сайт ТИЗ"></div>
+        <ul class="pages-intro__list">
+          <li><a href="home.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog-made.html">Каталог - Производство </a></li>
+          <li><a href="favorites.html">Избранное</a></li>
+          <li><a href="product-card.html">Карточка товара</a></li>
+          <li><a href="product-card-slider.html">Карточка товара больше 6 фотографий</a></li>
+          <li><a href="product-card-rent.html">Карточка проката</a></li>
+          <li><a href="product-card-made.html">Карточка производственного образца</a></li>
+          <li><a href="services.html">Услуги фабрики</a></li>
+          <li><a href="reviews.html">Отзывы о фабрике</a></li>
+          <li><a href="about-fabric.html">Производство - О фабрике</a></li>
+          <li><a href="history.html">Производство - История</a></li>
+          <li><a href="blog.html">Журнал (новости)</a></li>
+          <li><a href="blog-post.html">Статья (новости)</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="user.html">Личный кабинет</a></li>
+          <li><a href="user-empty.html">Личный кабинет - Нет заказов и рек</a></li>
+          <li><a href="user-settings.html">Личный кабинет - Настройки профиля</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/apps.js"></script>
+  </body>
+</html>
