@@ -4664,23 +4664,23 @@
                         <li class="nav-order__item"> <a href="#">Подтверждение</a></li>
                       </ul>
                     </nav>
-                    <ul class="nav-delivery__list">
+                    <ul class="nav-delivery__list" id="selectionDeliveryNav">
                       <li class="nav-delivery__item">
-                        <button class="active">Самовывоз</button>
+                        <button class="active nav-delivery__btn-delivery-nav" id="bundlePickup">Самовывоз</button>
                       </li>
                       <li class="nav-delivery__item">
-                        <button>Курьером по СПб</button>
+                        <button class="nav-delivery__btn-delivery-nav" id="bundleCourierSPB">Курьером по СПб</button>
                       </li>
                       <li class="nav-delivery__item">
-                        <button>Доставка транспортной компанией</button>
+                        <button class="nav-delivery__btn-delivery-nav" id="bundleDeliveryByCompany">Доставка транспортной компанией</button>
                       </li>
                     </ul>
-              <div class="choice-delivery__box-pickup">
+              <div class="choice-delivery__box-delivery active choice-delivery__box-pickup" data-box-id="bundlePickup">
                 <h3 class="choice-delivery__caption">Самовывоз из фирменного салона</h3>
                 <p class="choice-delivery__desc">
                    Вы можете забрать ваш товар по адресу Санкт-Петербург, Новосмоленская набережная д.4 в течение 7 дней со дня бронирования заказа. Мы работаем с понедельника по пятницу с 10:00 до 19:00.</p><a class="dflt-bttn" href="#">Выбрать способ оплаты</a>
               </div>
-              <div class="choice-delivery__box-courier">
+              <div class="choice-delivery__box-delivery choice-delivery__box-courier" data-box-id="bundleCourierSPB">
                 <form class="form-choice-delivery-courier" action="#">
                   <h3 class="choice-delivery__caption">Доставка курьером в Санкт-Петербурге</h3>
                   <p class="choice-delivery__desc">Доставка курьером осуществляется фирмой «Рога и копыта» с 11:00 до 22:00. Стоимость 500 рублей.</p>
@@ -4695,12 +4695,21 @@
                             <div class="drop-down1">
                               <label class="dflt-label" for="courierDate">Выберите дату</label>
                               <input class="dflt-input" type="text" id="courierDate">
-                              <button class="drop-down1__btn"> </button>
-                              <ul class="drop-down1__list">
+                              <button class="drop-down1__btn" id="dropDown1"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                              </button>
+                              <ul class="drop-down1__list" data-drop-id="dropDown1">
                                 <li>
                                    sddvsv </li>
                                 <li>
                                    sdvsvsv </li>
+                                <li>
+                                   dsvsvwev</li>
+                                <li>
+                                   dsvsvwev</li>
+                                <li>
+                                   dsvsvwev</li>
                                 <li>
                                    dsvsvwev</li>
                               </ul>
@@ -4710,12 +4719,21 @@
                             <div class="drop-down1">
                               <label class="dflt-label" for="courierTime">Диапазон времени</label>
                               <input class="dflt-input" type="text" id="courierTime">
-                              <button class="drop-down1__btn"> </button>
-                              <ul class="drop-down1__list">
+                              <button class="drop-down1__btn" id="dropDown2"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                              </button>
+                              <ul class="drop-down1__list" data-drop-id="dropDown2">
                                 <li>
                                    sddvsv </li>
                                 <li>
                                    sdvsvsv </li>
+                                <li>
+                                   dsvsvwev</li>
+                                <li>
+                                   dsvsvwev</li>
+                                <li>
+                                   dsvsvwev</li>
                                 <li>
                                    dsvsvwev</li>
                               </ul>
@@ -4744,11 +4762,313 @@
                   </ul><a class="dflt-bttn" href="#">Выбрать способ оплаты</a>
                 </form>
               </div>
-              <div class="choice-delivery__shipping-company">
+              <div class="choice-delivery__box-delivery choice-delivery__shipping-company" data-box-id="bundleDeliveryByCompany">
                 <h3 class="choice-delivery__caption">Выберите транспортную компанию</h3>
-                <div class="choice-delivery__company-1"> 
+                <ul class="choice-delivery__list-delivery-post" id="choosingService">
+                  <li> 
+                          <button class="btn-choice-delivery active" id="russPost"><span class="btn-choice-delivery__custom"></span><span class="btn-choice-delivery__text">Почта России</span></button>
+                  </li>
+                  <li> 
+                          <button class="btn-choice-delivery" id="sdec"><span class="btn-choice-delivery__custom"></span><span class="btn-choice-delivery__text">СДЭК</span></button>
+                  </li>
+                  <li>
+                          <button class="btn-choice-delivery" id="boxberry"><span class="btn-choice-delivery__custom"></span><span class="btn-choice-delivery__text">Boxberry</span></button>
+                  </li>
+                </ul>
+                <div class="choice-delivery__company choice-delivery__company-1 active" data-box-id="russPost"> 
                   <p class="choice-delivery__desc">Стоимость доставки Почтой России составляет 500 руб.</p>
-                  <ul class="company-1__list"></ul>
+                  <form class="choice-delivery__form-company-1" action="#">
+                    <ul class="company-1__list">
+                      <li> 
+                              <label class="dflt-label" for="russPostStreet">Улица</label>
+                              <input class="dflt-input" type="text" id="russPostStreet">
+                      </li>
+                      <li>
+                              <label class="dflt-label" for="russPostHouse">Дом</label>
+                              <input class="dflt-input" type="text" id="russPostHouse">
+                      </li>
+                      <li>
+                              <label class="dflt-label" for="russPostOffice">Квартира/Офис</label>
+                              <input class="dflt-input" type="text" id="russPostOffice">
+                      </li>
+                      <li> 
+                              <label class="dflt-label" for="russPostIndex">Индекс</label>
+                              <input class="dflt-input" type="text" id="russPostIndex">
+                      </li>
+                    </ul><a class="dflt-bttn" href="#">Выбрать способ оплаты</a>
+                  </form>
+                </div>
+                <div class="choice-delivery__company choice-delivery__company-2" data-box-id="sdec"> 
+                  <ul class="company-2__list" id="company2boxChoiceDelivery">
+                    <li> 
+                            <button class="btn-choice-delivery" id="deliveryCompany2Courier"><span class="btn-choice-delivery__custom"></span><span class="btn-choice-delivery__text">Курьером</span></button>
+                    </li>
+                    <li> 
+                            <button class="btn-choice-delivery active" id="deliveryCompany2PickUpPoint"><span class="btn-choice-delivery__custom"></span><span class="btn-choice-delivery__text">До пункта выдачи</span></button>
+                    </li>
+                  </ul>
+                  <div class="company-2__box-delivery company-2__box-pick-up-point active" data-box-id="deliveryCompany2PickUpPoint">
+                    <form class="company-2__form-pick-up-point" action="#">
+                      <ul class="company-2__list-pick-up-point">
+                        <li> 
+                                <div class="drop-down1">
+                                  <label class="dflt-label" for="deliveryCompany2PickUpPointCity">Город доставки</label>
+                                  <input class="dflt-input" type="text" id="deliveryCompany2PickUpPointCity">
+                                  <button class="drop-down1__btn" id="btnChoosingCity"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                  </button>
+                                  <ul class="drop-down1__list" data-drop-id="btnChoosingCity">
+                                    <li>
+                                       sddvsv </li>
+                                    <li>
+                                       sdvsvsv </li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                  </ul>
+                                </div>
+                        </li>
+                        <li> <a class="dflt-bttn dflt-bttn_ghost" href="#"><span>Выбрать пункт выдачи</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.9974 1.66667C8.22929 1.66667 6.53359 2.36905 5.28335 3.61929C4.03311 4.86953 3.33073 6.56522 3.33073 8.33333C3.33073 10.915 5.01051 13.4202 6.85236 15.3644C7.75624 16.3185 8.66295 17.0996 9.34463 17.6424C9.59832 17.8444 9.81992 18.0127 9.9974 18.1438C10.1749 18.0127 10.3965 17.8444 10.6502 17.6424C11.3318 17.0996 12.2386 16.3185 13.1424 15.3644C14.9843 13.4202 16.6641 10.915 16.6641 8.33333C16.6641 6.56522 15.9617 4.86953 14.7114 3.61929C13.4612 2.36905 11.7655 1.66667 9.9974 1.66667ZM9.9974 19.1667C9.53515 19.86 9.53493 19.8599 9.53469 19.8597L9.53231 19.8581L9.52676 19.8544L9.50766 19.8415C9.49144 19.8305 9.46829 19.8147 9.43869 19.7942C9.3795 19.7532 9.29445 19.6934 9.18722 19.616C8.97285 19.4612 8.66936 19.2352 8.30642 18.9462C7.58184 18.3692 6.61355 17.5357 5.64244 16.5106C3.73428 14.4965 1.66406 11.585 1.66406 8.33333C1.66406 6.1232 2.54204 4.00358 4.10484 2.44078C5.66764 0.877974 7.78726 0 9.9974 0C12.2075 0 14.3271 0.877974 15.89 2.44078C17.4528 4.00358 18.3307 6.1232 18.3307 8.33333C18.3307 11.585 16.2605 14.4965 14.3524 16.5106C13.3812 17.5357 12.413 18.3692 11.6884 18.9462C11.3254 19.2352 11.0219 19.4612 10.8076 19.616C10.7003 19.6934 10.6153 19.7532 10.5561 19.7942C10.5265 19.8147 10.5034 19.8305 10.4871 19.8415L10.468 19.8544L10.4625 19.8581L10.4607 19.8593C10.4605 19.8595 10.4596 19.86 9.9974 19.1667ZM9.9974 19.1667L10.4596 19.86C10.1797 20.0467 9.81461 20.0464 9.53469 19.8597L9.9974 19.1667ZM9.9974 6.66667C9.07692 6.66667 8.33073 7.41286 8.33073 8.33333C8.33073 9.25381 9.07692 10 9.9974 10C10.9179 10 11.6641 9.25381 11.6641 8.33333C11.6641 7.41286 10.9179 6.66667 9.9974 6.66667ZM6.66406 8.33333C6.66406 6.49238 8.15645 5 9.9974 5C11.8383 5 13.3307 6.49238 13.3307 8.33333C13.3307 10.1743 11.8383 11.6667 9.9974 11.6667C8.15645 11.6667 6.66406 10.1743 6.66406 8.33333Z" fill="currentColor" />
+</svg></a></li>
+                      </ul>
+                      <div class="company-2__box-address-price">
+                        <address class="company-2__address">
+                          <p>Адрес пункта выдачи:</p>
+                          <p>Удмуртская Республика, г. Ижевск, ул. Ленина, д.100, кв.30</p>
+                        </address>
+                        <p class="company-2__price">Стоимость: <span>500</span> руб.</p>
+                      </div><a class="dflt-bttn disabled" href="#">Выбрать способ оплаты</a>
+                    </form>
+                  </div>
+                  <div class="company-2__box-delivery company-2__box-courier" data-box-id="deliveryCompany2Courier">
+                    <form class="company-2__form-courier" action="#">
+                      <ul class="company-2__list-pick-up-point">
+                        <li> 
+                                <div class="drop-down1">
+                                  <label class="dflt-label" for="deliveryCompany2PickUpPointCity">Город доставки</label>
+                                  <input class="dflt-input" type="text" id="deliveryCompany2PickUpPointCity">
+                                  <button class="drop-down1__btn" id="btnChoosingCity1"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                  </button>
+                                  <ul class="drop-down1__list" data-drop-id="btnChoosingCity1">
+                                    <li>
+                                       sddvsv </li>
+                                    <li>
+                                       sdvsvsv </li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                  </ul>
+                                </div>
+                        </li>
+                        <li> <a class="dflt-bttn dflt-bttn_ghost" href="#"><span>Выбрать пункт выдачи</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.9974 1.66667C8.22929 1.66667 6.53359 2.36905 5.28335 3.61929C4.03311 4.86953 3.33073 6.56522 3.33073 8.33333C3.33073 10.915 5.01051 13.4202 6.85236 15.3644C7.75624 16.3185 8.66295 17.0996 9.34463 17.6424C9.59832 17.8444 9.81992 18.0127 9.9974 18.1438C10.1749 18.0127 10.3965 17.8444 10.6502 17.6424C11.3318 17.0996 12.2386 16.3185 13.1424 15.3644C14.9843 13.4202 16.6641 10.915 16.6641 8.33333C16.6641 6.56522 15.9617 4.86953 14.7114 3.61929C13.4612 2.36905 11.7655 1.66667 9.9974 1.66667ZM9.9974 19.1667C9.53515 19.86 9.53493 19.8599 9.53469 19.8597L9.53231 19.8581L9.52676 19.8544L9.50766 19.8415C9.49144 19.8305 9.46829 19.8147 9.43869 19.7942C9.3795 19.7532 9.29445 19.6934 9.18722 19.616C8.97285 19.4612 8.66936 19.2352 8.30642 18.9462C7.58184 18.3692 6.61355 17.5357 5.64244 16.5106C3.73428 14.4965 1.66406 11.585 1.66406 8.33333C1.66406 6.1232 2.54204 4.00358 4.10484 2.44078C5.66764 0.877974 7.78726 0 9.9974 0C12.2075 0 14.3271 0.877974 15.89 2.44078C17.4528 4.00358 18.3307 6.1232 18.3307 8.33333C18.3307 11.585 16.2605 14.4965 14.3524 16.5106C13.3812 17.5357 12.413 18.3692 11.6884 18.9462C11.3254 19.2352 11.0219 19.4612 10.8076 19.616C10.7003 19.6934 10.6153 19.7532 10.5561 19.7942C10.5265 19.8147 10.5034 19.8305 10.4871 19.8415L10.468 19.8544L10.4625 19.8581L10.4607 19.8593C10.4605 19.8595 10.4596 19.86 9.9974 19.1667ZM9.9974 19.1667L10.4596 19.86C10.1797 20.0467 9.81461 20.0464 9.53469 19.8597L9.9974 19.1667ZM9.9974 6.66667C9.07692 6.66667 8.33073 7.41286 8.33073 8.33333C8.33073 9.25381 9.07692 10 9.9974 10C10.9179 10 11.6641 9.25381 11.6641 8.33333C11.6641 7.41286 10.9179 6.66667 9.9974 6.66667ZM6.66406 8.33333C6.66406 6.49238 8.15645 5 9.9974 5C11.8383 5 13.3307 6.49238 13.3307 8.33333C13.3307 10.1743 11.8383 11.6667 9.9974 11.6667C8.15645 11.6667 6.66406 10.1743 6.66406 8.33333Z" fill="currentColor" />
+</svg></a></li>
+                      </ul>
+                      <div class="company-2__box-address-price">
+                        <address class="company-2__address">
+                          <p>Адрес пункта выдачи:</p>
+                          <p>Удмуртская Республика, г. Ижевск, ул. Ленина, д.100, кв.30</p>
+                        </address>
+                        <p class="company-2__price">Стоимость: <span>500</span> руб.</p>
+                      </div>
+                      <ul class="company-2__list-courier">
+                        <li> 
+                                <div class="drop-down1">
+                                  <label class="dflt-label" for="courierSelectionDateTime">Выберите дату</label>
+                                  <input class="dflt-input" type="text" id="courierSelectionDateTime">
+                                  <button class="drop-down1__btn" id="selectionDateTime"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                  </button>
+                                  <ul class="drop-down1__list" data-drop-id="selectionDateTime">
+                                    <li>
+                                       sddvsv </li>
+                                    <li>
+                                       sdvsvsv </li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                  </ul>
+                                </div>
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierStreetCompany2">Улица</label>
+                                <input class="dflt-input" type="text" id="courierStreetCompany2">
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierHouseCompany2">Дом</label>
+                                <input class="dflt-input" type="text" id="courierHouseCompany2">
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierOfficeCompany2">Квартира/Офис</label>
+                                <input class="dflt-input" type="text" id="courierOfficeCompany2">
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierIntercomCompany2">Домофон</label>
+                                <input class="dflt-input" type="text" id="courierIntercomCompany2">
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierCommentCompany2">Комментарий для курьера</label>
+                                <input class="dflt-input" type="text" id="courierCommentCompany2">
+                        </li>
+                      </ul><a class="dflt-bttn disabled" href="#">Указать получателя</a>
+                    </form>
+                  </div>
+                </div>
+                <div class="choice-delivery__company choice-delivery__company-3" data-box-id="boxberry"> 
+                  <ul class="company-2__list" id="company3boxChoiceDelivery">
+                    <li> 
+                            <button class="btn-choice-delivery" id="deliveryCompany3Courier"><span class="btn-choice-delivery__custom"></span><span class="btn-choice-delivery__text">Курьером</span></button>
+                    </li>
+                    <li> 
+                            <button class="btn-choice-delivery active" id="deliveryCompany3PickUpPoint"><span class="btn-choice-delivery__custom"></span><span class="btn-choice-delivery__text">До пункта выдачи</span></button>
+                    </li>
+                  </ul>
+                  <div class="company-3__box-delivery company-2__box-pick-up-point active" data-box-id="deliveryCompany3PickUpPoint">
+                    <form class="company-2__form-pick-up-point" action="#">
+                      <ul class="company-2__list-pick-up-point">
+                        <li> 
+                                <div class="drop-down1">
+                                  <label class="dflt-label" for="deliveryCompany2PickUpPointCity">Город доставки</label>
+                                  <input class="dflt-input" type="text" id="deliveryCompany2PickUpPointCity">
+                                  <button class="drop-down1__btn" id="btnChoosingCity2"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                  </button>
+                                  <ul class="drop-down1__list" data-drop-id="btnChoosingCity2">
+                                    <li>
+                                       sddvsv </li>
+                                    <li>
+                                       sdvsvsv </li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                  </ul>
+                                </div>
+                        </li>
+                        <li> <a class="dflt-bttn dflt-bttn_ghost" href="#"><span>Выбрать пункт выдачи</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.9974 1.66667C8.22929 1.66667 6.53359 2.36905 5.28335 3.61929C4.03311 4.86953 3.33073 6.56522 3.33073 8.33333C3.33073 10.915 5.01051 13.4202 6.85236 15.3644C7.75624 16.3185 8.66295 17.0996 9.34463 17.6424C9.59832 17.8444 9.81992 18.0127 9.9974 18.1438C10.1749 18.0127 10.3965 17.8444 10.6502 17.6424C11.3318 17.0996 12.2386 16.3185 13.1424 15.3644C14.9843 13.4202 16.6641 10.915 16.6641 8.33333C16.6641 6.56522 15.9617 4.86953 14.7114 3.61929C13.4612 2.36905 11.7655 1.66667 9.9974 1.66667ZM9.9974 19.1667C9.53515 19.86 9.53493 19.8599 9.53469 19.8597L9.53231 19.8581L9.52676 19.8544L9.50766 19.8415C9.49144 19.8305 9.46829 19.8147 9.43869 19.7942C9.3795 19.7532 9.29445 19.6934 9.18722 19.616C8.97285 19.4612 8.66936 19.2352 8.30642 18.9462C7.58184 18.3692 6.61355 17.5357 5.64244 16.5106C3.73428 14.4965 1.66406 11.585 1.66406 8.33333C1.66406 6.1232 2.54204 4.00358 4.10484 2.44078C5.66764 0.877974 7.78726 0 9.9974 0C12.2075 0 14.3271 0.877974 15.89 2.44078C17.4528 4.00358 18.3307 6.1232 18.3307 8.33333C18.3307 11.585 16.2605 14.4965 14.3524 16.5106C13.3812 17.5357 12.413 18.3692 11.6884 18.9462C11.3254 19.2352 11.0219 19.4612 10.8076 19.616C10.7003 19.6934 10.6153 19.7532 10.5561 19.7942C10.5265 19.8147 10.5034 19.8305 10.4871 19.8415L10.468 19.8544L10.4625 19.8581L10.4607 19.8593C10.4605 19.8595 10.4596 19.86 9.9974 19.1667ZM9.9974 19.1667L10.4596 19.86C10.1797 20.0467 9.81461 20.0464 9.53469 19.8597L9.9974 19.1667ZM9.9974 6.66667C9.07692 6.66667 8.33073 7.41286 8.33073 8.33333C8.33073 9.25381 9.07692 10 9.9974 10C10.9179 10 11.6641 9.25381 11.6641 8.33333C11.6641 7.41286 10.9179 6.66667 9.9974 6.66667ZM6.66406 8.33333C6.66406 6.49238 8.15645 5 9.9974 5C11.8383 5 13.3307 6.49238 13.3307 8.33333C13.3307 10.1743 11.8383 11.6667 9.9974 11.6667C8.15645 11.6667 6.66406 10.1743 6.66406 8.33333Z" fill="currentColor" />
+</svg></a></li>
+                      </ul>
+                      <div class="company-2__box-address-price">
+                        <address class="company-2__address">
+                          <p>Адрес пункта выдачи:</p>
+                          <p>Удмуртская Республика, г. Ижевск, ул. Ленина, д.100, кв.30</p>
+                        </address>
+                        <p class="company-2__price">Стоимость: <span>500</span> руб.</p>
+                      </div><a class="dflt-bttn disabled" href="#">Выбрать способ оплаты</a>
+                    </form>
+                  </div>
+                  <div class="company-3__box-delivery company-2__box-courier" data-box-id="deliveryCompany3Courier">
+                    <form class="company-2__form-courier" action="#">
+                      <ul class="company-2__list-pick-up-point">
+                        <li> 
+                                <div class="drop-down1">
+                                  <label class="dflt-label" for="deliveryCompany3PickUpPointCity">Город доставки</label>
+                                  <input class="dflt-input" type="text" id="deliveryCompany3PickUpPointCity">
+                                  <button class="drop-down1__btn" id="btnChoosingCity3"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                  </button>
+                                  <ul class="drop-down1__list" data-drop-id="btnChoosingCity3">
+                                    <li>
+                                       sddvsv </li>
+                                    <li>
+                                       sdvsvsv </li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                  </ul>
+                                </div>
+                        </li>
+                        <li> <a class="dflt-bttn dflt-bttn_ghost" href="#"><span>Выбрать пункт выдачи</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.9974 1.66667C8.22929 1.66667 6.53359 2.36905 5.28335 3.61929C4.03311 4.86953 3.33073 6.56522 3.33073 8.33333C3.33073 10.915 5.01051 13.4202 6.85236 15.3644C7.75624 16.3185 8.66295 17.0996 9.34463 17.6424C9.59832 17.8444 9.81992 18.0127 9.9974 18.1438C10.1749 18.0127 10.3965 17.8444 10.6502 17.6424C11.3318 17.0996 12.2386 16.3185 13.1424 15.3644C14.9843 13.4202 16.6641 10.915 16.6641 8.33333C16.6641 6.56522 15.9617 4.86953 14.7114 3.61929C13.4612 2.36905 11.7655 1.66667 9.9974 1.66667ZM9.9974 19.1667C9.53515 19.86 9.53493 19.8599 9.53469 19.8597L9.53231 19.8581L9.52676 19.8544L9.50766 19.8415C9.49144 19.8305 9.46829 19.8147 9.43869 19.7942C9.3795 19.7532 9.29445 19.6934 9.18722 19.616C8.97285 19.4612 8.66936 19.2352 8.30642 18.9462C7.58184 18.3692 6.61355 17.5357 5.64244 16.5106C3.73428 14.4965 1.66406 11.585 1.66406 8.33333C1.66406 6.1232 2.54204 4.00358 4.10484 2.44078C5.66764 0.877974 7.78726 0 9.9974 0C12.2075 0 14.3271 0.877974 15.89 2.44078C17.4528 4.00358 18.3307 6.1232 18.3307 8.33333C18.3307 11.585 16.2605 14.4965 14.3524 16.5106C13.3812 17.5357 12.413 18.3692 11.6884 18.9462C11.3254 19.2352 11.0219 19.4612 10.8076 19.616C10.7003 19.6934 10.6153 19.7532 10.5561 19.7942C10.5265 19.8147 10.5034 19.8305 10.4871 19.8415L10.468 19.8544L10.4625 19.8581L10.4607 19.8593C10.4605 19.8595 10.4596 19.86 9.9974 19.1667ZM9.9974 19.1667L10.4596 19.86C10.1797 20.0467 9.81461 20.0464 9.53469 19.8597L9.9974 19.1667ZM9.9974 6.66667C9.07692 6.66667 8.33073 7.41286 8.33073 8.33333C8.33073 9.25381 9.07692 10 9.9974 10C10.9179 10 11.6641 9.25381 11.6641 8.33333C11.6641 7.41286 10.9179 6.66667 9.9974 6.66667ZM6.66406 8.33333C6.66406 6.49238 8.15645 5 9.9974 5C11.8383 5 13.3307 6.49238 13.3307 8.33333C13.3307 10.1743 11.8383 11.6667 9.9974 11.6667C8.15645 11.6667 6.66406 10.1743 6.66406 8.33333Z" fill="currentColor" />
+</svg></a></li>
+                      </ul>
+                      <div class="company-2__box-address-price">
+                        <address class="company-2__address">
+                          <p>Адрес пункта выдачи:</p>
+                          <p>Удмуртская Республика, г. Ижевск, ул. Ленина, д.100, кв.30</p>
+                        </address>
+                        <p class="company-2__price">Стоимость: <span>500</span> руб.</p>
+                      </div>
+                      <ul class="company-2__list-courier">
+                        <li> 
+                                <div class="drop-down1">
+                                  <label class="dflt-label" for="courierSelectionDateTime1">Выберите дату</label>
+                                  <input class="dflt-input" type="text" id="courierSelectionDateTime1">
+                                  <button class="drop-down1__btn" id="selectionDateTime1"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                  </button>
+                                  <ul class="drop-down1__list" data-drop-id="selectionDateTime1">
+                                    <li>
+                                       sddvsv </li>
+                                    <li>
+                                       sdvsvsv </li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                    <li>
+                                       dsvsvwev</li>
+                                  </ul>
+                                </div>
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierStreetCompany2">Улица</label>
+                                <input class="dflt-input" type="text" id="courierStreetCompany2">
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierHouseCompany2">Дом</label>
+                                <input class="dflt-input" type="text" id="courierHouseCompany2">
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierOfficeCompany2">Квартира/Офис</label>
+                                <input class="dflt-input" type="text" id="courierOfficeCompany2">
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierIntercomCompany2">Домофон</label>
+                                <input class="dflt-input" type="text" id="courierIntercomCompany2">
+                        </li>
+                        <li> 
+                                <label class="dflt-label" for="courierCommentCompany2">Комментарий для курьера</label>
+                                <input class="dflt-input" type="text" id="courierCommentCompany2">
+                        </li>
+                      </ul><a class="dflt-bttn disabled" href="#">Указать получателя</a>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
