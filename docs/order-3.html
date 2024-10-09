@@ -4664,131 +4664,137 @@
                         <li class="nav-order__item"> <a href="#">Подтверждение</a></li>
                       </ul>
                     </nav>
-                    <ul class="nav-delivery__list">
+                    <ul class="nav-delivery__list" id="selectionPayment">
                       <li class="nav-delivery__item">
-                        <button class="active">Онлайн-оплата</button>
+                        <button class="active nav-delivery__btn-payment" id="bundleOnlinePayment">Онлайн-оплата</button>
                       </li>
                       <li class="nav-delivery__item">
-                        <button>При получении</button>
+                        <button class="nav-delivery__btn-payment" id="bundleReceiptPayment">При получении</button>
                       </li>
                       <li class="nav-delivery__item">
-                        <button>Безналичная оплата по счёту</button>
+                        <button class="nav-delivery__btn-payment" id="bundleNonCashPayment">Безналичная оплата по счёту</button>
                       </li>
                     </ul>
-              <div class="payment-info__box-online">
+              <div class="page-order__payment-info payment-info__box-online active" data-box-id="bundleOnlinePayment">
                 <p class="payment-info__desc">Оплата происходит через ПАО СБЕРБАНК с использованием банковских карт следующих платёжных систем:</p>
                 <ul class="payment-info__list-img">
-                  <li> <img src="#" alt="мир"></li>
-                  <li> <img src="#" alt="visa"></li>
-                  <li> <img src="#" alt="mastercard"></li>
+                  <li> <img src="img/payment-info-mir.png" alt="мир"></li>
+                  <li> <img src="img/payment-info-visa.png" alt="visa"></li>
+                  <li> <img src="img/payment-info-mc.png" alt="MC"></li>
                 </ul>
                 <p class="payment-info__desc">Соединение с платёжным шлюзом и передача информации осуществляется в защищённом режиме с использованием протокола шифрования SSL. В случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться ввод специального пароля.</p>
                 <p class="payment-info__desc">Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.</p>
               </div>
-              <div class="payment-info__box-receipt">
+              <div class="page-order__payment-info payment-info__box-receipt" data-box-id="bundleReceiptPayment">
                 <p class="payment-info__desc">Оплата при получении доступна частным клиентам при выборе способа доставки “Самовывоз”.</p>
                 <p class="payment-info__desc">Самовывоз из магазина происходит по адресу: СПб, Наличная ул., дом № 36, корпус 5, литера Б, помещение 34Н (за домом Новосмоленская набережная, д. 4) с 10:00 до 19:00 пн-пт.</p>
               </div>
-              <div class="payment-info__box-non-cash">
+              <div class="page-order__payment-info payment-info__box-non-cash" data-box-id="bundleNonCashPayment">
                 <p class="payment-info__desc">Вы сможете оплатить по выставленному нами счёту в любом удобном банке. После оформления заказа документ будет отправлен на почту и доступен в Личном Кабинете на сайте. С любыми вопросами по поводу счёта и оплаты, вы можете обратиться к менеджеру продаж по телефону 8 800 700-44-93 или почте tizspb@gmail.com</p>
                 <form class="payment-info__form" action="#">
-                  <h3 class="settings-profile__caption"></h3>
+                  <h3 class="settings-profile__caption">Заполните данные компании</h3>
                   <ul class="settings-profile__list-name"> 
                     <li class="settings-profile__input--error">
-                      <label for="userSurname">Фамилия</label>
-                      <input class="dflt-input" type="text" id="userSurname">
+                      <label for="paymentUserSurname">Фамилия</label>
+                      <input class="dflt-input" type="text" id="paymentUserSurname">
                     </li>
                     <li> 
-                      <label for="userName">Имя</label>
-                      <input class="dflt-input" type="text" id="userName">
+                      <label for="paymentUserName">Имя</label>
+                      <input class="dflt-input" type="text" id="paymentUserName">
                     </li>
                     <li> 
-                      <label for="userLastname">Отчество</label>
-                      <input class="dflt-input" type="text" id="userLastname">
+                      <label for="paymentUserLastname">Отчество</label>
+                      <input class="dflt-input" type="text" id="paymentUserLastname">
                     </li>
                   </ul>
                   <ul class="settings-profile__list-contacts">
                     <li class="settings-profile__input--error">
-                      <label for="userPhone">Телефон</label>
-                      <input class="dflt-input" type="text" id="userPhone" placeholder="+7">
+                      <label for="paymentUserPhone">Телефон</label>
+                      <input class="dflt-input" type="text" id="paymentUserPhone" placeholder="+7">
                     </li>
                     <li> 
-                      <label for="userEmail">E-mail</label>
-                      <input class="dflt-input" type="text" id="userEmail">
+                      <label for="paymentUserEmail">E-mail</label>
+                      <input class="dflt-input" type="text" id="paymentUserEmail">
                     </li>
                   </ul>
                   <ul class="settings-profile__list-name"> 
                     <li> 
-                      <label for="companySurname">Фамилия</label>
-                      <input class="dflt-input" type="text" id="companySurname">
+                      <label for="paymentUompanySurname">Фамилия</label>
+                      <input class="dflt-input" type="text" id="paymentUompanySurname">
                     </li>
                     <li> 
-                      <label for="companyName">Имя</label>
-                      <input class="dflt-input" type="text" id="companyName">
+                      <label for="paymentCompanyName">Имя</label>
+                      <input class="dflt-input" type="text" id="paymentCompanyName">
                     </li>
                     <li> 
-                      <label for="companyLastname">Отчество</label>
-                      <input class="dflt-input" type="text" id="companyLastname">
+                      <label for="paymentCompanyLastname">Отчество</label>
+                      <input class="dflt-input" type="text" id="paymentCompanyLastname">
                     </li>
                   </ul>
                   <ul class="settings-profile__list-contacts company">
                     <li class="settings-profile__input--error">
-                      <label for="companyPhone">Телефон</label>
-                      <input class="dflt-input" type="text" id="companyPhone" placeholder="+7">
+                      <label for="paymentCompanyPhone">Телефон</label>
+                      <input class="dflt-input" type="text" id="paymentCompanyPhone" placeholder="+7">
                     </li>
                     <li> 
-                      <label for="companyEmail">E-mail</label>
-                      <input class="dflt-input" type="text" id="companyEmail">
+                      <label for="paymentCompanyEmail">E-mail</label>
+                      <input class="dflt-input" type="text" id="paymentCompanyEmail">
                     </li>
                     <li> 
-                      <label for="companyFax">Факс</label>
-                      <input class="dflt-input" type="text" id="companyFax">
+                      <label for="paymentCompanyFax">Факс</label>
+                      <input class="dflt-input" type="text" id="paymentCompanyFax">
                     </li>
                     <li> 
-                      <label for="companyNameCompany">Наименование организации</label>
-                      <input class="dflt-input" type="text" id="companyNameCompany">
+                      <label for="paymentCompanyNameCompany">Наименование организации</label>
+                      <input class="dflt-input" type="text" id="paymentCompanyNameCompany">
                     </li>
                     <li> 
-                      <label for="legalAddress">Юридический адрес</label>
-                      <input class="dflt-input" type="text" id="legalAddress">
+                      <label for="paymentLegalAddress">Юридический адрес</label>
+                      <input class="dflt-input" type="text" id="paymentLegalAddress">
                     </li>
                     <li> 
-                      <label for="actualAddress">Фактический адрес</label>
-                      <input class="dflt-input" type="text" id="actualAddress">
+                      <label for="paymentActualAddress">Фактический адрес</label>
+                      <input class="dflt-input" type="text" id="paymentActualAddress">
                     </li>
                     <li> 
-                      <label for="postalAddress">Почтовый адрес</label>
-                      <input class="dflt-input" type="text" id="postalAddress">
+                      <label for="paymentPostalAddress">Почтовый адрес</label>
+                      <input class="dflt-input" type="text" id="paymentPostalAddress">
                     </li>
                     <li> 
-                      <label for="inn">ИНН</label>
-                      <input class="dflt-input" type="text" id="inn">
+                      <label for="paymentInn">ИНН</label>
+                      <input class="dflt-input" type="text" id="paymentInn">
                     </li>
                     <li> 
-                      <label for="paymentAccount">Расчетный счет</label>
-                      <input class="dflt-input" type="text" id="paymentAccount">
+                      <label for="paymentPaymentAccount">Расчетный счет</label>
+                      <input class="dflt-input" type="text" id="paymentPaymentAccount">
                     </li>
                     <li> 
-                      <label for="bankName">Наименование банка</label>
-                      <input class="dflt-input" type="text" id="bankName">
+                      <label for="paymentBankName">Наименование банка</label>
+                      <input class="dflt-input" type="text" id="paymentBankName">
                     </li>
                     <li class="settings-profile__input--error">
-                      <label for="bankAccount">Кор. счет банка</label>
-                      <input class="dflt-input" type="text" id="bankAccount">
+                      <label for="paymentBankAccount">Кор. счет банка</label>
+                      <input class="dflt-input" type="text" id="paymentBankAccount">
                     </li>
                     <li> 
-                      <label for="bic">БИК</label>
-                      <input class="dflt-input" type="text" id="bic">
+                      <label for="paymentBic">БИК</label>
+                      <input class="dflt-input" type="text" id="paymentBic">
                     </li>
                     <li> 
-                      <label for="ogrn">ОГРН</label>
-                      <input class="dflt-input" type="text" id="ogrn">
+                      <label for="paymentOgrn">ОГРН</label>
+                      <input class="dflt-input" type="text" id="paymentOgrn">
                     </li>
                     <li> 
-                      <label for="kpp">КПП</label>
-                      <input class="dflt-input" type="text" id="kpp">
+                      <label for="paymentKpp">КПП</label>
+                      <input class="dflt-input" type="text" id="paymentKpp">
                     </li>
                   </ul>
+                        <div class="dflt-checkbox">
+                          <input class="dflt-checkbox__input" type="checkbox" id="savePaymentMethod" checked>
+                          <label class="dflt-checkbox__label" for="savePaymentMethod"><span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+</svg></span><span class="dflt-checkbox__label-text"><span>Сохранить в ЛК для автозаполнения формы при следующих заказах</span></span></label>
+                        </div>
                 </form>
               </div>
             </div>
