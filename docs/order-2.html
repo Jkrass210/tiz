@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Оформление заказа "Данные получателя" - Сайт ТИЗ</title>
+    <title>Оформление заказа "Выбор доставки" - Сайт ТИЗ</title>
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -4664,63 +4664,93 @@
                         <li class="nav-order__item"> <a href="#">Подтверждение</a></li>
                       </ul>
                     </nav>
-                    <p class="modal__desc">Уже зарегистрированы?<a class="modal__link" href="#">Авторизуйтесь</a></p>
-              <form class="form-page-order" action="#">
-                <h3 class="form-page-order__title">Заполните информацию о получателе</h3>
-                      <ul class="form-name-contacts__list-name">
-                        <li class="form-name-contacts__input--error">
-                          <label for="order1userSurname">Фамилия</label>
-                          <input class="dflt-input" type="text" id="order1userSurname">
-                        </li>
-                        <li> 
-                          <label for="order1userName">Имя</label>
-                          <input class="dflt-input" type="text" id="order1userName">
-                        </li>
-                        <li> 
-                          <label for="order1userLastname">Отчество</label>
-                          <input class="dflt-input" type="text" id="order1userLastname">
-                        </li>
-                      </ul>
-                      <ul class="form-name-contacts__list-contacts">
-                        <li class="form-name-contacts__input--error">
-                          <label for="order1userPhone">Телефон</label>
-                          <input class="dflt-input" type="text" id="order1userPhone" placeholder="+7">
-                        </li>
-                        <li> 
-                          <label for="order1userEmail">E-mail</label>
-                          <input class="dflt-input" type="text" id="order1userEmail">
-                        </li>
-                      </ul>
-                <ul class="form-page-order__list-checkbox">
-                  <li>
-                          <div class="dflt-checkbox">
-                            <input class="dflt-checkbox__input" type="checkbox" id="order1AutoCreate" checked>
-                            <label class="dflt-checkbox__label" for="order1AutoCreate"><span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ul class="nav-delivery__list">
+                      <li class="nav-delivery__item">
+                        <button class="active">Самовывоз</button>
+                      </li>
+                      <li class="nav-delivery__item">
+                        <button>Курьером по СПб</button>
+                      </li>
+                      <li class="nav-delivery__item">
+                        <button>Доставка транспортной компанией</button>
+                      </li>
+                    </ul>
+              <div class="choice-delivery__box-pickup">
+                <h3 class="choice-delivery__caption">Самовывоз из фирменного салона</h3>
+                <p class="choice-delivery__desc">
+                   Вы можете забрать ваш товар по адресу Санкт-Петербург, Новосмоленская набережная д.4 в течение 7 дней со дня бронирования заказа. Мы работаем с понедельника по пятницу с 10:00 до 19:00.</p><a class="dflt-bttn" href="#">Выбрать способ оплаты</a>
+              </div>
+              <div class="choice-delivery__box-courier">
+                <form class="form-choice-delivery-courier" action="#">
+                  <h3 class="choice-delivery__caption">Доставка курьером в Санкт-Петербурге</h3>
+                  <p class="choice-delivery__desc">Доставка курьером осуществляется фирмой «Рога и копыта» с 11:00 до 22:00. Стоимость 500 рублей.</p>
+                        <div class="dflt-checkbox">
+                          <input class="dflt-checkbox__input" type="checkbox" id="deliveryAccount" checked>
+                          <label class="dflt-checkbox__label" for="deliveryAccount"><span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
-</svg></span><span class="dflt-checkbox__label-text"><span>Автоматически создать Личный Кабинет для отслеживания заказа</span></span></label>
-                          </div>
-                  </li>
-                  <li>
-                          <div class="dflt-checkbox">
-                            <input class="dflt-checkbox__input" type="checkbox" id="order1SendNotifications" checked>
-                            <label class="dflt-checkbox__label" for="order1SendNotifications"><span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
-</svg></span><span class="dflt-checkbox__label-text"><span>Отправлять уведомления о статусе заказа по СМС</span></span></label>
-                          </div>
-                  </li>
-                  <li>
-                          <div class="dflt-checkbox">
-                            <input class="dflt-checkbox__input" type="checkbox" id="order1SendEmail" checked>
-                            <label class="dflt-checkbox__label" for="order1SendEmail"><span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
-</svg></span><span class="dflt-checkbox__label-text"><span>Отправлять увеомления о статусе заказа по e-mail</span></span></label>
-                          </div>
-                  </li>
-                </ul>
-                <div class="form-page-order__submit">
-                  <button class="dflt-bttn">Выбрать способ доставки</button>
+</svg></span><span class="dflt-checkbox__label-text"><span>Выставить оплату доставки отдельным счётом</span></span></label>
+                        </div>
+                  <ul class="form-choice-delivery-courier__list">
+                    <li>
+                            <div class="drop-down1">
+                              <label class="dflt-label" for="courierDate">Выберите дату</label>
+                              <input class="dflt-input" type="text" id="courierDate">
+                              <button class="drop-down1__btn"> </button>
+                              <ul class="drop-down1__list">
+                                <li>
+                                   sddvsv </li>
+                                <li>
+                                   sdvsvsv </li>
+                                <li>
+                                   dsvsvwev</li>
+                              </ul>
+                            </div>
+                    </li>
+                    <li> 
+                            <div class="drop-down1">
+                              <label class="dflt-label" for="courierTime">Диапазон времени</label>
+                              <input class="dflt-input" type="text" id="courierTime">
+                              <button class="drop-down1__btn"> </button>
+                              <ul class="drop-down1__list">
+                                <li>
+                                   sddvsv </li>
+                                <li>
+                                   sdvsvsv </li>
+                                <li>
+                                   dsvsvwev</li>
+                              </ul>
+                            </div>
+                    </li>
+                    <li> 
+                            <label class="dflt-label" for="courierStreet">Улица</label>
+                            <input class="dflt-input" type="text" id="courierStreet">
+                    </li>
+                    <li> 
+                            <label class="dflt-label" for="courierHouse">Дом</label>
+                            <input class="dflt-input" type="text" id="courierHouse">
+                    </li>
+                    <li> 
+                            <label class="dflt-label" for="courierOffice">Квартира/Офис</label>
+                            <input class="dflt-input" type="text" id="courierOffice">
+                    </li>
+                    <li> 
+                            <label class="dflt-label" for="courierIntercom">Домофон</label>
+                            <input class="dflt-input" type="text" id="courierIntercom">
+                    </li>
+                    <li> 
+                            <label class="dflt-label" for="courierComment">Комментарий для курьера</label>
+                            <input class="dflt-input" type="text" id="courierComment">
+                    </li>
+                  </ul><a class="dflt-bttn" href="#">Выбрать способ оплаты</a>
+                </form>
+              </div>
+              <div class="choice-delivery__shipping-company">
+                <h3 class="choice-delivery__caption">Выберите транспортную компанию</h3>
+                <div class="choice-delivery__company-1"> 
+                  <p class="choice-delivery__desc">Стоимость доставки Почтой России составляет 500 руб.</p>
+                  <ul class="company-1__list"></ul>
                 </div>
-              </form>
+              </div>
             </div>
             <div class="page-order__box-details">
               <div class="order-details">
@@ -4751,11 +4781,18 @@
                   </ul>
                 </div>
                 <div class="order-details__bottom">
+                  <div class="order-details__box-promoCode"> 
+                    <label class="dflt-label" for="promoCode">Есть промокод?</label>
+                    <input class="dflt-input" type="text" id="promoCode">
+                    <button>Применить</button>
+                  </div>
                   <div class="order-details__box-result">
                     <p>Сумма к оплате:</p>
                     <p><span>78 500</span> руб.</p>
-                  </div><a class="dflt-bttn" href="#">Оформить заказ</a>
-                  <p>Нажимая на кнопку,  вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</p>
+                  </div><a class="dflt-bttn disabled" href="#">Оформить заказ</a>
+                  <p class="order-details__desc">Уведомляем Вас, что каждый товар в нашем интернет-магазине имеет индивидуальное сочетание материалов и индивидуально-определенные свойства – каждое наше изделие может быть использовано исключительно индивидуально. Согласно 4 абзацу пункта 4 ст. 26.1 Закона РФ «О защите прав потребителей» данный вид товаров, надлежащего качества, возврату и обмену не подлежит. Нажимая кнопку «Оплатить заказ», Вы подтверждаете, что ознакомлены и согласны с данной информацией, а так же с политикой кофиденциальности сайта.</p>
+                  <p class="order-details__desc">Согласно 4 абзацу пункта 4 ст. 26.1 Закона РФ «О защите прав потребителей» данный вид товаров, надлежащего качества, возврату и обмену не подлежит.</p>
+                  <p class="order-details__desc">Нажимая кнопку «Оплатить заказ», Вы подтверждаете, что ознакомлены и согласны с данной информацией, а так же с политикой кофиденциальности сайта.</p>
                 </div>
               </div>
             </div>
