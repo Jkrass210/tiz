@@ -4439,19 +4439,19 @@
               <div class="header__menu">
                 <div class="header__menu-list-wrapp" id="menuBurger">
                   <ul class="header__menu-list">
-                    <li><a href="#">
+                    <li><a class="header__menu-item-link" href="#">
                         Производство<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.89645 4.14645C3.09171 3.95118 3.40829 3.95118 3.60355 4.14645L6.25 6.79289L8.89645 4.14645C9.09171 3.95118 9.40829 3.95118 9.60355 4.14645C9.79882 4.34171 9.79882 4.65829 9.60355 4.85355L6.60355 7.85355C6.40829 8.04882 6.09171 8.04882 5.89645 7.85355L2.89645 4.85355C2.70118 4.65829 2.70118 4.34171 2.89645 4.14645Z" fill="currentColor"/>
 </svg></a></li>
-                    <li><a href="#">
+                    <li><a class="header__menu-item-link" href="#">
                         Прокат<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.89645 4.14645C3.09171 3.95118 3.40829 3.95118 3.60355 4.14645L6.25 6.79289L8.89645 4.14645C9.09171 3.95118 9.40829 3.95118 9.60355 4.14645C9.79882 4.34171 9.79882 4.65829 9.60355 4.85355L6.60355 7.85355C6.40829 8.04882 6.09171 8.04882 5.89645 7.85355L2.89645 4.85355C2.70118 4.65829 2.70118 4.34171 2.89645 4.14645Z" fill="currentColor"/>
 </svg></a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Доставка и возврат</a></li>
-                    <li><a href="#">Журнал</a></li>
-                    <li><a href="#">О нас пишут</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a class="header__menu-item-link" href="#">Услуги</a></li>
+                    <li><a class="header__menu-item-link" href="#">Доставка и возврат</a></li>
+                    <li><a class="header__menu-item-link" href="#">Журнал</a></li>
+                    <li><a class="header__menu-item-link" href="#">О нас пишут</a></li>
+                    <li><a class="header__menu-item-link" href="#">Контакты</a></li>
                   </ul>
                   <div class="header__menu-hidden">
                     <div class="header__menu-hidden-desc">
@@ -4654,7 +4654,11 @@
         <div class="container">
           <h1 class="main-catalog-list__title">Театральные костюмы</h1>
           <div class="main-catalog-list__inner">
-                  <div class="catalog-main-menu__aside-page">
+            <button class="main-catalog-list__hidden-menu" id="btnHiddenMenuTabs"> <img src="img/icons/1.svg" alt="icon"><span>Костюмы по тематикам</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
+</svg>
+            </button>
+                  <div class="catalog-main-menu__aside-page" id="hiddenMenuTabs">
                     <ul class="catalog-main-menu__list-page">
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/1.svg" alt="icon"><span>Костюмы по тематикам</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4668,10 +4672,10 @@
 </svg>
                             </button>
                             <ul class="point__list">
-                              <li> <a href="#">lksmvsdm</a></li>
-                              <li> <a href="#">sgdfvd</a></li>
-                              <li> <a href="#">lksmvsdvsv</a></li>
-                              <li> <a href="#">lksmvssvs</a></li>
+                              <li> <a class="link-for-close" href="#">lksmvsdm</a></li>
+                              <li> <a class="link-for-close" href="#">sgdfvd</a></li>
+                              <li> <a class="link-for-close" href="#">lksmvsdvsv</a></li>
+                              <li> <a class="link-for-close" href="#">lksmvssvs</a></li>
                             </ul>
                           </div>
                           <div class="catalog-main-menu__point point-2">
@@ -4685,7 +4689,7 @@
                               <li> <a href="#">lksmvsdvsv</a></li>
                               <li> <a href="#">lksmvssvs</a></li>
                             </ul>
-                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                          </div><a class="catalog-main-menu__point-link link-for-close" href="#">Плащи, накидки, мантии</a>
                         </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
@@ -4713,162 +4717,644 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
-                        <div class="catalog-main-menu__points-page">
-                          <ul> 
-                            <li> <a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a></li>
-                            <li> <a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a></li>
-                            <li><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a></li>
-                          </ul>
-                        </div>
+                        <div class="catalog-main-menu__points-page"><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a></div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/4.svg" alt="icon"><span>Маски сценические, карнавальные</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/5.svg" alt="icon"><span>Галстуки, бабочки, жабо исторические</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page"><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a></div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/6.svg" alt="icon"><span>Обувь сценическая</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/7.svg" alt="icon"><span>Крылья карнавальные</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/8.svg" alt="icon"><span>Перья и боа</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/9.svg" alt="icon"><span>Очки, пенсне, монокли и бинокли</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/10.svg" alt="icon"><span>Постиж и театральный грим</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/11.svg" alt="icon"><span>Гольфы и колготки</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/12.svg" alt="icon"><span>Сумки, клатчи</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/13.svg" alt="icon"><span>Трости</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/14.svg" alt="icon"><span>Ткани и отделка</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/15.svg" alt="icon"><span>Головные уборы</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/16.svg" alt="icon"><span>Парики</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/17.svg" alt="icon"><span>Перчатки</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/18.svg" alt="icon"><span>Ремни, пояса, портупеи, кобура, подтяжки</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/19.svg" alt="icon"><span>Зонты сценические</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/20.svg" alt="icon"><span>Веера: перьевые, жаккардовые, кружевные</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/21.svg" alt="icon"><span>Бижутерия театральная</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/22.svg" alt="icon"><span>Часы</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/23.svg" alt="icon"><span>Уши, носы, клыки</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/24.svg" alt="icon"><span>Реквизит</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/25.svg" alt="icon"><span>Трубки и мундштуки</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/26.svg" alt="icon"><span>Муляжи оружия и доспехи, театральные</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-page">
                         <button class="catalog-main-menu__list-item-btm-page"><img src="img/icons/27.svg" alt="icon"><span>Знаки различия</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="#153138"/>
 </svg>
                         </button>
+                        <div class="catalog-main-menu__points-page">
+                          <div class="catalog-main-menu__point point-1">
+                            <button class="point__btn"> <span>Женские</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z" fill="currentColor"/>
+</svg>
+                            </button>
+                            <ul class="point__list">
+                              <li> <a href="#">lksmvsdm</a></li>
+                              <li> <a href="#">sgdfvd</a></li>
+                              <li> <a href="#">lksmvsdvsv</a></li>
+                              <li> <a href="#">lksmvssvs</a></li>
+                            </ul>
+                          </div><a class="catalog-main-menu__point-link" href="#">Плащи, накидки, мантии</a>
+                        </div>
                       </li>
                       <li class="catalog-main-menu__list-item-link"><a class="catalog-main-menu__list-item-btm" href="#"><img src="img/icons/27.svg" alt="icon"><span>Простая ссылка</span></a></li>
                     </ul>
                   </div>
             <div class="main-catalog-list__content">
+              <div class="main-catalog-list__box-filter">
+                      <form class="filter-main" action="#">
+                        <ul class="filter-main__list-top"> 
+                          <li> 
+                                  <div class="drop-down1">
+                                    <label class="dflt-label" for="eraStyle">Эпоха и стиль</label>
+                                    <input class="dflt-input" type="text" id="eraStyle" placeholder="Не выбрано">
+                                    <button class="drop-down1__btn" id="btnEraStyle"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                    </button>
+                                    <ul class="drop-down1__list" data-drop-id="btnEraStyle">
+                                      <li>
+                                         sddvsv </li>
+                                      <li>
+                                         sdvsvsv </li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                    </ul>
+                                  </div>
+                          </li>
+                          <li> 
+                                  <div class="drop-down1">
+                                    <label class="dflt-label" for="countries">Страны, народы мира</label>
+                                    <input class="dflt-input" type="text" id="countries" placeholder="Не выбрано">
+                                    <button class="drop-down1__btn" id="btnCountries"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                    </button>
+                                    <ul class="drop-down1__list" data-drop-id="btnCountries">
+                                      <li>
+                                         sddvsv </li>
+                                      <li>
+                                         sdvsvsv </li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                    </ul>
+                                  </div>
+                          </li>
+                          <li> 
+                                  <div class="drop-down1">
+                                    <label class="dflt-label" for="professions">Профессии</label>
+                                    <input class="dflt-input" type="text" id="professions" placeholder="Не выбрано">
+                                    <button class="drop-down1__btn" id="btnProfessions"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                    </button>
+                                    <ul class="drop-down1__list" data-drop-id="btnProfessions">
+                                      <li>
+                                         sddvsv </li>
+                                      <li>
+                                         sdvsvsv </li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                    </ul>
+                                  </div>
+                          </li>
+                          <li> 
+                                  <div class="drop-down1">
+                                    <label class="dflt-label" for="otherTopics">Другие тематики</label>
+                                    <input class="dflt-input" type="text" id="otherTopics" placeholder="Не выбрано">
+                                    <button class="drop-down1__btn" id="btnOtherTopics"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+                                    </button>
+                                    <ul class="drop-down1__list" data-drop-id="btnOtherTopics">
+                                      <li>
+                                         sddvsv </li>
+                                      <li>
+                                         sdvsvsv </li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                      <li>
+                                         dsvsvwev</li>
+                                    </ul>
+                                  </div>
+                          </li>
+                        </ul>
+                        <div class="filter-main__box-line"> 
+                          <ul class="filter-main__list-centre"> 
+                            <li> 
+                                    <div class="dflt-checkbox">
+                                      <input class="dflt-checkbox__input" type="checkbox" id="filterMale" checked>
+                                      <label class="dflt-checkbox__label" for="filterMale"><span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+</svg></span><span class="dflt-checkbox__label-text"><span>Мужское</span></span></label>
+                                    </div>
+                            </li>
+                            <li> 
+                                    <div class="dflt-checkbox">
+                                      <input class="dflt-checkbox__input" type="checkbox" id="filterFemale" checked>
+                                      <label class="dflt-checkbox__label" for="filterFemale"><span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+</svg></span><span class="dflt-checkbox__label-text"><span>Женское</span></span></label>
+                                    </div>
+                            </li>
+                            <li> 
+                                    <label class="dflt-checkbox-1" for="filterStocks">
+                                      <input type="checkbox" id="filterStocks"><span class="dflt-checkbox-1__wrapp"><i></i></span><span class="dflt-checkbox-1__text">Только акции</span>
+                                    </label>
+                            </li>
+                            <li> 
+                                    <label class="dflt-checkbox-1" for="filterAvailable">
+                                      <input type="checkbox" id="filterAvailable"><span class="dflt-checkbox-1__wrapp"><i></i></span><span class="dflt-checkbox-1__text">Только в наличии</span>
+                                    </label>
+                            </li>
+                            <li> 
+                                    <label class="dflt-checkbox-1" for="filterRental">
+                                      <input type="checkbox" id="filterRental"><span class="dflt-checkbox-1__wrapp"><i></i></span><span class="dflt-checkbox-1__text">Прокат</span>
+                                    </label>
+                            </li>
+                          </ul>
+                          <button class="filter-main__btn-open"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.33333 2.6665C6.06971 2.6665 6.66667 3.26346 6.66667 3.99984V13.3332C6.66667 14.0696 6.06971 14.6665 5.33333 14.6665C4.59695 14.6665 4 14.0696 4 13.3332V3.99984C4 3.26346 4.59695 2.6665 5.33333 2.6665ZM16 2.6665C16.7364 2.6665 17.3333 3.26346 17.3333 3.99984V9.33317H20C20.7364 9.33317 21.3333 9.93012 21.3333 10.6665C21.3333 11.4029 20.7364 11.9998 20 11.9998H12C11.2636 11.9998 10.6667 11.4029 10.6667 10.6665C10.6667 9.93012 11.2636 9.33317 12 9.33317H14.6667V3.99984C14.6667 3.26346 15.2636 2.6665 16 2.6665ZM26.6667 2.6665C27.403 2.6665 28 3.26346 28 3.99984V15.9998C28 16.7362 27.403 17.3332 26.6667 17.3332C25.9303 17.3332 25.3333 16.7362 25.3333 15.9998V3.99984C25.3333 3.26346 25.9303 2.6665 26.6667 2.6665ZM16 14.6665C16.7364 14.6665 17.3333 15.2635 17.3333 15.9998V27.9998C17.3333 28.7362 16.7364 29.3332 16 29.3332C15.2636 29.3332 14.6667 28.7362 14.6667 27.9998V15.9998C14.6667 15.2635 15.2636 14.6665 16 14.6665ZM0 18.6665C0 17.9301 0.596954 17.3332 1.33333 17.3332H9.33333C10.0697 17.3332 10.6667 17.9301 10.6667 18.6665C10.6667 19.4029 10.0697 19.9998 9.33333 19.9998H6.66667V27.9998C6.66667 28.7362 6.06971 29.3332 5.33333 29.3332C4.59695 29.3332 4 28.7362 4 27.9998V19.9998H1.33333C0.596954 19.9998 0 19.4029 0 18.6665ZM21.3333 21.3332C21.3333 20.5968 21.9303 19.9998 22.6667 19.9998H30.6667C31.403 19.9998 32 20.5968 32 21.3332C32 22.0696 31.403 22.6665 30.6667 22.6665H28V27.9998C28 28.7362 27.403 29.3332 26.6667 29.3332C25.9303 29.3332 25.3333 28.7362 25.3333 27.9998V22.6665H22.6667C21.9303 22.6665 21.3333 22.0696 21.3333 21.3332Z" fill="currentColor" />
+</svg>
+                          </button>
+                        </div>
+                        <div class="filter-main__box-bottom">
+                          <ul class="filter-main__list-bottom">
+                            <li><span>Размер:</span><span>44</span>
+                              <button class="filter-main__btn-del-size"><span></span><span></span></button>
+                            </li>
+                            <li><span>Размер:</span><span>46</span>
+                              <button class="filter-main__btn-del-size"><span></span><span></span></button>
+                            </li>
+                          </ul>
+                          <button class="filter-main__clear"><span>Очистить фильтры</span><span class="filter-main__clear-close"></span></button>
+                        </div>
+                      </form>
+                <div class="main-catalog-list__box-counter">
+                  <div class="favorites__count">
+                    <div class="favorites__count-number">Всего: <span>23</span></div>
+                    <div class="favorites__count-sort">
+                      <div class="dflt-choices">
+                        <select>
+                          <option value="option1">По дате добавления</option>
+                          <option value="option2">По цене</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="main-catalog-list__grid">
                 <div class="dflt-product-list-card"><span class="dflt-product-list-card__tag">в наличии</span>
                   <button class="dflt-product-list-card__fav"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
