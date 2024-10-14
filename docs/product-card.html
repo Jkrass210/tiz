@@ -4522,14 +4522,14 @@
         </div>
       </header>
       <div class="modal none" data-modal-id="autorizModal">
-        <div class="modal__box-1 modal__box none">
+        <div class="modal__box-1 modal__box" data-window-id="autorizWindowAutoriz">
           <div class="modal__box-close"> 
             <button class="modal__close"><span></span><span></span></button>
           </div>
           <form class="modal__form" action="#">
             <h2 class="modal__title">Авторизация</h2>
             <p class="modal__desc">
-               Ещё нет аккаунта?<a class="modal__link" href="#">Зарегистрируйтесь</a></p>
+               Ещё нет аккаунта?<a class="modal__link" href="#" id="autorizWindowReg">Зарегистрируйтесь</a></p>
             <ul class="modal__lisc-col">
               <li> 
                       <label class="dflt-label" for="autorizEmail">Телефон или E-mail</label>
@@ -4544,14 +4544,14 @@
 </svg>
                       </button>
               </li>
-            </ul><a class="modal__link exception" href="#">Забыли пароль?</a>
+            </ul><a class="modal__link exception" href="#" id="autorizWindowPasswordRecovery">Забыли пароль?</a>
             <ul class="modal__lisc-col modal__group-btn"> 
               <li> <a class="dflt-bttn" href="#">Авторизоваться</a></li>
-              <li> <a class="dflt-bttn dflt-bttn_ghost" href="#">Войти по коду</a></li>
+              <li> <a class="modal__link dflt-bttn dflt-bttn_ghost" href="#" id="autorizWindowCode">Войти по коду</a></li>
             </ul>
           </form>
         </div>
-        <div class="modal__box-2 modal__box none">
+        <div class="modal__box-2 modal__box none" data-window-id="autorizWindowCode">
           <div class="modal__box-close"> 
             <button class="modal__close"><span></span><span></span></button>
           </div>
@@ -4561,14 +4561,14 @@
                   <input class="dflt-input" type="text" id="autorizCode"><a class="dflt-bttn" href="#">Продолжить</a>
           </form>
         </div>
-        <div class="modal__box-3 modal__box">
+        <div class="modal__box-3 modal__box none" data-window-id="autorizWindowReg">
           <div class="modal__box-close"> 
             <button class="modal__close"><span></span><span></span></button>
           </div>
           <form class="modal__form" action="#">
             <h2 class="modal__title">Регистрация</h2>
             <p class="modal__desc">
-               Уже есть аккаунт?<a class="modal__link" href="#">Авторизуйтесь</a></p>
+               Уже есть аккаунт?<a class="modal__link" href="#" id="autorizWindowAutoriz">Авторизуйтесь</a></p>
                   <ul class="form-name-contacts__list-name">
                     <li class="form-name-contacts__input--error">
                       <label for="autorizSurname">Фамилия</label>
@@ -4626,11 +4626,11 @@
             </ul>
             <ul class="modal__lisc-col modal__group-btn">
               <li> <a class="dflt-bttn" href="#">Авторизоваться</a></li>
-              <li> <a class="dflt-bttn dflt-bttn_ghost" href="#">Войти по коду</a></li>
+              <li> <a class="modal__link dflt-bttn dflt-bttn_ghost" href="#" id="autorizWindowCode">Войти по коду</a></li>
             </ul>
           </form>
         </div>
-        <div class="modal__box-4 modal__box none">
+        <div class="modal__box-4 modal__box none" data-window-id="autorizWindowPasswordRecovery">
           <div class="modal__box-close"> 
             <button class="modal__close"><span></span><span></span></button>
           </div>
@@ -5075,17 +5075,26 @@
             <form class="subscribe__form" action="#" method="POST"> <span class="subscribe__form-title">E-mail</span>
               <div class="subscribe__form-row">
                 <input class="dflt-input" type="text">
-                <button class="dflt-bttn"><span>Оформить подписку</span></button>
+                <button class="dflt-bttn open-modal" id="subsModal"><span>Оформить подписку</span></button>
               </div>
               <div class="subscribe__form-checkbox">
                 <div class="dflt-checkbox">
                   <input class="dflt-checkbox__input" type="checkbox" id="subscribePolicy" checked>
                   <label class="dflt-checkbox__label" for="subscribePolicy"> <span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
-</svg></span><span class="dflt-checkbox__label-text"><span>Я согласен с </span><a href="#">политикой конфиденциальности  </a></span></label>
+</svg></span><span class="dflt-checkbox__label-text"><span>Я согласен с </span><a href="#">политикой конфиденциальности</a></span></label>
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+        <div class="modal none" data-modal-id="subsModal">
+          <div class="modal__box-subs modal__box">
+            <div class="modal__box-close"> 
+              <button class="modal__close"><span></span><span></span></button>
+            </div>
+            <h2 class="modal__title">Подписка оформлена</h2>
+            <p class="modal__desc">Спасибо за интерес к нашей фабрике. Мы будем стараться радовать Вас приятными новостями в каждом письме.</p><a class="dflt-bttn" href="/">На главную</a>
           </div>
         </div>
       </section>
