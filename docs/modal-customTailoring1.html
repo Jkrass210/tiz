@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Модальное окно - Сайт ТИЗ</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="stylesheet" href="css/plugins.min.css">
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
+    <link rel="stylesheet" href="css/custom.min.css">
+  </head>
+  <body>
+    <div class="modal" data-modal-id="customTailoringModal1">
+      <div class="modal__box-copy modal__box" data-window-id="customTailoringWindowOrder">
+        <div class="modal__box-close"> 
+          <button class="modal__close"><span></span><span></span></button>
+        </div>
+        <form class="modal__form" action="#">
+          <h2 class="modal__title">Пошив на заказ</h2>
+          <p class="modal__desc-name">Костюм Снегурочки «Великий Устюг», мод. № 31</p>
+          <p class="modal__desc">Заполните общие данные о заказчике и желаемом изделии, чтобы мы могли Вас проконсультировать</p>
+              <ul class="form-name-contacts__list-name">
+                <li class="form-name-contacts__input--error">
+                  <label for="customTailoringSurname">Фамилия</label>
+                  <input class="dflt-input" type="text" id="customTailoringSurname">
+                </li>
+                <li> 
+                  <label for="customTailoringName">Имя</label>
+                  <input class="dflt-input" type="text" id="customTailoringName">
+                </li>
+                <li> 
+                  <label for="customTailoringLastname">Отчество</label>
+                  <input class="dflt-input" type="text" id="customTailoringLastname">
+                </li>
+              </ul>
+              <ul class="form-name-contacts__list-contacts">
+                <li class="form-name-contacts__input--error">
+                  <label for="customTailoringPhone">Телефон</label>
+                  <input class="dflt-input" type="text" id="customTailoringPhone" placeholder="+7">
+                </li>
+                <li> 
+                  <label for="customTailoringEmail">E-mail</label>
+                  <input class="dflt-input" type="text" id="customTailoringEmail">
+                </li>
+              </ul>
+              <label class="dflt-label" for="customTailoringTextarea">Комментарий к заказу</label>
+              <textarea class="dflt-textarea" id="customTailoringTextarea"></textarea>
+          <ul class="modal__group-btn-row">
+            <li> <a class="dflt-bttn" href="#">Заказать звонок менеджера</a></li>
+            <li><a class="dflt-bttn dflt-bttn_ghost modal__link-open" href="#" id="customTailoringWindowSize">Заполнить анкету с мерками</a></li>
+          </ul>
+        </form>
+      </div>
+      <div class="modal__box-copy modal__box none" data-window-id="customTailoringWindowSize">
+        <div class="modal__box-close"> 
+          <button class="modal__close"><span></span><span></span></button>
+        </div>
+        <form class="modal__form" action="#">
+          <h2 class="modal__title">Пошив на заказ</h2>
+          <p class="modal__desc-name">Костюм Снегурочки «Великий Устюг», мод. № 31</p>
+          <p class="modal__desc">Мы подготовили анкету с видео-инструкциями, чтобы вы смогли снять мерки легко и точно. Заполните форму с мерками в соответствии с нашими рекомендациями, либо подойдите в наш фирменный салон и наши менеджеры вам помогут.</p>
+          <div class="modal__swiper swiper" id="swiper-10">
+            <div class="modal__swiper-wrapper swiper-wrapper">
+              <div class="modal__swiper-slide swiper-slide">
+                    <div class="card-size">
+                      <h3 class="card-size__title">Измерение объема талии</h3><img class="card-size__img" src="img/modal-img-1.jpg" alt="img">
+                          <label class="dflt-label" for="customTailoringSizeWaist1">Объем талии (см)</label>
+                          <input class="dflt-input" type="text" id="customTailoringSizeWaist1">
+                    </div>
+              </div>
+              <div class="modal__swiper-slide swiper-slide">
+                    <div class="card-size">
+                      <h3 class="card-size__title">Измерение ширины плеч</h3><img class="card-size__img" src="img/modal-img-1.jpg" alt="img">
+                          <label class="dflt-label" for="customTailoringSizeShoulders1">Ширина плеч (см)</label>
+                          <input class="dflt-input" type="text" id="customTailoringSizeShoulders1">
+                    </div>
+              </div>
+              <div class="modal__swiper-slide swiper-slide">
+                    <div class="card-size">
+                      <h3 class="card-size__title">Измерение объема груди</h3><img class="card-size__img" src="img/modal-img-1.jpg" alt="img">
+                          <label class="dflt-label" for="customTailoringSizeBreast1">Объем груди (см)</label>
+                          <input class="dflt-input" type="text" id="customTailoringSizeBreast1">
+                    </div>
+              </div>
+              <div class="modal__swiper-slide swiper-slide">
+                    <div class="card-size">
+                      <h3 class="card-size__title">Измерение объема бедер</h3><img class="card-size__img" src="img/modal-img-1.jpg" alt="img">
+                          <label class="dflt-label" for="customTailoringSizeHip1">Объем бедер (см)</label>
+                          <input class="dflt-input" type="text" id="customTailoringSizeHip1">
+                    </div>
+              </div>
+            </div>
+            <div class="modal__swiper-pagination"></div>
+          </div>
+          <ul class="modal__group-btn-row">
+            <li> <a class="dflt-bttn dflt-bttn_ghost modal__link-open" href="#" id="customTailoringWindowOrder">Назад</a></li>
+            <li><a class="dflt-bttn modal__link-open" href="#" id="customTailoringWindowConfirmation">Продолжить</a></li>
+          </ul>
+        </form>
+      </div>
+      <div class="modal__box-copy modal__box none" data-window-id="customTailoringWindowConfirmation">
+        <div class="modal__box-close"> 
+          <button class="modal__close"><span></span><span></span></button>
+        </div>
+        <form class="modal__form" action="#">
+          <h2 class="modal__title">Пошив на заказ</h2>
+          <p class="modal__desc-name">Костюм Снегурочки «Великий Устюг», мод. № 31</p>
+          <p class="modal__desc">Заполните общие данные о заказчике и желаемом изделии, чтобы мы могли Вас проконсультировать</p>
+              <ul class="form-name-contacts__list-name">
+                <li class="form-name-contacts__input--error">
+                  <label for="customTailoringSurname1">Фамилия</label>
+                  <input class="dflt-input" type="text" id="customTailoringSurname1">
+                </li>
+                <li> 
+                  <label for="customTailoringName1">Имя</label>
+                  <input class="dflt-input" type="text" id="customTailoringName1">
+                </li>
+                <li> 
+                  <label for="customTailoringLastname1">Отчество</label>
+                  <input class="dflt-input" type="text" id="customTailoringLastname1">
+                </li>
+              </ul>
+              <ul class="form-name-contacts__list-contacts">
+                <li class="form-name-contacts__input--error">
+                  <label for="customTailoringPhone1">Телефон</label>
+                  <input class="dflt-input" type="text" id="customTailoringPhone1" placeholder="+7">
+                </li>
+                <li> 
+                  <label for="customTailoringEmail1">E-mail</label>
+                  <input class="dflt-input" type="text" id="customTailoringEmail1">
+                </li>
+              </ul>
+          <h3 class="modal__caption">Мерки заказчика</h3>
+          <ul class="modal__list-customer">
+            <li> 
+                  <label class="dflt-label" for="customTailoringShoulders1">Ширина плеч (см)</label>
+                  <input class="dflt-input" type="text" id="customTailoringShoulders1">
+            </li>
+            <li> 
+                  <label class="dflt-label" for="customTailoringBreast1">Объем груди (см)</label>
+                  <input class="dflt-input" type="text" id="customTailoringBreast1">
+            </li>
+            <li> 
+                  <label class="dflt-label" for="customTailoringWaist1">Объем талии (см)</label>
+                  <input class="dflt-input" type="text" id="customTailoringWaist1">
+            </li>
+            <li> 
+                  <label class="dflt-label" for="customTailoringHip1">Объем бедер (см)</label>
+                  <input class="dflt-input" type="text" id="customTailoringHip1">
+            </li>
+          </ul>
+              <label class="dflt-label" for="customTailoringTextarea1">Комментарий к заказу</label>
+              <textarea class="dflt-textarea" id="customTailoringTextarea1"></textarea>
+          <ul class="modal__group-btn-row">
+            <li> <a class="dflt-bttn dflt-bttn_ghost modal__link-open" href="#" id="customTailoringWindowSize">Назад</a></li>
+            <li><a class="dflt-bttn modal__link-open" href="#" id="customTailoringWindowSent">Отправить заявку</a></li>
+          </ul>
+        </form>
+      </div>
+      <div class="modal__box-subs modal__box none" data-window-id="customTailoringWindowSent">
+        <div class="modal__box-close"> 
+          <button class="modal__close"><span></span><span></span></button>
+        </div>
+        <h2 class="modal__title">Заявка отправлена</h2>
+        <p class="modal__desc">Спасибо за обращение! Ожидайте звонка менеджера, для обсуждение деталей заказа, в течение 24 часов.</p>
+        <ul class="modal__group-btn-row">
+          <li><a class="dflt-bttn dflt-bttn_ghost modal__link-open" href="/">Вернуться на главную</a></li>
+          <li><a class="dflt-bttn modal__link-open" href="#" id="customTailoringWindowOrder">Оставить другую заявку</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/apps.js"></script>
+  </body>
+</html>

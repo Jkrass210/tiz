@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Модальное окно - Сайт ТИЗ</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="stylesheet" href="css/plugins.min.css">
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
+    <link rel="stylesheet" href="css/custom.min.css">
+  </head>
+  <body>
+    <div class="modal" data-modal-id="addReviewModal">
+      <div class="modal__box-copy modal__box">
+        <div class="modal__box-close"> 
+          <button class="modal__close"><span></span><span></span></button>
+        </div>
+        <form class="modal__form" action="#">
+          <h2 class="modal__title">Добавить отзыв</h2>
+          <p class="modal__desc">Ваш отзыв появится на сайте в течение 1-2 дней. Спасибо, что оставляете обратную связь! Она делает нас ещё лучше!</p>
+          <ul class="modal__copy-list-1">
+            <li> 
+                  <label class="dflt-label" for="addReviewName">Ваше имя</label>
+                  <input class="dflt-input" type="text" id="addReviewName">
+            </li>
+            <li> 
+                  <label class="dflt-label" for="addReviewPhone">Телефон</label>
+                  <input class="dflt-input" type="text" id="addReviewPhone" placeholder="+7">
+            </li>
+            <li> 
+                  <label class="dflt-label" for="addReviewEmail">E-mail</label>
+                  <input class="dflt-input" type="text" id="addReviewEmail">
+            </li>
+            <li> 
+                  <label class="dflt-label" for="addReviewTextarea">Текст отзыва</label>
+                  <textarea class="dflt-textarea" id="addReviewTextarea"></textarea>
+            </li>
+          </ul>
+              <div class="dflt-file">
+                <label for="addReviewFile"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 2C13.0523 2 13.5 2.44772 13.5 3V12.5858L16.7929 9.29289C17.1834 8.90237 17.8166 8.90237 18.2071 9.29289C18.5976 9.68342 18.5976 10.3166 18.2071 10.7071L13.2071 15.7071C12.8166 16.0976 12.1834 16.0976 11.7929 15.7071L6.79289 10.7071C6.40237 10.3166 6.40237 9.68342 6.79289 9.29289C7.18342 8.90237 7.81658 8.90237 8.20711 9.29289L11.5 12.5858V3C11.5 2.44772 11.9477 2 12.5 2ZM3.5 14C4.05228 14 4.5 14.4477 4.5 15V19C4.5 19.2652 4.60536 19.5196 4.79289 19.7071C4.98043 19.8946 5.23478 20 5.5 20H19.5C19.7652 20 20.0196 19.8946 20.2071 19.7071C20.3946 19.5196 20.5 19.2652 20.5 19V15C20.5 14.4477 20.9477 14 21.5 14C22.0523 14 22.5 14.4477 22.5 15V19C22.5 19.7957 22.1839 20.5587 21.6213 21.1213C21.0587 21.6839 20.2957 22 19.5 22H5.5C4.70435 22 3.94129 21.6839 3.37868 21.1213C2.81607 20.5587 2.5 19.7957 2.5 19V15C2.5 14.4477 2.94772 14 3.5 14Z" fill="currentColor" />
+</svg><span>Прикрепить фото товара</span>
+                </label>
+                <input type="file" id="addReviewFile">
+              </div>
+              <div class="dflt-estimation">
+                <p class="dflt-estimation-text">Ваша оценка</p>
+                <div><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 1.61804L13.7186 8.4463L13.8309 8.7918H14.1942H21.3738L15.5654 13.0119L15.2715 13.2254L15.3837 13.5709L17.6024 20.3992L11.7939 16.1791L11.5 15.9656L11.2061 16.1791L5.39763 20.3992L7.61627 13.5709L7.72853 13.2254L7.43464 13.0119L1.62616 8.7918H8.80583H9.1691L9.28136 8.4463L11.5 1.61804Z" stroke="#DD9850"/>
+</svg>
+<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 1.61804L13.7186 8.4463L13.8309 8.7918H14.1942H21.3738L15.5654 13.0119L15.2715 13.2254L15.3837 13.5709L17.6024 20.3992L11.7939 16.1791L11.5 15.9656L11.2061 16.1791L5.39763 20.3992L7.61627 13.5709L7.72853 13.2254L7.43464 13.0119L1.62616 8.7918H8.80583H9.1691L9.28136 8.4463L11.5 1.61804Z" stroke="#DD9850"/>
+</svg>
+<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 1.61804L13.7186 8.4463L13.8309 8.7918H14.1942H21.3738L15.5654 13.0119L15.2715 13.2254L15.3837 13.5709L17.6024 20.3992L11.7939 16.1791L11.5 15.9656L11.2061 16.1791L5.39763 20.3992L7.61627 13.5709L7.72853 13.2254L7.43464 13.0119L1.62616 8.7918H8.80583H9.1691L9.28136 8.4463L11.5 1.61804Z" stroke="#DD9850"/>
+</svg>
+<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 1.61804L13.7186 8.4463L13.8309 8.7918H14.1942H21.3738L15.5654 13.0119L15.2715 13.2254L15.3837 13.5709L17.6024 20.3992L11.7939 16.1791L11.5 15.9656L11.2061 16.1791L5.39763 20.3992L7.61627 13.5709L7.72853 13.2254L7.43464 13.0119L1.62616 8.7918H8.80583H9.1691L9.28136 8.4463L11.5 1.61804Z" stroke="#DD9850"/>
+</svg>
+<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 1.61804L13.7186 8.4463L13.8309 8.7918H14.1942H21.3738L15.5654 13.0119L15.2715 13.2254L15.3837 13.5709L17.6024 20.3992L11.7939 16.1791L11.5 15.9656L11.2061 16.1791L5.39763 20.3992L7.61627 13.5709L7.72853 13.2254L7.43464 13.0119L1.62616 8.7918H8.80583H9.1691L9.28136 8.4463L11.5 1.61804Z" stroke="#DD9850"/>
+</svg>
+                </div>
+              </div>
+          <ul class="modal__copy-list-2"> 
+            <li> 
+                  <div class="dflt-checkbox">
+                    <input class="dflt-checkbox__input" type="checkbox" id="addReviewPrivacyPolicy" checked>
+                    <label class="dflt-checkbox__label" for="subscribePolicy"> <span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+</svg></span><span class="dflt-checkbox__label-text"><span>Я согласен с </span><a href="#">политикой конфиденциальности</a></span></label>
+                  </div>
+            </li>
+            <li> 
+                  <div class="dflt-checkbox">
+                    <input class="dflt-checkbox__input" type="checkbox" id="addReviewRental" checked>
+                    <label class="dflt-checkbox__label" for="subscribePolicy"> <span class="dflt-checkbox__label-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+</svg></span><span class="dflt-checkbox__label-text"><span>Я ознакомился и согласен с </span><a href="#">правилами проката</a></span></label>
+                  </div>
+            </li>
+          </ul>
+          <button class="dflt-bttn">Отправить заявку</button>
+        </form>
+      </div>
+      <div class="modal__box-subs modal__box none">
+        <div class="modal__box-close"> 
+          <button class="modal__close"><span></span><span></span></button>
+        </div>
+        <h2 class="modal__title">Заявка отправлена</h2>
+        <p class="modal__desc">Мы обязательно перезвоним Вам в ближайшее время</p><a class="dflt-bttn" href="/">Вернуться в каталог</a>
+      </div>
+    </div>
+    <script src="js/apps.js"></script>
+  </body>
+</html>

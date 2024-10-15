@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Модальное окно - Сайт ТИЗ</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="stylesheet" href="css/plugins.min.css">
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
+    <link rel="stylesheet" href="css/custom.min.css">
+  </head>
+  <body>
+    <div class="modal" data-modal-id="customTailoringModal">
+      <div class="modal__box-copy modal__box">
+        <div class="modal__box-close"> 
+          <button class="modal__close"><span></span><span></span></button>
+        </div>
+        <form class="modal__form" action="#">
+          <h2 class="modal__title">Пошив на заказ</h2>
+          <p class="modal__desc">Заполните общие данные о заказчике и желаемом изделии, чтобы мы могли Вас проконсультировать</p>
+              <ul class="form-name-contacts__list-name">
+                <li class="form-name-contacts__input--error">
+                  <label for="customTailoringSurname">Фамилия</label>
+                  <input class="dflt-input" type="text" id="customTailoringSurname">
+                </li>
+                <li> 
+                  <label for="customTailoringName">Имя</label>
+                  <input class="dflt-input" type="text" id="customTailoringName">
+                </li>
+                <li> 
+                  <label for="customTailoringLastname">Отчество</label>
+                  <input class="dflt-input" type="text" id="customTailoringLastname">
+                </li>
+              </ul>
+              <ul class="form-name-contacts__list-contacts">
+                <li class="form-name-contacts__input--error">
+                  <label for="customTailoringPhone">Телефон</label>
+                  <input class="dflt-input" type="text" id="customTailoringPhone" placeholder="+7">
+                </li>
+                <li> 
+                  <label for="customTailoringEmail">E-mail</label>
+                  <input class="dflt-input" type="text" id="customTailoringEmail">
+                </li>
+              </ul>
+              <label class="dflt-label" for="customTailoringTextarea">Желаемое изделие</label>
+              <textarea class="dflt-textarea" id="customTailoringTextarea"></textarea>
+          <ul class="modal__group-btn-row">
+            <li> <a class="dflt-bttn" href="#">Заказать звонок менеджера</a></li>
+            <li><a class="dflt-bttn dflt-bttn_ghost" href="#">Заполнить анкету с мерками</a></li>
+          </ul>
+        </form>
+      </div>
+      <div class="modal__box-copy modal__box none">
+        <div class="modal__box-close"> 
+          <button class="modal__close"><span></span><span></span></button>
+        </div>
+        <h2 class="modal__title">Пошив на заказ</h2>
+        <p class="modal__desc">Для заполнения полей с мерками, выберите изделие из списка, наиболее близкое к желаемому.</p>
+            <div class="drop-down1 drop-down2">
+              <input class="dflt-input" type="text" id="customTailoringProduct">
+              <button class="drop-down1__btn" id="customTailoringDropProduct"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C4D3D7" />
+</svg>
+              </button>
+              <ul class="drop-down1__list" data-drop-id="customTailoringDropProduct">
+                <li>
+                   sddvsv </li>
+                <li>
+                   sdvsvsv </li>
+                <li>
+                   dsvsvwev</li>
+                <li>
+                   dsvsvwev</li>
+                <li>
+                   dsvsvwev</li>
+                <li>
+                   dsvsvwev</li>
+              </ul>
+            </div>
+        <ul class="modal__group-btn-row">
+          <li><a class="dflt-bttn dflt-bttn_ghost" href="#">Назад</a></li>
+          <li><a class="dflt-bttn" href="#">Продолжить</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/apps.js"></script>
+  </body>
+</html>
