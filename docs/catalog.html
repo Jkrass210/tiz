@@ -5324,7 +5324,7 @@
                                     </label>
                             </li>
                           </ul>
-                          <button class="filter-main__btn-open"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <button class="filter-main__btn-open" id="filterAdvanced"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.33333 2.6665C6.06971 2.6665 6.66667 3.26346 6.66667 3.99984V13.3332C6.66667 14.0696 6.06971 14.6665 5.33333 14.6665C4.59695 14.6665 4 14.0696 4 13.3332V3.99984C4 3.26346 4.59695 2.6665 5.33333 2.6665ZM16 2.6665C16.7364 2.6665 17.3333 3.26346 17.3333 3.99984V9.33317H20C20.7364 9.33317 21.3333 9.93012 21.3333 10.6665C21.3333 11.4029 20.7364 11.9998 20 11.9998H12C11.2636 11.9998 10.6667 11.4029 10.6667 10.6665C10.6667 9.93012 11.2636 9.33317 12 9.33317H14.6667V3.99984C14.6667 3.26346 15.2636 2.6665 16 2.6665ZM26.6667 2.6665C27.403 2.6665 28 3.26346 28 3.99984V15.9998C28 16.7362 27.403 17.3332 26.6667 17.3332C25.9303 17.3332 25.3333 16.7362 25.3333 15.9998V3.99984C25.3333 3.26346 25.9303 2.6665 26.6667 2.6665ZM16 14.6665C16.7364 14.6665 17.3333 15.2635 17.3333 15.9998V27.9998C17.3333 28.7362 16.7364 29.3332 16 29.3332C15.2636 29.3332 14.6667 28.7362 14.6667 27.9998V15.9998C14.6667 15.2635 15.2636 14.6665 16 14.6665ZM0 18.6665C0 17.9301 0.596954 17.3332 1.33333 17.3332H9.33333C10.0697 17.3332 10.6667 17.9301 10.6667 18.6665C10.6667 19.4029 10.0697 19.9998 9.33333 19.9998H6.66667V27.9998C6.66667 28.7362 6.06971 29.3332 5.33333 29.3332C4.59695 29.3332 4 28.7362 4 27.9998V19.9998H1.33333C0.596954 19.9998 0 19.4029 0 18.6665ZM21.3333 21.3332C21.3333 20.5968 21.9303 19.9998 22.6667 19.9998H30.6667C31.403 19.9998 32 20.5968 32 21.3332C32 22.0696 31.403 22.6665 30.6667 22.6665H28V27.9998C28 28.7362 27.403 29.3332 26.6667 29.3332C25.9303 29.3332 25.3333 28.7362 25.3333 27.9998V22.6665H22.6667C21.9303 22.6665 21.3333 22.0696 21.3333 21.3332Z" fill="currentColor" />
 </svg>
                           </button>
@@ -5341,7 +5341,7 @@
                           <button class="filter-main__clear"><span>Очистить фильтры</span><span class="filter-main__clear-close"></span></button>
                         </div>
                       </form>
-                      <div class="filter-advanced">
+                      <div class="filter-advanced none" data-filter-id="filterAdvanced">
                         <button class="filter-advanced__close"><span></span><span></span></button>
                         <form action="#"> 
                           <h3 class="filter-advanced__title">Фильтр по товарам</h3>
@@ -5357,11 +5357,11 @@
                               </div>
                             </li>
                             <li class="filter-advanced__item">
-                              <button><span>Размер</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <button class="filter-advanced__btn-tabs"><span>Размер</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="currentColor" />
 </svg>
                               </button>
-                              <ul> 
+                              <ul class="filter-advanced__list-points">
                                 <li> 
                                         <div class="dflt-checkbox">
                                           <input class="dflt-checkbox__input" type="checkbox" id="filterAdvanced42" checked>
@@ -5413,11 +5413,11 @@
                               </ul>
                             </li>
                             <li class="filter-advanced__item">
-                              <button><span>Цвет</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <button class="filter-advanced__btn-tabs"><span>Цвет</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="currentColor" />
 </svg>
                               </button>
-                              <ul> 
+                              <ul class="filter-advanced__list-points">
                                 <li> 
                                         <div class="dflt-checkbox">
                                           <input class="dflt-checkbox__input" type="checkbox" id="filterAdvancedWhite" checked>
@@ -5437,11 +5437,11 @@
                               </ul>
                             </li>
                             <li class="filter-advanced__item">
-                              <button><span>Категория одежды</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <button class="filter-advanced__btn-tabs"><span>Категория одежды</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="currentColor" />
 </svg>
                               </button>
-                              <ul> 
+                              <ul class="filter-advanced__list-points">
                                 <li> 
                                         <div class="dflt-checkbox">
                                           <input class="dflt-checkbox__input" type="checkbox" id="filterAdvancedDresses" checked>
@@ -5461,11 +5461,11 @@
                               </ul>
                             </li>
                             <li class="filter-advanced__item">
-                              <button><span>Силуэт</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <button class="filter-advanced__btn-tabs"><span>Силуэт</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="currentColor" />
 </svg>
                               </button>
-                              <ul> 
+                              <ul class="filter-advanced__list-points">
                                 <li> 
                                         <div class="dflt-checkbox">
                                           <input class="dflt-checkbox__input" type="checkbox" id="filterAdvancedDresses" checked>
@@ -5485,11 +5485,11 @@
                               </ul>
                             </li>
                             <li class="filter-advanced__item">
-                              <button><span>Тип рукава</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <button class="filter-advanced__btn-tabs"><span>Тип рукава</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="currentColor" />
 </svg>
                               </button>
-                              <ul> 
+                              <ul class="filter-advanced__list-points">
                                 <li> 
                                         <div class="dflt-checkbox">
                                           <input class="dflt-checkbox__input" type="checkbox" id="filterAdvancedDresses" checked>
@@ -5509,11 +5509,11 @@
                               </ul>
                             </li>
                             <li class="filter-advanced__item">
-                              <button><span>Длина изделия</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <button class="filter-advanced__btn-tabs"><span>Длина изделия</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="currentColor" />
 </svg>
                               </button>
-                              <ul> 
+                              <ul class="filter-advanced__list-points">
                                 <li> 
                                         <div class="dflt-checkbox">
                                           <input class="dflt-checkbox__input" type="checkbox" id="filterAdvancedDresses" checked>
@@ -5533,11 +5533,11 @@
                               </ul>
                             </li>
                             <li class="filter-advanced__item">
-                              <button><span>Эпоха и стиль</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <button class="filter-advanced__btn-tabs"><span>Эпоха и стиль</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="currentColor" />
 </svg>
                               </button>
-                              <ul> 
+                              <ul class="filter-advanced__list-points">
                                 <li> 
                                         <div class="dflt-checkbox">
                                           <input class="dflt-checkbox__input" type="checkbox" id="filterAdvancedDresses" checked>
@@ -5557,7 +5557,7 @@
                               </ul>
                             </li>
                             <li class="filter-advanced__item">
-                              <button><span>Эпоха и стиль</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <button class="filter-advanced__btn-tabs"><span>Эпоха и стиль</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z" fill="currentColor" />
 </svg>
                               </button>
