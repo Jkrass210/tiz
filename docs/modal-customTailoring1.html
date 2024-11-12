@@ -27,29 +27,29 @@
               <ul class="form-name-contacts__list-name">
                 <li class="form-name-contacts__input--error">
                   <label for="customTailoringSurname">Фамилия</label>
-                  <input class="dflt-input" type="text" id="customTailoringSurname">
+                  <input class="dflt-input" type="text" id="customTailoringSurname" autocomplete="off">
                 </li>
                 <li> 
                   <label for="customTailoringName">Имя</label>
-                  <input class="dflt-input" type="text" id="customTailoringName">
+                  <input class="dflt-input" type="text" id="customTailoringName" autocomplete="off">
                 </li>
                 <li> 
                   <label for="customTailoringLastname">Отчество</label>
-                  <input class="dflt-input" type="text" id="customTailoringLastname">
+                  <input class="dflt-input" type="text" id="customTailoringLastname" autocomplete="off">
                 </li>
               </ul>
               <ul class="form-name-contacts__list-contacts">
                 <li class="form-name-contacts__input--error">
                   <label for="customTailoringPhone">Телефон</label>
-                  <input class="dflt-input" type="text" id="customTailoringPhone" placeholder="+7">
+                  <input class="dflt-input" type="text" id="customTailoringPhone" placeholder="+7" autocomplete="off">
                 </li>
                 <li> 
                   <label for="customTailoringEmail">E-mail</label>
-                  <input class="dflt-input" type="text" id="customTailoringEmail">
+                  <input class="dflt-input" type="text" id="customTailoringEmail" autocomplete="off">
                 </li>
               </ul>
               <label class="dflt-label" for="customTailoringTextarea">Комментарий к заказу</label>
-              <textarea class="dflt-textarea" id="customTailoringTextarea"></textarea>
+              <textarea class="dflt-textarea" id="customTailoringTextarea" autocomplete="off"></textarea>
           <ul class="modal__group-btn-row">
             <li> <a class="dflt-bttn" href="#">Заказать звонок менеджера</a></li>
             <li><a class="dflt-bttn dflt-bttn_ghost modal__link-open" href="#" id="customTailoringWindowSize">Заполнить анкету с мерками</a></li>
@@ -68,30 +68,46 @@
             <div class="modal__swiper-wrapper swiper-wrapper">
               <div class="modal__swiper-slide swiper-slide">
                     <div class="card-size">
-                      <h3 class="card-size__title">Измерение объема талии</h3><img class="card-size__img" src="img/modal-img-1.jpg" alt="img">
+                      <h3 class="card-size__title">Измерение объема талии</h3>
+                      <video class="card-size__video" autoplay loop muted playsinline>
+                        <source src="img/video/video.mp4" type="video/mp4">
+                        <source src="img/video/video.webm" type="video/webm">
+                      </video>
                           <label class="dflt-label" for="customTailoringSizeWaist1">Объем талии (см)</label>
-                          <input class="dflt-input" type="text" id="customTailoringSizeWaist1">
+                          <input class="dflt-input" type="text" id="customTailoringSizeWaist1" autocomplete="off">
                     </div>
               </div>
               <div class="modal__swiper-slide swiper-slide">
                     <div class="card-size">
-                      <h3 class="card-size__title">Измерение ширины плеч</h3><img class="card-size__img" src="img/modal-img-1.jpg" alt="img">
+                      <h3 class="card-size__title">Измерение ширины плеч</h3>
+                      <video class="card-size__video" autoplay loop muted playsinline>
+                        <source src="img/video/video.mp4" type="video/mp4">
+                        <source src="img/video/video.webm" type="video/webm">
+                      </video>
                           <label class="dflt-label" for="customTailoringSizeShoulders1">Ширина плеч (см)</label>
-                          <input class="dflt-input" type="text" id="customTailoringSizeShoulders1">
+                          <input class="dflt-input" type="text" id="customTailoringSizeShoulders1" autocomplete="off">
                     </div>
               </div>
               <div class="modal__swiper-slide swiper-slide">
                     <div class="card-size">
-                      <h3 class="card-size__title">Измерение объема груди</h3><img class="card-size__img" src="img/modal-img-1.jpg" alt="img">
+                      <h3 class="card-size__title">Измерение объема груди</h3>
+                      <video class="card-size__video" autoplay loop muted playsinline>
+                        <source src="img/video/video.mp4" type="video/mp4">
+                        <source src="img/video/video.webm" type="video/webm">
+                      </video>
                           <label class="dflt-label" for="customTailoringSizeBreast1">Объем груди (см)</label>
-                          <input class="dflt-input" type="text" id="customTailoringSizeBreast1">
+                          <input class="dflt-input" type="text" id="customTailoringSizeBreast1" autocomplete="off">
                     </div>
               </div>
               <div class="modal__swiper-slide swiper-slide">
                     <div class="card-size">
-                      <h3 class="card-size__title">Измерение объема бедер</h3><img class="card-size__img" src="img/modal-img-1.jpg" alt="img">
+                      <h3 class="card-size__title">Измерение объема бедер</h3>
+                      <video class="card-size__video" autoplay loop muted playsinline>
+                        <source src="img/video/video.mp4" type="video/mp4">
+                        <source src="img/video/video.webm" type="video/webm">
+                      </video>
                           <label class="dflt-label" for="customTailoringSizeHip1">Объем бедер (см)</label>
-                          <input class="dflt-input" type="text" id="customTailoringSizeHip1">
+                          <input class="dflt-input" type="text" id="customTailoringSizeHip1" autocomplete="off">
                     </div>
               </div>
             </div>
@@ -110,52 +126,52 @@
         <form class="modal__form" action="#">
           <h2 class="modal__title">Пошив на заказ</h2>
           <p class="modal__desc-name">Костюм Снегурочки «Великий Устюг», мод. № 31</p>
-          <p class="modal__desc">Заполните общие данные о заказчике и желаемом изделии, чтобы мы могли Вас проконсультировать</p>
+          <p class="modal__desc">Проверьте данные заявки перед отправкой. Наш менеджер свяжется с вами в ближайшее время, чтобы обсудить детали заказа.</p>
               <ul class="form-name-contacts__list-name">
                 <li class="form-name-contacts__input--error">
                   <label for="customTailoringSurname1">Фамилия</label>
-                  <input class="dflt-input" type="text" id="customTailoringSurname1">
+                  <input class="dflt-input" type="text" id="customTailoringSurname1" autocomplete="off">
                 </li>
                 <li> 
                   <label for="customTailoringName1">Имя</label>
-                  <input class="dflt-input" type="text" id="customTailoringName1">
+                  <input class="dflt-input" type="text" id="customTailoringName1" autocomplete="off">
                 </li>
                 <li> 
                   <label for="customTailoringLastname1">Отчество</label>
-                  <input class="dflt-input" type="text" id="customTailoringLastname1">
+                  <input class="dflt-input" type="text" id="customTailoringLastname1" autocomplete="off">
                 </li>
               </ul>
               <ul class="form-name-contacts__list-contacts">
                 <li class="form-name-contacts__input--error">
                   <label for="customTailoringPhone1">Телефон</label>
-                  <input class="dflt-input" type="text" id="customTailoringPhone1" placeholder="+7">
+                  <input class="dflt-input" type="text" id="customTailoringPhone1" placeholder="+7" autocomplete="off">
                 </li>
                 <li> 
                   <label for="customTailoringEmail1">E-mail</label>
-                  <input class="dflt-input" type="text" id="customTailoringEmail1">
+                  <input class="dflt-input" type="text" id="customTailoringEmail1" autocomplete="off">
                 </li>
               </ul>
-          <h3 class="modal__caption">Мерки заказчика</h3>
+          <h3 class="modal__caption caption">Мерки заказчика</h3>
           <ul class="modal__list-customer">
             <li> 
                   <label class="dflt-label" for="customTailoringShoulders1">Ширина плеч (см)</label>
-                  <input class="dflt-input" type="text" id="customTailoringShoulders1">
+                  <input class="dflt-input" type="text" id="customTailoringShoulders1" autocomplete="off">
             </li>
             <li> 
                   <label class="dflt-label" for="customTailoringBreast1">Объем груди (см)</label>
-                  <input class="dflt-input" type="text" id="customTailoringBreast1">
+                  <input class="dflt-input" type="text" id="customTailoringBreast1" autocomplete="off">
             </li>
             <li> 
                   <label class="dflt-label" for="customTailoringWaist1">Объем талии (см)</label>
-                  <input class="dflt-input" type="text" id="customTailoringWaist1">
+                  <input class="dflt-input" type="text" id="customTailoringWaist1" autocomplete="off">
             </li>
             <li> 
                   <label class="dflt-label" for="customTailoringHip1">Объем бедер (см)</label>
-                  <input class="dflt-input" type="text" id="customTailoringHip1">
+                  <input class="dflt-input" type="text" id="customTailoringHip1" autocomplete="off">
             </li>
           </ul>
               <label class="dflt-label" for="customTailoringTextarea1">Комментарий к заказу</label>
-              <textarea class="dflt-textarea" id="customTailoringTextarea1"></textarea>
+              <textarea class="dflt-textarea" id="customTailoringTextarea1" autocomplete="off"></textarea>
           <ul class="modal__group-btn-row">
             <li> <a class="dflt-bttn dflt-bttn_ghost modal__link-open" href="#" id="customTailoringWindowSize">Назад</a></li>
             <li><a class="dflt-bttn modal__link-open" href="#" id="customTailoringWindowSent">Отправить заявку</a></li>
