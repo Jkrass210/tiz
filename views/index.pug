@@ -1,0 +1,145 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title Список страниц - Сайт ТИЗ
+
+		link(rel="apple-touch-icon", sizes="180x180", href="img/apple-touch-icon.png")
+		link(rel="icon", type="image/png", sizes="32x32", href="img/favicon-32x32.png")
+		link(rel="icon", type="image/png", sizes="16x16", href="img/favicon-16x16.png")
+
+		include layouts/styles.pug
+	body
+		.page-wrapper
+
+			style.
+				html, body, .page-wrapper {
+					height: 100%;
+				}
+				.page-wrapper { 
+					overflow: auto;
+				}
+				.pages-intro {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					width: 100%;
+					margin: 0 auto;
+					padding: 100px 40px;
+				}
+				.pages-intro__logo {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					max-width: 120px;
+					padding: 16px;
+					border: 2px solid #22313C;
+				}
+				.pages-intro__list {
+					margin: 0;
+					padding: 60px 0 0 20px;
+					list-style-type: none;
+					border-left: 2px solid #22313C;
+				}
+				.pages-intro__list > li {
+					position: relative;
+				}
+				.pages-intro__list > li:not(:last-child) {
+					margin-bottom: 16px;
+				}
+				.pages-intro__list > li:before {
+					content: '';
+					position: absolute;
+					top: calc(50% - 2px);
+					right: calc(100% + 10px);
+					transform: translateY(-50%);
+					display: block;
+					width: 10px;
+					height: 2px;
+					background: #22313C;
+				}
+				.pages-intro__list > li > a {
+					font-size: 24px;
+					line-height: 1;
+					font-weight: 600px;
+				}
+				.pages-intro__list > li > a:hover {
+					text-decoration: underline;
+				}
+
+			.pages-intro
+				.pages-intro__logo
+					img(src="img/main-logo-red.png", alt="Сайт ТИЗ")
+				ul.pages-intro__list
+					li
+						a(href="home.html") Главная
+					li
+						a(href="catalog.html") Каталог
+					li
+						a(href="catalog-zero.html") Каталог - не найдено
+					li
+						a(href="catalog-made.html") Каталог - Производство
+					li
+						a(href="catalog-rental.html") Каталог - Прокат
+					li
+						a(href="favorites.html") Избранное
+					li
+						a(href="product-card.html") Карточка товара
+					li
+						a(href="product-card-none.html") Карточка товара - Нет в наличии
+					li
+						a(href="product-card-slider.html") Карточка товара больше 6 фотографийы
+					li
+						a(href="product-card-rent.html") Карточка проката
+					li
+						a(href="product-card-made.html") Карточка производственного образца
+					li
+						a(href="services.html") Услуги фабрики
+					li
+						a(href="reviews.html") Отзывы о фабрике
+					li
+						a(href="reviews-1.html") Отзывы - Наши покупатели
+					li
+						a(href="reviews-2.html") Отзывы - Театры и организации
+					li
+						a(href="about-fabric.html") Производство - О фабрике
+					li
+						a(href="history.html") Производство - История
+					li
+						a(href="blog.html") Журнал (новости)
+					li
+						a(href="blog-post.html") Статья (новости)
+					li
+						a(href="contacts.html") Контакты
+					li
+						a(href="user.html") Личный кабинет
+					li
+						a(href="user-empty.html") Личный кабинет - Нет заказов и рек
+					li
+						a(href="user-settings.html") Личный кабинет - Настройки профиля
+					li
+						a(href="basket.html") Корзина
+					li
+						a(href="order-1.html") Оформление заказа - Данные получателя
+					li
+						a(href="order-2.html") Оформление заказа - Выбор доставки
+					li
+						a(href="order-3.html") Оформление заказа - Способ оплаты
+					li
+						a(href="modal-consult.html") Модальное окно - Нужна консультация
+					li
+						a(href="modal-rental.html") Модальное окно - Прокат костюма
+					li
+						a(href="modal-measurements.html") Модальное окно - Снятие мерок
+					li
+						a(href="modal-addReview.html") Модальное окно - Добавить отзыв
+					li
+						a(href="modal-customTailoring.html") Модальное окно - Пошив на заказ
+					li
+						a(href="modal-customTailoring1.html") Модальное окно - Пошив на заказ.1
+					li
+						a(href="search.html") Поиск
+
+		include layouts/scripts.pug

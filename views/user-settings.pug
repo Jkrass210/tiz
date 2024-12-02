@@ -1,0 +1,120 @@
+include layouts/mixins.pug
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title Настройки профиля - Сайт ТИЗ
+
+
+		link(rel="apple-touch-icon", sizes="180x180", href="img/apple-touch-icon.png")
+		link(rel="icon", type="image/png", sizes="32x32", href="img/favicon-32x32.png")
+		link(rel="icon", type="image/png", sizes="16x16", href="img/favicon-16x16.png")
+		
+
+		include layouts/styles.pug
+	body
+		.page-wrapper
+
+			include layouts/header.pug
+
+			.dflt-breadcrumbs
+				.container
+					ul
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Личный кабинет
+						li 
+							span Настройки профиля
+							
+			section.settings-profile
+				.container
+					h1.settings-profile__title Настройки профиля
+					.settings-profile__form-wrapp 
+						form(action="#" autocomplete="off").settings-profile__form
+							h3.settings-profile__caption Данные пользователя
+							ul.settings-profile__list-name 
+								li.settings-profile__input--error
+									label(for="userSurname") Фамилия
+									input(type="text" id="userSurname" autocomplete="off").dflt-input
+								li 
+									label(for="userName") Имя
+									input(type="text" id="userName" autocomplete="off").dflt-input
+								li 
+									label(for="userLastname") Отчество
+									input(type="text" id="userLastname" autocomplete="off").dflt-input
+							ul.settings-profile__list-contacts
+								li.settings-profile__input--error
+									label(for="userPhone") Телефон
+									input(type="text" id="userPhone" placeholder="+7" autocomplete="off").dflt-input
+								li 
+									label(for="userEmail") E-mail
+									input(type="text" id="userEmail" autocomplete="off").dflt-input
+							h3.settings-profile__caption Реквизиты компании
+							ul.settings-profile__list-name 
+								li 
+									label(for="companySurname") Фамилия
+									input(type="text" id="companySurname" autocomplete="off").dflt-input
+								li 
+									label(for="companyName") Имя
+									input(type="text" id="companyName" autocomplete="off").dflt-input
+								li 
+									label(for="companyLastname") Отчество
+									input(type="text" id="companyLastname" autocomplete="off").dflt-input
+							ul.settings-profile__list-contacts.company
+								li.settings-profile__input--error
+									label(for="companyPhone") Телефон
+									input(type="text" id="companyPhone" placeholder="+7" autocomplete="off").dflt-input
+								li 
+									label(for="companyEmail") E-mail
+									input(type="text" id="companyEmail" autocomplete="off").dflt-input
+								li 
+									label(for="companyFax") Факс
+									input(type="text" id="companyFax" autocomplete="off").dflt-input
+								li 
+									label(for="companyNameCompany") Наименование организации
+									input(type="text" id="companyNameCompany" autocomplete="off").dflt-input
+								li 
+									label(for="legalAddress") Юридический адрес
+									input(type="text" id="legalAddress" autocomplete="off").dflt-input
+								li 
+									label(for="actualAddress") Фактический адрес
+									input(type="text" id="actualAddress" autocomplete="off").dflt-input
+								li 
+									label(for="postalAddress") Почтовый адрес
+									input(type="text" id="postalAddress" autocomplete="off").dflt-input
+								li 
+									label(for="inn") ИНН
+									input(type="text" id="inn" autocomplete="off").dflt-input
+								li 
+									label(for="paymentAccount") Расчетный счет
+									input(type="text" id="paymentAccount" autocomplete="off").dflt-input
+								li 
+									label(for="bankName") Наименование банка
+									input(type="text" id="bankName" autocomplete="off").dflt-input
+								li.settings-profile__input--error
+									label(for="bankAccount") Кор. счет банка
+									input(type="text" id="bankAccount" autocomplete="off").dflt-input
+								li 
+									label(for="bic") БИК
+									input(type="text" id="bic" autocomplete="off").dflt-input
+								li 
+									label(for="ogrn") ОГРН
+									input(type="text" id="ogrn" autocomplete="off").dflt-input
+								li 
+									label(for="kpp") КПП
+									input(type="text" id="kpp" autocomplete="off").dflt-input
+							h3.settings-profile__caption Смена пароля
+							.settings-profile__list-password
+								+form-password("Старый пароль","Новый пароль","userSettOldPassword","userSettNewPassword")
+							
+							button.dflt-bttn
+								span Сохранить изменения
+
+			include layouts/s-subscribe.pug
+			
+			include layouts/footer.pug
+
+		include layouts/scripts.pug

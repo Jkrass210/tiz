@@ -1,0 +1,1777 @@
+.stop-scroll 
+  overflow: hidden
+	
+.showcase-plates
+	&__slider
+		&-item
+			height: 890px
+			overflow: hidden
+			&-link
+				height: 100%
+				position: relative
+				display: flex
+			&-img
+				position: relative
+				z-index: 1
+				width: 100%
+				height: 100%
+				object-fit: cover
+			&-title
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				z-index: 2
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 60px
+				&:hover
+					&:before
+						opacity: 1
+					span
+						transform: scale(1)
+						opacity: 1
+						color:#FFF
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+					right: 0
+					bottom: 0
+					z-index: 1
+					background: rgba(50, 97, 109, 0.66)
+					opacity: 0
+					transition: all .3s ease
+				span
+					position: relative
+					z-index: 2
+					transform: scale(1.75)
+					display: inline-flex
+					font-family: 'EB Garamond', sans-serif
+					font-size: 84px
+					line-height: 1
+					font-weight: 500
+					text-align: center
+					color:#153138
+					transition: all .3s ease
+					opacity: 0
+
+.products-plates
+	user-select: none
+	padding: 72px 0
+	&__title
+		position: relative
+		z-index: 2
+		display: inline-flex
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 40px
+		line-height: 1.1
+		font-weight: 400
+	&__slider
+		position: relative
+		z-index: 1
+		margin-top: -80px
+		padding-top: 80px
+		&_bttn
+			.products-plates__slider-nav
+				.swiper-button-prev,
+				.swiper-button-next
+					background: #E9EEEF
+		&-item
+			position: relative
+			&-fav
+				position: absolute
+				top: 20px
+				right: 16px
+				z-index: 2
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 24px
+				height: 24px
+				&.active
+					svg
+						path
+							fill: #AE1917
+				svg
+					width: 100%
+			&-link
+				position: relative
+				z-index: 1
+				display: flex
+				flex-direction: column
+				&:hover
+					.products-plates__slider-item-img
+						img
+							transform: scale(1.05)
+				& > *:last-child
+					margin-bottom: 0
+			&-img
+				display: flex
+				align-items: flex-end
+				justify-content: center
+				width: 100%
+				height: 516px
+				margin-bottom: 16px
+				background: #F5F5F5
+				overflow: hidden
+				img
+					width: auto
+					height: 95%
+					transition: all 1s ease
+			&-name
+				margin-bottom: 12px
+				line-height: 1
+				font-weight: 600
+				color:#53818C
+			&-price
+				line-height: 1
+				font-weight: 600
+				color:#153138
+		&-nav
+			position: absolute
+			top: 0
+			right: 0
+			display: flex
+			.swiper-button-prev,
+			.swiper-button-next
+				position: static
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				margin: 0
+				padding: 0
+				border-radius: 5px
+				&:after
+					content: none
+					display: none
+					visibility: hidden
+				svg
+					max-width: 20px
+			.swiper-button-next
+				margin-left: 16px
+
+.story-line
+	padding: 72px 0
+	&__inner
+		display: flex
+		flex-wrap: wrap
+	&__col
+		width: 50%
+		&:nth-child(1)
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			padding-right: 100px
+	&__row
+		width: 100%
+		margin-top: 52px
+	&__img1,
+	&__img2,
+	&__img
+		width: 100%
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__img1
+		height: 930px
+	&__img2
+		height: 538px
+		margin: 52px 0
+	&__img3
+		height: 994px
+	&__title
+		margin: 0
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__desc
+		margin: 0 0 32px
+		font-size: 20px
+		font-weight: 600
+		color:#1A2122
+	&__link
+		display: inline-flex
+		padding: 16px 0
+		border-radius: 2px
+		border-bottom: 1px solid #53818C
+		font-weight: 600
+		color:#53818C
+		transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out
+		&:hover
+			color:#811429
+			border-color:#811429
+		&:active
+			color:#153138
+			border-color:#153138
+
+.get-callback
+	&__inner
+		display: flex
+	&__col
+		width: 50%
+		flex-shrink: 0
+	&__img
+		height: 100%
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__info
+		height: 100%
+		padding: 72px 138px 57px 240px
+		background: #F5F5F5
+	&__title
+		margin: 0 0	16px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		font-weight: 400
+		line-height: 1.1
+		color:#000
+	&__desc
+		margin: 0 0 52px
+		font-size: 20px
+		font-weight: 600
+		color:#000
+	&__list
+		margin: 0 0 52px
+		padding: 0
+		list-style-type: none
+		li
+			position: relative
+			padding-left: 64px
+			font-weight: 600
+			color:#000
+			&:not(:last-child):before
+				content: ''
+				position: absolute
+				left: 21px
+				top: 21px
+				bottom: -51px
+				z-index: 1
+				display: flex
+				border: 2px dashed #C4D3D7
+			&:not(:last-child)
+				margin-bottom: 30px
+			span
+				position: absolute
+				left: 0
+				top: 0
+				z-index: 2
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 46px
+				height: 46px
+				border-radius: 50%
+				overflow: hidden
+				font-family: 'EB Garamond', sans-serif
+				font-size: 32px
+				line-height: 1.1
+				font-weight: 400
+				text-align: center
+				color:#153138
+				background: #C4D3D7
+
+
+.subscribe
+	user-select: none
+	padding: 40px 0
+	border-bottom: 1px solid #C4D3D7
+	background: #F5F5F5
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__info,
+	&__form
+		width: calc(50% - 60px)
+	&__title
+		margin: 0 0 24px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 32px
+		font-weight: 400
+		line-height: 1.1
+		color:#000
+	&__desc
+		margin: 0
+		color:#000
+	&__form
+		&-title
+			display: inline-flex
+			margin-bottom: 8px
+			font-size: 16px
+			font-weight: 600
+			color:#000
+		&-row
+			display: flex
+			margin-bottom: 16px
+			.dflt-input
+				flex-grow: 1
+				margin-right: 24px
+
+.footer
+	padding: 40px 0 50px
+	background: #F5F5F5
+	&__inner
+		display: flex
+		justify-content: space-between
+	&__col
+		display: flex
+		align-items: flex-start
+		&:first-child
+			width: 50%
+		&:last-child
+			width: calc(50% - 60px)
+	&__logo
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		max-width: 62px
+		width: auto
+		margin-right: 100px
+	&__menu
+		display: flex
+		flex-grow: 1
+		justify-content: space-between
+		&-col
+			width: calc(50% - 36px)
+		&-title
+			display: inline-flex
+			margin-bottom: 20px
+			font-family: 'EB Garamond', sans-serif
+			font-size: 24px
+			font-weight: 400
+			color:#000
+		&-list
+			margin: 0
+			padding: 0
+			list-style-type: none
+			li
+				&:not(:last-child)
+					margin-bottom: 20px
+				a
+					display: inline-flex
+					font-size: 16px
+					font-weight: 500
+					color:#53818C
+					transition: color 0.4s ease-in-out
+				a:hover
+					color: #ae1917
+				a:active
+					color: #811429
+	&__contacts
+		display: flex
+		flex-direction: column
+		&-address
+			margin: 0	0 28px
+			font-size: 16px
+			color:#22313C
+			span
+				font-weight: 600
+		&-link
+			display: flex
+			align-items: center
+			transition: color 0.4s ease-in-out
+			&:hover
+				color: #ae1917
+			&:active
+				color: #811429
+			&:not(:last-child)
+				margin-bottom: 8px
+			svg
+				margin-right: 12px
+	&__socials
+		display: flex
+		align-items: center
+		margin: 0 0 0 auto
+		padding: 0
+		list-style-type: none
+		li
+			&:not(:last-child)
+				margin-right: 16px
+			a
+				display: flex
+				align-items: center
+				justify-content: center
+				color: #53818c
+				transition: color 0.4s ease-in-out
+			a:hover
+				color: #153138
+			a:active
+				color: #811429
+	&__bottom
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		&-text
+			margin: 0
+			font-size: 16px
+			font-weight: 500
+			color:#8A8A8A
+
+.reviews-content
+	&__title
+		margin: 0 0 52px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__add-more
+		margin-bottom: 24px
+	&__inner
+		display: flex
+	&__customers
+		flex-grow: 1
+		margin-right: 20px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: start
+	&__orgs
+		flex-shrink: 0
+		width: 526px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: start
+	&__subtitle
+		margin: 0 0 24px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 32px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+		> span
+			font-size: 24px
+			color:#B1B1B3
+	&__orgs-item
+		min-height: 458px
+		margin-bottom: 16px
+		padding: 20px
+		border: 1px solid #C4D3D7
+		border-radius: 2px
+		&-top
+			display: flex
+			margin-bottom: 16px
+		&-icon
+			flex-shrink: 0
+			width: 100px
+			height: 100px
+			margin-right: 16px
+			overflow: hidden
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-info
+			display: flex
+			flex-direction: column
+			justify-content: center
+			flex-grow: 1
+		&-author
+			display: inline-flex
+			font-size: 20px
+			font-weight: 600
+			letter-spacing: 0.4px
+		&-name
+			font-size: 16px
+			font-weight: 600
+			color:#B1B1B3
+		&-text
+			margin: 0
+			font-size: 16px
+	&__customers-item
+		margin-bottom: 16px
+		&-inner
+			padding: 24px
+			border: 1px solid #C4D3D7
+			border-radius: 2px
+		&-author
+			margin-bottom: 16px
+			font-size: 20px
+			font-weight: 600
+		&-text
+			margin: 0 0 16px
+			font-size: 16px
+			color:#454443
+		&-gallery
+			display: flex
+			align-items: center
+			margin: 0 0 16px
+			padding: 0
+			list-style-type: none
+			li
+				&:not(:last-child)
+					margin-right: 16px
+				a
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 100px
+					height: 130px
+					border-radius: 2px
+					overflow: hidden
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+		&-date-time
+			font-size: 16px
+			font-weight: 600
+			color:#B1B1B3
+			span
+				display: inline-flex
+				&:nth-child(1)
+					margin-right: 10px
+		&-answer
+			position: relative
+			margin-left: 28px
+			margin-top: 16px
+			padding: 24px
+			border: 1px solid #C4D3D7
+			border-radius: 2px
+			background: #F5F5F5
+			&-icon
+				position: absolute
+				top: 0
+				right: calc(100% + 10px)
+			&-author
+				margin-bottom: 16px
+				font-size: 20px
+				font-weight: 600
+				color:#000
+			&-text
+				margin: 0 0 16px
+				font-size: 16px
+			&-date-time
+				font-size: 16px
+				font-weight: 600
+				color:#B1B1B3
+				span
+					display: inline-flex
+					&:nth-child(1)
+						margin-right: 10px
+	&__customers-item-author-wrapp
+		display: flex
+		gap: 24px
+
+
+
+
+		
+.posters-plates
+	padding: 52px 0
+	&__title
+		position: relative
+		z-index: 2
+		display: inline-flex
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 40px
+		line-height: 1.1
+		font-weight: 400
+	&__slider
+		position: relative
+		z-index: 1
+		margin-top: -80px
+		padding-top: 80px
+		&-item
+			position: relative
+			&-link
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 100%
+				height: 522px
+				overflow: hidden
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+		&-nav
+			position: absolute
+			top: 0
+			right: 0
+			display: flex
+			.swiper-button-prev,
+			.swiper-button-next
+				position: static
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				margin: 0
+				padding: 0
+				border-radius: 5px
+				background: #E9EEEF
+				&:after
+					content: none
+					display: none
+					visibility: hidden
+				svg
+					max-width: 20px
+			.swiper-button-next
+				margin-left: 16px
+
+.services
+	padding: 20px 0 72px
+	&__title
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+	&__list
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		column-gap: 20px
+		row-gap: 40px
+		&-item
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			padding: 0 20px
+			&-icon
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 100px
+				height: 100px
+				margin-bottom: 16px
+				svg
+					max-height: 100%
+					width: 100%
+					height: auto
+			&-title
+				margin: 0 0 16px
+				font-family: 'EB Garamond', sans-serif
+				font-size: 36px
+				line-height: 1.1
+				font-weight: 400
+				color:#153138
+			&-desc
+				margin: 0 0 20px
+				font-size: 16px
+			&-link
+				display: inline-flex
+				margin-top: auto
+				padding: 16px 0
+				border-radius: 2px
+				border-bottom: 1px solid #53818C
+				font-weight: 600
+				color:#53818C
+				transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out
+				&:hover
+					color: #811429
+					border-color: #811429
+				&:active
+					color: #153138
+					border-color: #153138
+
+.main-story
+	padding: 20px 0 72px
+	&__title
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__row
+		display: flex
+		&:nth-child(1)
+			height: 484px
+			margin-bottom: 40px
+		&:nth-child(2)
+			height: 616px
+	&__desc
+		flex-grow: 1
+		margin: 0
+		&-link
+			position: relative
+			&::before
+				position: absolute
+				content: ""
+				left: 0
+				width: 100%
+				height: 1px
+				bottom: -3px
+				background-color: #22313C
+			&:hover
+				color: #811429
+				&::before
+					background-color: #811429
+
+				
+	&__img1
+		flex-shrink: 0
+		width: 710px
+		margin-left: 140px
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__img2
+		flex-shrink: 0
+		width: 922px
+		margin-right: 32px
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__img3
+		flex-grow: 1
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+.other-stories
+	&__list
+		&-item
+			margin-bottom: 72px
+			&-title
+				margin: 0 0 40px
+				font-family: 'EB Garamond', sans-serif
+				font-size: 40px
+				line-height: 1.1
+				font-weight: 400
+				color:#000
+			&-info
+				display: flex
+			&-desc
+				margin: 0
+			&-img
+				flex-shrink: 0
+				width: 418px
+				margin-left: 40px
+				&-inner
+					height: 578px
+					margin-bottom: 20px
+					overflow: hidden
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+				&-desc
+					margin: 0
+					font-size: 14px
+					color:#000
+				
+.fabric-intro
+	padding-bottom: 52px
+	&__title
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__inner
+		display: flex
+	&__col
+		width: 50%
+		&:nth-child(1)
+			padding-right: 100px
+	&__desc
+		margin: 0 0 52px
+	&__img1,
+	&__img2
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__img1
+		height: 780px
+	&__img2
+		height: 538px
+		margin-bottom: 52px
+
+.banner-gallery
+	padding: 52px 0
+	&__title
+		position: relative
+		z-index: 2
+		display: inline-flex
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 40px
+		line-height: 1.1
+		font-weight: 400
+	&__slider
+		position: relative
+		z-index: 1
+		margin-top: -80px
+		padding-top: 80px
+		&-item
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			grid-auto-rows: 236px
+			column-gap: 2px
+			row-gap: 2px
+			&-img
+				overflow: hidden
+				&:nth-child(1)
+					grid-column: 1 / 3
+					grid-row: 1 / 4
+				&:nth-child(2)
+					grid-column: 3 / 4
+					grid-row: 1 / 2
+				&:nth-child(3)
+					grid-column: 3 / 4
+					grid-row: 2 / 3
+				&:nth-child(4)
+					grid-column: 3 / 4
+					grid-row: 3 / 4
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+		&-nav
+			position: absolute
+			top: 0
+			right: 0
+			display: flex
+			.swiper-button-prev,
+			.swiper-button-next
+				position: static
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				margin: 0
+				padding: 0
+				border-radius: 5px
+				&:after
+					content: none
+					display: none
+					visibility: hidden
+				svg
+					max-width: 20px
+			.swiper-button-next
+				margin-left: 16px
+
+.clients-logos
+	user-select: none
+	padding: 52px 0
+	&__title
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 166px
+		height: 166px
+		filter: grayscale(1)
+		transition: all .3s ease
+		&:hover
+			filter: grayscale(0)
+		img
+			max-width: 100%
+			max-height: 100%
+			width: auto
+			height: auto
+
+.items-stories
+	user-select: none
+	padding: 52px 0
+	&__title
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__item
+		display: flex
+		margin-bottom: 40px
+		border: 1px solid #C4D3D7
+		border-radius: 2px
+		&-info
+			flex-grow: 1
+			padding: 32px 40px
+		&-title
+			margin: 0 0 24px
+			font-family: 'EB Garamond', sans-serif
+			font-size: 32px
+			line-height: 1.1
+			font-weight: 400
+			color:#000
+		&-desc
+			margin: 0 0 24px
+			font-size: 16px
+		&-img
+			position: relative
+			flex-shrink: 0
+			width: 410px
+			&-inner
+				position: absolute
+				left: 0
+				top: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 100%
+				height: 100%
+				overflow: hidden
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+
+.blog-main
+	padding: 20px 0 72px
+	&__title
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__nav
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 40px
+	&__category
+		display: flex
+		align-items: center
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			&:not(:last-child)
+				margin-right: 20px
+			a
+				display: inline-flex
+				padding: 12px 16px
+				border-radius: 40px
+				font-size: 16px
+				line-height: 1.2
+				font-weight: 500
+				color:#53818C
+				background: #E9EEEF
+	&__date-select
+		position: relative
+		&.active
+			.blog-main__date-select
+				&-dropdown
+					display: block
+					visibility: visible
+		&-bttn
+			position: relative
+			z-index: 1
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 10px 0
+			font-size: 16px
+			font-weight: 500
+			color:#53818C
+			svg
+				margin-left: 8px
+		&-dropdown
+			position: absolute
+			top: 100%
+			right: 0
+			z-index: 2
+			display: none
+			visibility: hidden
+			margin: 0
+			padding: 0
+			list-style-type: none
+			border-radius: 5px
+			box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.10)
+			overflow: hidden
+			background: #F5F5F5
+			li
+				display: flex
+				button,
+				input
+					display: flex
+					flex-grow: 1
+					padding: 10px 24px
+					border: none
+					font-size: 16px
+					white-space: nowrap
+					background: transparent
+					transition: all .3s ease
+					&:hover
+						color:#F5F5F5
+						background: #53818C
+				input::placeholder
+					opacity: 1
+	&__list
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		column-gap: 20px
+		row-gap: 32px
+	&__item
+		display: flex
+		flex-direction: column
+		&-img
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: 318px
+			margin-bottom: 16px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-date
+			display: flex
+			margin-bottom: 16px
+			font-size: 16px
+			color:#8A8A8A
+		&-title
+			display: flex
+			margin-bottom: 16px
+			font-family: 'EB Garamond', sans-serif
+			font-size: 32px
+			line-height: 1.1
+			font-weight: 400
+			color:#000
+		&-desc
+			margin: 0
+			font-size: 16px
+	&__pagination
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 40px
+
+.product-card
+	padding-bottom: 72px
+	&__topline
+		margin-bottom: 40px
+	&__inner
+		display: flex
+	&__main
+		flex-grow: 1
+		max-width: calc(100% - 552px)
+	&__info
+		flex-shrink: 0
+		width: 512px
+		margin-left: 40px
+	/*&__photo-plates
+		display: grid
+		grid-template-columns: 1fr 1fr
+		column-gap: 16px
+		row-gap: 16px
+		grid-auto-rows: 654px
+		margin-bottom: 40px
+		&-item
+			display: flex
+			overflow: hidden
+			background: #F5F5F5
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	&__photo-slider
+		margin-bottom: 40px
+		&-main
+			margin-bottom: 16px
+			&-item
+				a
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 100%
+					height: 654px
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+		&-nav
+			position: relative
+			&-inner
+				position: relative
+				z-index: 1
+			&-item
+				button
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 100%
+					height: 324px
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+			&-prev,
+			&-next
+				position: absolute
+				top: 50%
+				z-index: 2
+				transform: translateY(-50%)
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 40px
+				margin: 0
+				padding: 0
+				border-radius: 5px
+				background: #E9EEEF
+				cursor: pointer
+				&:after
+					content: none
+					display: none
+					visibility: hidden
+				svg
+					max-width: 20px
+			&-prev
+				left: -20px
+			&-next
+				right: -20px
+				margin-left: 16px
+	&__tabs
+		&-nav
+			margin-bottom: 40px
+			ul
+				display: flex
+				align-items: center
+				margin: 0
+				padding: 0
+				list-style-type: none
+				li
+					&:not(:last-child)
+						margin-right: 40px
+					a
+						display: inline-flex
+						align-items: center
+						padding: 16px 0 14px
+						border-bottom: 2px solid transparent
+						font-size: 20px
+						font-weight: 600
+						color:#53818C
+						transition: all .3s ease
+						&:hover
+							border-color: #53818C
+						&.active
+							border-color: #53818C
+							color:#000
+						span
+							display: inline-flex
+							margin-left: 8px
+							color:#B1B1B3
+		&-content
+			&-section
+				display: none
+				visibility: hidden
+				&.active
+					display: block
+					visibility: visible
+			&-desc
+				*:last-child
+					margin-bottom: 0
+				h4
+					margin: 0 0 24px
+					font-size: 24px
+					font-weight: 700
+					color:#000
+				p
+					margin: 0 0 24px
+					font-size: 16px
+					color:#000
+				ul
+					margin: 0 0 40px
+					padding: 0
+					list-style-type: none
+					li
+						position: relative
+						padding-left: 20px
+						font-size: 16px
+						color:#000
+						&:not(:last-child)
+							margin-bottom: 20px
+						&:before
+							content: ''
+							position: absolute
+							left: 0
+							top: 50%
+							transform: translateY(-50%)
+							display: inline-flex
+							width: 8px
+							height: 8px
+							border-radius: 50%
+							background: #53818C
+			&-specs
+				&-title
+					margin: 0 0 24px
+					font-weight: 600
+					color:#000
+				&-list
+					margin: 0 0 32px
+					padding: 0
+					list-style-type: none
+					li
+						display: flex
+						align-items: flex-start
+						justify-content: space-between
+						&:not(last-child)
+							margin-bottom: 16px
+						span
+							display: inline-flex
+							overflow: hidden
+							font-size: 16px
+							&:first-child
+								flex-shrink: 0
+								margin-right: 32px
+								color:#8A8A8A
+							&:last-child
+								text-align: right
+			&-reviews
+				position: relative
+				
+	&__info
+		position: relative
+		&-inner
+			position: sticky
+			top: 16px
+		&-row
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 24px
+			.dflt-number-input
+				margin-left: 16px
+				margin-right: auto
+		&-col
+			flex-shrink: 0
+			width: calc(50% - 10px)
+	&__full-width
+		width: 100%
+	&__title
+		margin: 0 0 16px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 40px
+		line-height: 1.1
+		color:#000
+	&__desc
+		margin: 0 0 32px
+		font-size: 16px
+	&__desc-small
+		margin: 0 0 32px
+		font-size: 14px
+		&_gray
+			color:#8A8A8A
+	&__more-desc
+		margin-bottom: 32px
+		p
+			margin: 0 0 24px
+			font-weight: 600
+			color:#000
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			li
+				position: relative
+				padding-left: 20px
+				font-size: 16px
+				color:#000
+				&:not(:last-child)
+					margin-bottom: 20px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					display: inline-flex
+					width: 8px
+					height: 8px
+					border-radius: 50%
+					background: #53818C
+	&__tags
+		display: flex
+		align-items: center
+		margin-bottom: 16px
+		&-item
+			display: inline-flex
+			padding: 8px 12px
+			border-radius: 2px
+			font-size: 14px
+			color:#000
+			background: #F5F5F5
+			&:hover
+				color:#000
+			&:not(:last-child)
+				margin-right: 16px
+			&_green
+				background: #E8F0E2
+			&_red
+				background: #F1DBDF
+	&__article
+		margin-bottom: 32px
+		font-size: 16px
+		color:#8A8A8A
+	&__part-code
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		&:not(:last-child)
+			margin-bottom: 8px
+		&-number
+			font-size: 16px
+			font-weight: 600
+			color:#B1B1B3
+		.dflt-checkbox
+			&__label
+				&-text
+					span
+						color:#53818C
+	&__price
+		font-family: 'EB Garamond', sans-serif
+		font-size: 32px
+		line-height: 1.1
+	&__more-price
+		font-family: 'EB Garamond', sans-serif
+		font-size: 20px
+		line-height: 1.1
+	&__fav,
+	&__share
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 60px
+		height: 60px
+		border: 2px solid #E9EEEF
+		border-radius: 2px
+		background: #E9EEEF
+	&__fav
+		margin-left: auto
+		margin-right: 8px
+		&.active
+			svg
+				path
+					fill: #AE1917
+		
+.blog-post
+	padding-bottom: 72px
+	&__topline
+		margin-bottom: 40px
+	&__title
+		margin: 0 0 40px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__tags
+		display: flex
+		align-items: center
+		margin: 0 0 40px
+		padding: 0
+		list-style-type: none
+		li
+			&:not(:last-child)
+				margin-right: 20px
+			a
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				padding: 7px 16px
+				border-radius: 40px
+				font-size: 16px
+				font-weight: 500
+				color:#53818C
+				background: #E9EEEF
+	&__inner
+		display: flex
+	&__content
+		flex-grow: 1
+		&-img
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: 508px
+			margin-bottom: 32px
+			overflow: hidden
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		*:last-child
+			margin-bottom: 0
+		p
+			margin: 0 0 32px
+		b
+			font-size: 24px
+			font-weight: 700
+		h4
+			margin: 0 0 32px
+			font-family: 'EB Garamond', sans-serif
+			font-size: 32px
+			line-height: 1.1
+			font-weight: 400
+			color:#000
+		.border-text
+			margin: 0 0 32px
+			padding: 24px
+			border: 1px solid #C4D3D7
+			border-radius: 5px
+			color:#000
+		.quote-text
+			position: relative
+			margin: 0 0 32px
+			padding: 24px
+			border: 1px solid #C4D3D7
+			border-radius: 5px
+			color:#000
+			&:after
+				content: ''
+				position: absolute
+				right: 20px
+				bottom: 10px
+				display: inline-flex
+				width: 44px
+				height: 34px
+				background-image: url(../img/icon-quote.svg)
+				background-repeat: no-repeat
+				background-position: center
+				background-size: 100% auto
+			span
+				display: flex
+				margin-top: 24px
+				font-family: 'EB Garamond', sans-serif
+				font-size: 24px
+				line-height: 1.1
+				font-weight: 400
+				color:#53818C
+		h5
+			margin: 0 0 16px
+			font-family: 'EB Garamond', sans-serif
+			font-size: 24px
+			line-height: 1.1
+			font-weight: 400
+			color:#000
+		ul
+			margin: 0 0 16px
+			padding: 0
+			list-style-type: none
+			li
+				position: relative
+				padding-left: 20px
+				font-size: 16px
+				color:#000
+				&:not(:last-child)
+					margin-bottom: 8px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					display: inline-flex
+					width: 8px
+					height: 8px
+					border-radius: 50%
+					background: #53818C
+		ol
+			margin: 0 0 16px
+			padding: 0
+			list-style: none
+			counter-reset: chapter 0
+			li
+				display: flex
+				align-items: center
+				position: relative
+				font-size: 16px
+				color:#000
+				&:not(:last-child)
+					margin-bottom: 8px
+				&:before
+					content: counter(chapter) "."
+					counter-increment: chapter
+					position: static
+					margin-right: 8px
+					font-weight: 600
+
+	&__aside
+		flex-shrink: 0
+		width: 296px
+		margin-left: 20px
+	&__other-posts
+		position: sticky
+		top: 16px
+		&-title
+			margin: 0 0 24px
+			font-family: 'EB Garamond', sans-serif
+			font-size: 32px
+			line-height: 1.1
+			font-weight: 400
+			color:#000
+		&-slider
+			.swiper-wrapper
+				flex-direction: column
+			&-item
+				display: flex
+				flex-direction: column
+				&:not(:last-child)
+					margin-bottom: 24px
+				&-img
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 100%
+					height: 200px
+					margin-bottom: 16px
+					overflow: hidden
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+				&-title
+					font-size: 20px
+					font-weight: 600
+					color:#333
+
+.favorites
+	padding-bottom: 72px
+	&__title
+		margin: 0 0 52px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__filters
+		display: flex
+		align-items: center
+		margin-bottom: 32px
+		&-item
+			&:not(:last-child)
+				margin-right: 16px
+	&__count
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 32px
+		&-number
+			font-size: 16px
+			color:#8A8A8A
+			span
+				display: inline-flex
+	&__grid
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		column-gap: 20px
+		row-gap: 32px
+	&__pagination
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 40px
+
+.main-catalog-list
+	padding-bottom: 72px
+	&__title
+		margin: 0 0 52px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 48px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__subtitle
+		margin: 0 0 24px
+		font-family: 'EB Garamond', sans-serif
+		font-size: 40px
+		line-height: 1.1
+		font-weight: 400
+		color:#000
+	&__desc
+		margin: 0 0 32px
+	&__inner
+		display: flex
+		gap: calc( 16 / 1440 * 100%  )
+	&__content
+		width: calc( 1080 / 1440 * 100% )
+	&__dropdowns
+		&-row
+			display: flex
+			align-items: center
+			justify-content: space-between
+		&-col
+			width: calc(25% - 15px)
+	&__selected-filter
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 20px
+		&-list
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			&-item
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				padding: 6px 8px 6px 16px
+				border-radius: 40px
+				font-size: 16px
+				font-weight: 500
+				color:#53818C
+				background: #E9EEEF
+				&:not(:last-child)
+					margin-right: 10px
+				button
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-left: 8px
+		&-clear
+			display: inline-flex
+			align-items: center
+			font-size: 16px
+			font-weight: 500
+			color:#53818C
+			svg
+				margin-left: 8px
+	&__count
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 32px
+		&-number
+			font-size: 16px
+			font-weight: 600
+			color:#8A8A8A
+	&__grid
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		column-gap: 20px
+		row-gap: 32px
+	&__pagination
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 40px
+	/*&__menu
+		margin: 0
+		padding: 0
+		list-style-type: none
+		> li
+			&.active
+				> a
+					background: #F5F5F5
+					> svg
+						filter: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(3679%) hue-rotate(146deg) brightness(97%) contrast(89%)
+				> ul
+					display: block
+					visibility: visible
+			> a
+				display: flex
+				align-items: center
+				padding: 16px
+				border-radius: 2px
+				font-size: 16px
+				line-height: 1.2
+				color:#153138
+				transition: all .3s ease
+				&:hover
+					background: #F5F5F5
+					> svg
+						filter: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(3679%) hue-rotate(146deg) brightness(97%) contrast(89%)
+				> span
+					display: inline-flex
+					flex-grow: 1
+					margin: 0 16px
+				> svg
+					max-width: 24px
+					max-height: 24px
+					filter: invert(71%) sepia(6%) saturate(68%) hue-rotate(202deg) brightness(98%) contrast(92%)
+					transition: all .3s ease
+			> ul
+				display: none
+				visibility: hidden
+				margin: 0
+				padding: 12px 16px 16px 56px
+				list-style-type: none
+				> li
+					&.active
+						> ul
+							display: block
+							visibility: visible
+					&:not(:last-child)
+						margin-bottom: 20px
+					> a
+						display: flex
+						align-items: center
+						justify-content: space-between
+						font-size: 16px
+						font-weight: 500
+						color:#53818C
+						> svg
+							max-width: 24px
+							max-height: 24px
+							filter: brightness(0) saturate(100%) invert(50%) sepia(11%) saturate(1148%) hue-rotate(144deg) brightness(92%) contrast(90%)
+					> ul
+						display: none
+						visibility: hidden
+						margin: 0
+						padding: 12px 0 0 16px
+						list-style-type: none
+						> li
+							&:not(:last-child)
+								margin-bottom: 8px
+							> a
+								display: flex
+								font-size: 16px
+								font-weight: 500
+								color:#53818C
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

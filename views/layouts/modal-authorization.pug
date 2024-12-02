@@ -1,0 +1,90 @@
+include mixins.pug
+.modal.none(data-modal-id="autorizModal")
+  .modal__box-1.modal__box(data-window-id="autorizWindowAutoriz")
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Авторизация
+      p.modal__desc 
+        | Ещё нет аккаунта?
+        a(href="#",id="autorizWindowReg").modal__link Зарегистрируйтесь
+      ul.modal__lisc-col
+        li 
+          +dflt-label-input("Телефон или E-mail","autorizEmail")
+        li
+          +inputPasswordBtn("autorizEmailPass","autorizWindowPasswordRecovery")
+      //a(href="#",id="autorizWindowPasswordRecovery").modal__link.exception Забыли пароль?
+      ul.modal__lisc-col.modal__group-btn 
+        li 
+          a(href="#").dflt-bttn Авторизоваться
+        li 
+          a(href="#",id="autorizWindowCode").modal__link.dflt-bttn.dflt-bttn_ghost Войти по коду
+
+  .modal__box-2.modal__box.none(data-window-id="autorizWindowCode")
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Введите код
+      p.modal__desc Введите код, который мы отправили на телефон +7 909 000 99 99
+      +dflt-input("autorizCode")
+      a(href="#").dflt-bttn Продолжить
+  
+  .modal__box-3.modal__box.none(data-window-id="autorizWindowReg")
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Регистрация
+      p.modal__desc 
+        | Уже есть аккаунт?
+        a(href="#",id="autorizWindowAutoriz").modal__link Авторизуйтесь
+      +form-name-contacts("autorizSurname","autorizName","autorizLastname","autorizPhone","autorizEmail")
+      +form-password("Пароль","Повторите пароль","autorizPassword","autorizCopyPassword")
+      ul.modal__list-hint
+        li 
+          span 
+            <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.146447 0.645983C0.341709 0.450688 0.658291 0.450688 0.853553 0.645983L3.5 3.29287L6.14645 0.645983C6.34171 0.450688 6.65829 0.450688 6.85355 0.645983C7.04882 0.841277 7.04882 1.15791 6.85355 1.35321L4.20711 4.00009L6.85355 6.64697C7.04882 6.84227 7.04882 7.1589 6.85355 7.3542C6.65829 7.54949 6.34171 7.54949 6.14645 7.3542L3.5 4.70731L0.853553 7.3542C0.658291 7.54949 0.341709 7.54949 0.146447 7.3542C-0.0488155 7.1589 -0.0488155 6.84227 0.146447 6.64697L2.79289 4.00009L0.146447 1.35321C-0.0488155 1.15791 -0.0488155 0.841277 0.146447 0.645983Z" fill="#AE1917" />
+            </svg>
+          p Пароль должен содержать не менее 8 знаков
+        li 
+          span 
+            <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.146447 0.645983C0.341709 0.450688 0.658291 0.450688 0.853553 0.645983L3.5 3.29287L6.14645 0.645983C6.34171 0.450688 6.65829 0.450688 6.85355 0.645983C7.04882 0.841277 7.04882 1.15791 6.85355 1.35321L4.20711 4.00009L6.85355 6.64697C7.04882 6.84227 7.04882 7.1589 6.85355 7.3542C6.65829 7.54949 6.34171 7.54949 6.14645 7.3542L3.5 4.70731L0.853553 7.3542C0.658291 7.54949 0.341709 7.54949 0.146447 7.3542C-0.0488155 7.1589 -0.0488155 6.84227 0.146447 6.64697L2.79289 4.00009L0.146447 1.35321C-0.0488155 1.15791 -0.0488155 0.841277 0.146447 0.645983Z" fill="#AE1917" />
+            </svg>
+          p Строчные и прописные буквы
+        li 
+          span
+            <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.85355 0.645983C9.04882 0.841277 9.04882 1.15791 8.85355 1.35321L3.35355 6.85412C3.15829 7.04941 2.84171 7.04941 2.64645 6.85412L0.146447 4.3537C-0.0488155 4.15841 -0.0488155 3.84177 0.146447 3.64648C0.341709 3.45118 0.658291 3.45118 0.853553 3.64648L3 5.79328L8.14645 0.645983C8.34171 0.450688 8.65829 0.450688 8.85355 0.645983Z" fill="#5C6C51" />
+            </svg>
+          p Хотя бы одну цифру
+        li 
+          span 
+            <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.146447 0.645983C0.341709 0.450688 0.658291 0.450688 0.853553 0.645983L3.5 3.29287L6.14645 0.645983C6.34171 0.450688 6.65829 0.450688 6.85355 0.645983C7.04882 0.841277 7.04882 1.15791 6.85355 1.35321L4.20711 4.00009L6.85355 6.64697C7.04882 6.84227 7.04882 7.1589 6.85355 7.3542C6.65829 7.54949 6.34171 7.54949 6.14645 7.3542L3.5 4.70731L0.853553 7.3542C0.658291 7.54949 0.341709 7.54949 0.146447 7.3542C-0.0488155 7.1589 -0.0488155 6.84227 0.146447 6.64697L2.79289 4.00009L0.146447 1.35321C-0.0488155 1.15791 -0.0488155 0.841277 0.146447 0.645983Z" fill="#AE1917" />
+            </svg>
+          p Не менее 8 символов
+
+      ul.modal__lisc-col.modal__group-btn
+        li 
+          a(href="#").dflt-bttn Авторизоваться
+        li 
+          a(href="#",id="autorizWindowCode").modal__link.dflt-bttn.dflt-bttn_ghost Войти по коду
+
+  .modal__box-4.modal__box.none(data-window-id="autorizWindowPasswordRecovery")
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Восстановление пароля
+      p.modal__desc 
+        | Введите почту, на которую регистрировали аккаунт и мы вышлем на него новый пароль в течение 5 минут
+      +dflt-input("autorizEmailNewPass")
+      a(href="#").dflt-bttn Продолжить

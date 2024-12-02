@@ -1,0 +1,32 @@
+include mixins.pug
+.modal(data-modal-id="customTailoringModal")
+  .modal__box-copy.modal__box
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Пошив на заказ
+      p.modal__desc Заполните общие данные о заказчике и желаемом изделии, чтобы мы могли Вас проконсультировать
+      +form-name-contacts("customTailoringSurname","customTailoringName","customTailoringLastname","customTailoringPhone","customTailoringEmail")
+      +dflt-label-textarea("Желаемое изделие","customTailoringTextarea")
+      ul.modal__group-btn-row
+        li 
+          a(href="#").dflt-bttn Заказать звонок менеджера
+        li
+          a(href="#").dflt-bttn.dflt-bttn_ghost Заполнить анкету с мерками
+
+  .modal__box-copy.modal__box.none
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    h2.modal__title Пошив на заказ
+    p.modal__desc
+      | Для заполнения полей с мерками, выберите изделие из списка, наиболее близкое к желаемому.
+    +drop-down2("customTailoringProduct","customTailoringDropProduct")
+    ul.modal__group-btn-row
+      li
+        a(href="#").dflt-bttn.dflt-bttn_ghost Назад
+      li
+        a(href="#").dflt-bttn Продолжить

@@ -1,0 +1,282 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title Личный кабинет - Сайт ТИЗ
+
+
+		link(rel="apple-touch-icon", sizes="180x180", href="img/apple-touch-icon.png")
+		link(rel="icon", type="image/png", sizes="32x32", href="img/favicon-32x32.png")
+		link(rel="icon", type="image/png", sizes="16x16", href="img/favicon-16x16.png")
+		
+
+		include layouts/styles.pug
+	body
+		.page-wrapper
+
+			include layouts/header.pug
+
+			.dflt-breadcrumbs
+				.container
+					ul
+						li
+							a(href="#") Главная
+						li
+							span Личный кабинет
+			
+			section.user-profile
+				.container
+					.user-profile__info
+						.user-profile__head
+							.user-profile__box-left
+								.user-profile__img
+									img(src="img/user-img-1.jpg", alt="img")
+								.user-profile__parameters
+									h3.user-profile__name 
+										|	Семёнов Иван Петрович
+									ul.user-profile__contacts
+										li +7 909 000 99 88
+										li ivan@mail.ru
+							.user-profile__box-right
+								ul.user-profile__checkbox-group 
+									li
+										.dflt-checkbox
+											input.dflt-checkbox__input(type="checkbox" id="mailing" checked)
+											label.dflt-checkbox__label(for="mailing") 
+												span.dflt-checkbox__label-icon
+													<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+													</svg>
+												span.dflt-checkbox__label-text
+													span Получать рассылку на e-mail
+									li
+										.dflt-checkbox
+											input.dflt-checkbox__input(type="checkbox" id="notificationsEmail" checked)
+											label.dflt-checkbox__label(for="notificationsEmail") 
+												span.dflt-checkbox__label-icon
+													<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+													</svg>
+												span.dflt-checkbox__label-text
+													span Получать оповещения о заказе по e-mail
+									li
+										.dflt-checkbox
+											input.dflt-checkbox__input(type="checkbox" id="notificationsMessages" checked)
+											label.dflt-checkbox__label(for="notificationsMessages") 
+												span.dflt-checkbox__label-icon
+													<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+													</svg>
+												span.dflt-checkbox__label-text
+													span Получать оповещения о заказе по СМС
+								ul.user-profile__btn-group
+									li
+										a(href="#") Выйти из аккаунта
+									li
+										a(href="#") Редактировать профиль
+									li
+										a(href="#") Удалить профиль
+						.user-profile__data
+								//при добавлении на див класса "user-profile__data-left--none-dflt" скрывается блок "ВЫ ЕЩЕ НИЧЕГО НЕ ЗАКАЗЫВАЛИ"; при добавлении на див класса "user-profile__data-left--none-order" скрываются все заказы
+								.user-profile__data-left.user-profile__data-left--none-dflt
+									h2.user-profile__title Заказы
+									.user-profile__content
+										.user-profile__content-dflt
+											p Вы ещё ничего не заказывали.
+											.user-profile__bttn-wrapp
+												a(href="#").dflt-bttn
+													span Перейти в каталог
+										.user-profile__box-order
+											h3.user-profile__caption
+												| Заказ <span>№7890</span> от <span>23.07.2023</span>
+											//при добавлении класса "user-profile__status--active" на параграф он тображается
+											p.user-profile__status.paid.user-profile__status--active
+												| В пути <span>Оплачено</span>
+											p.user-profile__status.waiting
+												| Ожидает оплаты
+											ul.user-profile__delivery-details
+												li 
+													p Получатель:
+													span Семёнов Иван Петрович 
+													span +7 909 000 99 88
+												li
+													p Адрес доставки:
+													span г. Москва
+													span ул. Магаданская 18, кв.100
+												li 
+													p Дата доставки:
+													span 24.08.2024
+												li 
+													p Транспортная компания:
+													span СДЭК
+												li 
+													p Код для отслеживания посылки:
+													span 74678476854
+											table.user-profile__table
+												thead.user-profile__thead
+													tr.user-profile__tr
+														th.user-profile__th
+															| Состав заказа
+												tbody.user-profile__tbody
+													tr.user-profile__tr
+														td.user-profile__td 
+															| Бальное платье 19 века
+														td.user-profile__td
+															| 1 шт.
+														td.user-profile__td
+															| Размер: 44
+														td.user-profile__td
+															| 19 000 руб.
+													tr.user-profile__tr
+														td.user-profile__td 
+															| Косоворотка
+														td.user-profile__td
+															| 1 шт.
+														td.user-profile__td
+															| Размер: 44
+														td.user-profile__td
+															| 19 000 руб.
+													tr.user-profile__tr
+														td.user-profile__td 
+															| Русский кафтан
+														td.user-profile__td
+															| 1 шт.
+														td.user-profile__td
+															| Размер: 44
+														td.user-profile__td
+															| 19 000 руб.
+													tr.user-profile__tr
+														td.user-profile__td 
+															| Балетная пачка
+														td.user-profile__td
+															| 1 шт.
+														td.user-profile__td
+															| Размер: 44
+														td.user-profile__td
+															| 19 000 руб.
+											p.user-profile__result
+												| Сумма: <span>59 000</span> руб.
+											.user-profile__link-wparr
+												a.user-profile__link(href="#")
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C10.5523 0 11 0.447715 11 1V10.5858L14.2929 7.29289C14.6834 6.90237 15.3166 6.90237 15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L10.7071 13.7071C10.3166 14.0976 9.68342 14.0976 9.29289 13.7071L4.29289 8.70711C3.90237 8.31658 3.90237 7.68342 4.29289 7.29289C4.68342 6.90237 5.31658 6.90237 5.70711 7.29289L9 10.5858V1C9 0.447715 9.44771 0 10 0ZM1 12C1.55228 12 2 12.4477 2 13V17C2 17.2652 2.10536 17.5196 2.29289 17.7071C2.48043 17.8946 2.73478 18 3 18H17C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17V13C18 12.4477 18.4477 12 19 12C19.5523 12 20 12.4477 20 13V17C20 17.7957 19.6839 18.5587 19.1213 19.1213C18.5587 19.6839 17.7957 20 17 20H3C2.20435 20 1.44129 19.6839 0.87868 19.1213C0.31607 18.5587 0 17.7957 0 17V13C0 12.4477 0.447715 12 1 12Z" fill="#53818C" />
+													</svg>
+													span Скачать документ
+										.user-profile__box-order
+											h3.user-profile__caption
+												| Заказ <span>№7890</span> от <span>23.07.2023</span>
+											//при добавлении класса "user-profile__status--active" на параграф он тображается
+											p.user-profile__status.paid
+												| В пути <span>Оплачено</span>
+											p.user-profile__status.waiting.user-profile__status--active
+												| Ожидает оплаты
+											ul.user-profile__delivery-details
+												li 
+													p Получатель:
+													span Семёнов Иван Петрович 
+													span +7 909 000 99 88
+												li
+													p Адрес доставки:
+													span г. Москва
+													span ул. Магаданская 18, кв.100
+												li 
+													p Дата доставки:
+													span 24.08.2024
+												li 
+													p Транспортная компания:
+													span СДЭК
+												li 
+													p Код для отслеживания посылки:
+													span 74678476854
+											table.user-profile__table
+												thead.user-profile__thead
+													tr.user-profile__tr
+														th.user-profile__th
+															| Состав заказа
+												tbody.user-profile__tbody
+													tr.user-profile__tr
+														td.user-profile__td 
+															| Бальное платье 19 века
+														td.user-profile__td
+															| 1 шт.
+														td.user-profile__td
+															| Размер: 44
+														td.user-profile__td
+															| 19 000 руб.
+													tr.user-profile__tr
+														td.user-profile__td 
+															| Косоворотка
+														td.user-profile__td
+															| 1 шт.
+														td.user-profile__td
+															| Размер: 44
+														td.user-profile__td
+															| 19 000 руб.
+													tr.user-profile__tr
+														td.user-profile__td 
+															| Русский кафтан
+														td.user-profile__td
+															| 1 шт.
+														td.user-profile__td
+															| Размер: 44
+														td.user-profile__td
+															| 19 000 руб.
+													tr.user-profile__tr
+														td.user-profile__td 
+															| Балетная пачка
+														td.user-profile__td
+															| 1 шт.
+														td.user-profile__td
+															| Размер: 44
+														td.user-profile__td
+															| 19 000 руб.
+											p.user-profile__result
+												| Сумма: <span>59 000</span> руб.
+											.user-profile__link-wparr
+												a.user-profile__link(href="#")
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C10.5523 0 11 0.447715 11 1V10.5858L14.2929 7.29289C14.6834 6.90237 15.3166 6.90237 15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711L10.7071 13.7071C10.3166 14.0976 9.68342 14.0976 9.29289 13.7071L4.29289 8.70711C3.90237 8.31658 3.90237 7.68342 4.29289 7.29289C4.68342 6.90237 5.31658 6.90237 5.70711 7.29289L9 10.5858V1C9 0.447715 9.44771 0 10 0ZM1 12C1.55228 12 2 12.4477 2 13V17C2 17.2652 2.10536 17.5196 2.29289 17.7071C2.48043 17.8946 2.73478 18 3 18H17C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17V13C18 12.4477 18.4477 12 19 12C19.5523 12 20 12.4477 20 13V17C20 17.7957 19.6839 18.5587 19.1213 19.1213C18.5587 19.6839 17.7957 20 17 20H3C2.20435 20 1.44129 19.6839 0.87868 19.1213C0.31607 18.5587 0 17.7957 0 17V13C0 12.4477 0.447715 12 1 12Z" fill="#53818C" />
+													</svg>
+													span Скачать документ
+								//при добавлении на див класса "user-profile__data-left--none-dflt" скрывается блок "ДОБАВИТЬ РЕКВИЗИТЫ"; при добавлении на див класса "user-profile__data-right--none-requisites" скрываются РЕКВИЗИТЫ
+								.user-profile__data-right.user-profile__data-right--none-dflt
+									h2.user-profile__title Реквизиты компании
+									.user-profile__content
+										.user-profile__content-dflt
+											p Являетесь представителем компании? Добавьте данные, для автозаполнения формы выставления счёта.
+											.user-profile__bttn-wrapp
+												a(href="#").dflt-bttn
+													span Добавить реквизиты
+										ul.contacts-requisites__list.list-left
+											li 
+												span Название организации:
+												span ИП Назаров Василий Борисович
+											li 
+												span ИНН
+												span 87645854845678548754
+											li 
+												span БИК
+												span 87645854845678548754
+											li 
+												span ИНН
+												span 87645854845678548754
+											li 
+												span БИК
+												span 87645854845678548754
+											li 
+												span Наименование организации
+												span Фабрика театральных костюмов «ТИЗ»
+											li 
+												span Юридический адрес
+												span Россия, 199226, Санкт-Петербург, Наличная ул., дом № 36, корпус 5, литера Б, помещение 34Н
+											li 
+												span БИК
+												span 87645854845678548754
+					.user-profile__settings
+			include layouts/s-subscribe.pug
+
+			include layouts/footer.pug
+
+		include layouts/scripts.pug

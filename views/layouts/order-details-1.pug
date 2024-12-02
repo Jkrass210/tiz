@@ -1,0 +1,31 @@
+.order-details
+  .order-details__top
+    .order-details__box-title 
+      h3 Детали заказа
+      p
+        span 2
+        span товара
+    ul.order-details__list-title 
+      li Бальное платье 19 века
+      li Чайное платье
+  .order-details__centre
+    ul.order-details__list-price
+      li 
+        p Общая сумма:
+        p <span>80 500</span> руб.
+      li 
+        p Скидка:
+        p.discount - <span>80 500</span> руб.
+      li 
+        p Цена доставки
+        p <span>80 500</span> руб.
+  .order-details__bottom
+    .order-details__box-promoCode 
+      label(for="promoCode").dflt-label Есть промокод?
+      input(type="text",id="promoCode").dflt-input
+      button Применить
+    .order-details__box-result
+      p Сумма к оплате:
+      p <span>78 500</span> руб.
+    a(href="#").dflt-bttn.disabled Оформить заказ
+    p Нажимая на кнопку,  вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.

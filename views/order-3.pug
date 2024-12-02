@@ -1,0 +1,117 @@
+include layouts/mixins.pug
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    title Оформление заказа "Способ оплаты" - Сайт ТИЗ
+
+
+    link(rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png")
+
+
+    include layouts/styles.pug
+  body
+    .page-wrapper
+
+      include layouts/header.pug
+
+      .dflt-breadcrumbs
+        .container
+          ul
+            li
+              a(href="#") Главная
+            li
+              span Корзина
+
+      section.page-order 
+        .container
+          .page-order__content
+            .page-order__box-making
+              h1.page-order__title Оформление заказа
+              +nav-order-payments
+              +nav-delivery-payment
+              .page-order__payment-info.payment-info__box-online.active(data-box-id="bundleOnlinePayment")
+                p.payment-info__desc Оплата происходит через ПАО СБЕРБАНК с использованием банковских карт следующих платёжных систем:
+                ul.payment-info__list-img
+                  li 
+                    img(src="img/payment-info-mir.png", alt="мир")
+                  li 
+                    img(src="img/payment-info-visa.png", alt="visa")
+                  li 
+                    img(src="img/payment-info-mc.png", alt="MC")
+                p.payment-info__desc Соединение с платёжным шлюзом и передача информации осуществляется в защищённом режиме с использованием протокола шифрования SSL. В случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться ввод специального пароля.
+                p.payment-info__desc Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая информация не будет предоставлена третьим лицам за исключением случаев, предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом соответствии с требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.
+              .page-order__payment-info.payment-info__box-receipt(data-box-id="bundleReceiptPayment")
+                p.payment-info__desc Оплата при получении доступна частным клиентам при выборе способа доставки “Самовывоз”.
+                p.payment-info__desc Самовывоз из магазина происходит по адресу: СПб, Наличная ул., дом № 36, корпус 5, литера Б, помещение 34Н (за домом Новосмоленская набережная, д. 4) с 10:00 до 19:00 пн-пт.
+              .page-order__payment-info.payment-info__box-non-cash(data-box-id="bundleNonCashPayment")
+                p.payment-info__desc Вы сможете оплатить по выставленному нами счёту в любом удобном банке. После оформления заказа документ будет отправлен на почту и доступен в Личном Кабинете на сайте. С любыми вопросами по поводу счёта и оплаты, вы можете обратиться к менеджеру продаж по телефону 8 800 700-44-93 или почте tizspb@gmail.com
+                form(action="#").payment-info__form
+                  h3.settings-profile__caption Заполните данные компании
+                  ul.settings-profile__list-name 
+                    li.settings-profile__input--error
+                      label(for="paymentUserSurname") Фамилия
+                      input(type="text" id="paymentUserSurname" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentUserName") Имя
+                      input(type="text" id="paymentUserName" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentUserLastname") Отчество
+                      input(type="text" id="paymentUserLastname" autocomplete="off").dflt-input
+                  ul.settings-profile__list-contacts
+                    li.settings-profile__input--error
+                      label(for="paymentUserPhone") Телефон
+                      input(type="text" id="paymentUserPhone" placeholder="+7" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentUserEmail") E-mail
+                      input(type="text" id="paymentUserEmail" autocomplete="off").dflt-input
+                  ul.settings-profile__list-contacts.company
+                    li 
+                      label(for="paymentCompanyFax") Факс
+                      input(type="text" id="paymentCompanyFax" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentCompanyNameCompany") Наименование организации
+                      input(type="text" id="paymentCompanyNameCompany" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentLegalAddress") Юридический адрес
+                      input(type="text" id="paymentLegalAddress" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentActualAddress") Фактический адрес
+                      input(type="text" id="paymentActualAddress" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentPostalAddress") Почтовый адрес
+                      input(type="text" id="paymentPostalAddress" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentInn") ИНН
+                      input(type="text" id="paymentInn" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentPaymentAccount") Расчетный счет
+                      input(type="text" id="paymentPaymentAccount" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentBankName") Наименование банка
+                      input(type="text" id="paymentBankName" autocomplete="off").dflt-input
+                    li.settings-profile__input--error
+                      label(for="paymentBankAccount") Кор. счет банка
+                      input(type="text" id="paymentBankAccount" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentBic") БИК
+                      input(type="text" id="paymentBic" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentOgrn") ОГРН
+                      input(type="text" id="paymentOgrn" autocomplete="off").dflt-input
+                    li 
+                      label(for="paymentKpp") КПП
+                      input(type="text" id="paymentKpp" autocomplete="off").dflt-input
+                  +checkbox("Сохранить в ЛК для автозаполнения формы при следующих заказах","savePaymentMethod")
+            .page-order__box-details
+              include layouts/order-details-1.pug
+
+      include layouts/s-subscribe.pug
+
+      include layouts/footer.pug
+
+    include layouts/scripts.pug

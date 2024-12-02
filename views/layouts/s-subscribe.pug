@@ -1,0 +1,28 @@
+section.subscribe
+  .container
+    .subscribe__inner
+      .subscribe__info
+        h2.subscribe__title
+          | Подпишитесь на рассылку, чтобы мы могли рассказывать вам о новых костюмах и акциях
+        p.subscribe__desc
+          | А так же делиться лукбуками и полезными статьями
+      form.subscribe__form(action="#" method="POST") 
+        span.subscribe__form-title
+          | E-mail
+        .subscribe__form-row
+          input.dflt-input(type="text")
+          button.dflt-bttn.open-modal(id="subsModal")
+            span Оформить подписку
+        .subscribe__form-checkbox
+          .dflt-checkbox
+            input.dflt-checkbox__input(type="checkbox" id="subscribePolicy" checked)
+            label.dflt-checkbox__label(for="subscribePolicy") 
+              span.dflt-checkbox__label-icon
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="#53818C"/>
+                </svg>
+              span.dflt-checkbox__label-text
+                span Я согласен с 
+                a(href="#") политикой конфиденциальности
+
+  include modal-subscription.pug

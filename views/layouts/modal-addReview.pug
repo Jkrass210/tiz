@@ -1,0 +1,37 @@
+include mixins.pug
+.modal(data-modal-id="addReviewModal")
+  .modal__box-copy.modal__box
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Добавить отзыв
+      p.modal__desc Ваш отзыв появится на сайте в течение 1-2 дней. Спасибо, что оставляете обратную связь! Она делает нас ещё лучше!
+      ul.modal__copy-list-1
+        li 
+          +dflt-label-input("Ваше имя","addReviewName")
+        li 
+          +dflt-label-input-placeholder("Телефон","addReviewPhone","+7")
+        li 
+          +dflt-label-input("E-mail","addReviewEmail")
+        li 
+          +dflt-label-textarea("Текст отзыва","addReviewTextarea")
+      +dflt-label-file("addReviewFile")
+      +dflt-estimation
+      ul.modal__copy-list-2 
+        li 
+          +checkbox2("addReviewPrivacyPolicy")
+        li 
+          +checkbox3("addReviewRental")
+      button.dflt-bttn Отправить заявку
+
+  .modal__box-subs.modal__box.none
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    h2.modal__title Заявка отправлена
+    p.modal__desc
+      | Мы обязательно перезвоним Вам в ближайшее время
+    a(href="/").dflt-bttn Вернуться в каталог

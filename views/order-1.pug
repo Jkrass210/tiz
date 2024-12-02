@@ -1,0 +1,56 @@
+include layouts/mixins.pug
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    title Оформление заказа "Данные получателя" - Сайт ТИЗ
+
+
+    link(rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png")
+
+
+    include layouts/styles.pug
+  body
+    .page-wrapper
+
+      include layouts/header.pug
+
+      .dflt-breadcrumbs
+        .container
+          ul
+            li
+              a(href="#") Главная
+            li
+              span Корзина
+
+      section.page-order 
+        .container
+          .page-order__content
+            .page-order__box-making
+              h1.page-order__title Оформление заказа
+              +nav-order
+              +question("Уже зарегистрированы?","Авторизуйтесь")
+              form(action="#").form-page-order
+                h3.form-page-order__title Заполните информацию о получателе
+                +form-name-contacts("order1userSurname","order1userName","order1userLastname","order1userPhone","order1userEmail")
+                ul.form-page-order__list-checkbox
+                  li
+                    +checkbox("Автоматически создать Личный Кабинет для отслеживания заказа","order1AutoCreate")
+                  li
+                    +checkbox("Отправлять уведомления о статусе заказа по СМС","order1SendNotifications")
+                  li
+                    +checkbox("Отправлять уведомления о статусе заказа по e-mail","order1SendEmail")
+                .form-page-order__submit
+                  button.dflt-bttn Выбрать способ доставки
+            .page-order__box-details
+              include layouts/order-details.pug
+
+      include layouts/s-subscribe.pug
+
+      include layouts/footer.pug
+
+    include layouts/scripts.pug

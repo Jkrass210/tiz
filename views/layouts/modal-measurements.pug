@@ -1,0 +1,35 @@
+include mixins.pug
+.modal(data-modal-id="measurementsModal")
+  .modal__box-copy.modal__box
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Снятие мерок
+      p.modal__desc Для снятие мерок для пошива Вам нужно подойти в наш фирменный салон по адресу Новосмоленская набережная д.4. 
+      ul.modal__copy-list-1
+        li 
+          +dflt-label-input("Ваше имя","measurementsName")
+        li 
+          +dflt-label-input-placeholder("Телефон","measurementsPhone","+7")
+        li 
+          +dflt-label-input("E-mail","measurementsEmail")
+        li 
+          +dflt-label-input("Когда вам удобно будет подойти?","measurementsComment")
+      ul.modal__copy-list-2 
+        li 
+          +checkbox2("measurementsPrivacyPolicy")
+        li 
+          +checkbox3("measurementsRental")
+      button.dflt-bttn Отправить заявку
+
+  .modal__box-subs.modal__box.none
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    h2.modal__title Заявка отправлена
+    p.modal__desc
+      | Мы обязательно перезвоним Вам в ближайшее время
+    a(href="/").dflt-bttn Вернуться в каталог

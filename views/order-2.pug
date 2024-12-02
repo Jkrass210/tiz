@@ -1,0 +1,200 @@
+include layouts/mixins.pug
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    title Оформление заказа "Выбор доставки" - Сайт ТИЗ
+
+
+    link(rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png")
+
+
+    include layouts/styles.pug
+  body
+    .page-wrapper
+
+      include layouts/header.pug
+
+      .dflt-breadcrumbs
+        .container
+          ul
+            li
+              a(href="#") Главная
+            li
+              span Корзина
+
+      section.page-order 
+        .container
+          .page-order__content
+            .page-order__box-making
+              h1.page-order__title Оформление заказа
+              +nav-order-delivery
+              +nav-delivery
+              .choice-delivery__box-delivery.active.choice-delivery__box-pickup(data-box-id="bundlePickup")
+                h3.choice-delivery__caption Самовывоз из фирменного салона
+                p.choice-delivery__desc 
+                  | Вы можете забрать ваш товар по адресу Санкт-Петербург, Новосмоленская набережная д.4 в течение 7 дней со дня бронирования заказа. Мы работаем с понедельника по пятницу с 10:00 до 19:00.
+                a(href="#").dflt-bttn Выбрать способ оплаты
+              .choice-delivery__box-delivery.choice-delivery__box-courier(data-box-id="bundleCourierSPB")
+                form(action="#").form-choice-delivery-courier
+                  h3.choice-delivery__caption Доставка курьером в Санкт-Петербурге
+                  p.choice-delivery__desc
+                    | Доставка курьером осуществляется фирмой «Рога и копыта» с 11:00 до 22:00. Стоимость 500 рублей.
+                  +checkbox("Выставить оплату доставки отдельным счётом","deliveryAccount")
+                  ul.form-choice-delivery-courier__list
+                    li
+                      +drop-down1("courierDate","Выберите дату","dropDown1")
+                    li 
+                      +drop-down1("courierTime","Диапазон времени","dropDown2")
+                    li 
+                      +dflt-label-input("Улица","courierStreet")
+                    li 
+                      +dflt-label-input("Дом","courierHouse")
+                    li 
+                      +dflt-label-input("Квартира/Офис","courierOffice")
+                    li 
+                      +dflt-label-input("Домофон","courierIntercom")
+                    li 
+                      +dflt-label-input("Комментарий для курьера","courierComment")
+                  a(href="#").dflt-bttn Выбрать способ оплаты
+              .choice-delivery__box-delivery.choice-delivery__shipping-company(data-box-id="bundleDeliveryByCompany")
+                h3.choice-delivery__caption Выберите транспортную компанию
+                ul.choice-delivery__list-delivery-post#choosingService
+                  li 
+                    +btn-choice-delivery-active("russPost","Почта России")
+                  li 
+                    +btn-choice-delivery("sdec","СДЭК")
+                  li
+                    +btn-choice-delivery("boxberry","Boxberry")
+                .choice-delivery__company.choice-delivery__company-1.active(data-box-id="russPost") 
+                  p.choice-delivery__desc Стоимость доставки Почтой России составляет 500 руб.
+                  form(action="#").choice-delivery__form-company-1
+                    ul.company-1__list
+                      li 
+                        +dflt-label-input('Улица','russPostStreet')
+                      li
+                        +dflt-label-input('Дом','russPostHouse')
+                      li
+                        +dflt-label-input('Квартира/Офис','russPostOffice')
+                      li 
+                        +dflt-label-input('Индекс','russPostIndex')
+                    a(href="#").dflt-bttn Выбрать способ оплаты
+                .choice-delivery__company.choice-delivery__company-2(data-box-id="sdec")
+                  +checkbox("Выставить оплату доставки отдельным счётом","deliveryAccount1")
+                  ul.company-2__list#company2boxChoiceDelivery
+                    li 
+                      +btn-choice-delivery("deliveryCompany2Courier","Курьером")
+                    li 
+                      +btn-choice-delivery-active("deliveryCompany2PickUpPoint","До пункта выдачи")
+                  .company-2__box-delivery.company-2__box-pick-up-point.active(data-box-id="deliveryCompany2PickUpPoint")
+                    form(action="#").company-2__form-pick-up-point
+                      ul.company-2__list-pick-up-point
+                        li 
+                          +drop-down1('deliveryCompany2PickUpPointCity',"Город доставки","btnChoosingCity")
+                        li 
+                          a(href="#").dflt-bttn.dflt-bttn_ghost
+                            span Выбрать пункт выдачи
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9974 1.66667C8.22929 1.66667 6.53359 2.36905 5.28335 3.61929C4.03311 4.86953 3.33073 6.56522 3.33073 8.33333C3.33073 10.915 5.01051 13.4202 6.85236 15.3644C7.75624 16.3185 8.66295 17.0996 9.34463 17.6424C9.59832 17.8444 9.81992 18.0127 9.9974 18.1438C10.1749 18.0127 10.3965 17.8444 10.6502 17.6424C11.3318 17.0996 12.2386 16.3185 13.1424 15.3644C14.9843 13.4202 16.6641 10.915 16.6641 8.33333C16.6641 6.56522 15.9617 4.86953 14.7114 3.61929C13.4612 2.36905 11.7655 1.66667 9.9974 1.66667ZM9.9974 19.1667C9.53515 19.86 9.53493 19.8599 9.53469 19.8597L9.53231 19.8581L9.52676 19.8544L9.50766 19.8415C9.49144 19.8305 9.46829 19.8147 9.43869 19.7942C9.3795 19.7532 9.29445 19.6934 9.18722 19.616C8.97285 19.4612 8.66936 19.2352 8.30642 18.9462C7.58184 18.3692 6.61355 17.5357 5.64244 16.5106C3.73428 14.4965 1.66406 11.585 1.66406 8.33333C1.66406 6.1232 2.54204 4.00358 4.10484 2.44078C5.66764 0.877974 7.78726 0 9.9974 0C12.2075 0 14.3271 0.877974 15.89 2.44078C17.4528 4.00358 18.3307 6.1232 18.3307 8.33333C18.3307 11.585 16.2605 14.4965 14.3524 16.5106C13.3812 17.5357 12.413 18.3692 11.6884 18.9462C11.3254 19.2352 11.0219 19.4612 10.8076 19.616C10.7003 19.6934 10.6153 19.7532 10.5561 19.7942C10.5265 19.8147 10.5034 19.8305 10.4871 19.8415L10.468 19.8544L10.4625 19.8581L10.4607 19.8593C10.4605 19.8595 10.4596 19.86 9.9974 19.1667ZM9.9974 19.1667L10.4596 19.86C10.1797 20.0467 9.81461 20.0464 9.53469 19.8597L9.9974 19.1667ZM9.9974 6.66667C9.07692 6.66667 8.33073 7.41286 8.33073 8.33333C8.33073 9.25381 9.07692 10 9.9974 10C10.9179 10 11.6641 9.25381 11.6641 8.33333C11.6641 7.41286 10.9179 6.66667 9.9974 6.66667ZM6.66406 8.33333C6.66406 6.49238 8.15645 5 9.9974 5C11.8383 5 13.3307 6.49238 13.3307 8.33333C13.3307 10.1743 11.8383 11.6667 9.9974 11.6667C8.15645 11.6667 6.66406 10.1743 6.66406 8.33333Z" fill="currentColor" />
+                            </svg>
+                      .company-2__box-address-price
+                        address.company-2__address
+                          p Адрес пункта выдачи:
+                          p Удмуртская Республика, г. Ижевск, ул. Ленина, д.100, кв.30
+                        p.company-2__price Стоимость: <span>500</span> руб.
+                      a(href="#").dflt-bttn.disabled Выбрать способ оплаты
+                  .company-2__box-delivery.company-2__box-courier(data-box-id="deliveryCompany2Courier")
+                    form(action="#").company-2__form-courier
+                      ul.company-2__list-pick-up-point
+                        li 
+                          +drop-down1('deliveryCompany2PickUpPointCity',"Город доставки","btnChoosingCity1")
+                        li 
+                          a(href="#").dflt-bttn.dflt-bttn_ghost
+                            span Выбрать пункт выдачи
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9974 1.66667C8.22929 1.66667 6.53359 2.36905 5.28335 3.61929C4.03311 4.86953 3.33073 6.56522 3.33073 8.33333C3.33073 10.915 5.01051 13.4202 6.85236 15.3644C7.75624 16.3185 8.66295 17.0996 9.34463 17.6424C9.59832 17.8444 9.81992 18.0127 9.9974 18.1438C10.1749 18.0127 10.3965 17.8444 10.6502 17.6424C11.3318 17.0996 12.2386 16.3185 13.1424 15.3644C14.9843 13.4202 16.6641 10.915 16.6641 8.33333C16.6641 6.56522 15.9617 4.86953 14.7114 3.61929C13.4612 2.36905 11.7655 1.66667 9.9974 1.66667ZM9.9974 19.1667C9.53515 19.86 9.53493 19.8599 9.53469 19.8597L9.53231 19.8581L9.52676 19.8544L9.50766 19.8415C9.49144 19.8305 9.46829 19.8147 9.43869 19.7942C9.3795 19.7532 9.29445 19.6934 9.18722 19.616C8.97285 19.4612 8.66936 19.2352 8.30642 18.9462C7.58184 18.3692 6.61355 17.5357 5.64244 16.5106C3.73428 14.4965 1.66406 11.585 1.66406 8.33333C1.66406 6.1232 2.54204 4.00358 4.10484 2.44078C5.66764 0.877974 7.78726 0 9.9974 0C12.2075 0 14.3271 0.877974 15.89 2.44078C17.4528 4.00358 18.3307 6.1232 18.3307 8.33333C18.3307 11.585 16.2605 14.4965 14.3524 16.5106C13.3812 17.5357 12.413 18.3692 11.6884 18.9462C11.3254 19.2352 11.0219 19.4612 10.8076 19.616C10.7003 19.6934 10.6153 19.7532 10.5561 19.7942C10.5265 19.8147 10.5034 19.8305 10.4871 19.8415L10.468 19.8544L10.4625 19.8581L10.4607 19.8593C10.4605 19.8595 10.4596 19.86 9.9974 19.1667ZM9.9974 19.1667L10.4596 19.86C10.1797 20.0467 9.81461 20.0464 9.53469 19.8597L9.9974 19.1667ZM9.9974 6.66667C9.07692 6.66667 8.33073 7.41286 8.33073 8.33333C8.33073 9.25381 9.07692 10 9.9974 10C10.9179 10 11.6641 9.25381 11.6641 8.33333C11.6641 7.41286 10.9179 6.66667 9.9974 6.66667ZM6.66406 8.33333C6.66406 6.49238 8.15645 5 9.9974 5C11.8383 5 13.3307 6.49238 13.3307 8.33333C13.3307 10.1743 11.8383 11.6667 9.9974 11.6667C8.15645 11.6667 6.66406 10.1743 6.66406 8.33333Z" fill="currentColor" />
+                            </svg>
+                      .company-2__box-address-price
+                        address.company-2__address
+                          p Адрес пункта выдачи:
+                          p Удмуртская Республика, г. Ижевск, ул. Ленина, д.100, кв.30
+                        p.company-2__price Стоимость: <span>500</span> руб.
+                      ul.company-2__list-courier
+                        li 
+                          +drop-down1("courierSelectionDateTime","Выберите дату",'selectionDateTime')
+                        li 
+                          +dflt-label-input("Улица","courierStreetCompany2")
+                        li 
+                          +dflt-label-input("Дом","courierHouseCompany2")
+                        li 
+                          +dflt-label-input("Квартира/Офис","courierOfficeCompany2")
+                        li 
+                          +dflt-label-input("Домофон","courierIntercomCompany2")
+                        li 
+                          +dflt-label-input("Комментарий для курьера","courierCommentCompany2")
+                      a(href="#").dflt-bttn.disabled Указать получателя
+                .choice-delivery__company.choice-delivery__company-3(data-box-id="boxberry") 
+                  ul.company-2__list#company3boxChoiceDelivery
+                    li 
+                      +btn-choice-delivery("deliveryCompany3Courier","Курьером")
+                    li 
+                      +btn-choice-delivery-active("deliveryCompany3PickUpPoint","До пункта выдачи")
+                  .company-3__box-delivery.company-2__box-pick-up-point.active(data-box-id="deliveryCompany3PickUpPoint")
+                    form(action="#").company-2__form-pick-up-point
+                      ul.company-2__list-pick-up-point
+                        li 
+                          +drop-down1('deliveryCompany2PickUpPointCity',"Город доставки","btnChoosingCity2")
+                        li 
+                          a(href="#").dflt-bttn.dflt-bttn_ghost
+                            span Выбрать пункт выдачи
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9974 1.66667C8.22929 1.66667 6.53359 2.36905 5.28335 3.61929C4.03311 4.86953 3.33073 6.56522 3.33073 8.33333C3.33073 10.915 5.01051 13.4202 6.85236 15.3644C7.75624 16.3185 8.66295 17.0996 9.34463 17.6424C9.59832 17.8444 9.81992 18.0127 9.9974 18.1438C10.1749 18.0127 10.3965 17.8444 10.6502 17.6424C11.3318 17.0996 12.2386 16.3185 13.1424 15.3644C14.9843 13.4202 16.6641 10.915 16.6641 8.33333C16.6641 6.56522 15.9617 4.86953 14.7114 3.61929C13.4612 2.36905 11.7655 1.66667 9.9974 1.66667ZM9.9974 19.1667C9.53515 19.86 9.53493 19.8599 9.53469 19.8597L9.53231 19.8581L9.52676 19.8544L9.50766 19.8415C9.49144 19.8305 9.46829 19.8147 9.43869 19.7942C9.3795 19.7532 9.29445 19.6934 9.18722 19.616C8.97285 19.4612 8.66936 19.2352 8.30642 18.9462C7.58184 18.3692 6.61355 17.5357 5.64244 16.5106C3.73428 14.4965 1.66406 11.585 1.66406 8.33333C1.66406 6.1232 2.54204 4.00358 4.10484 2.44078C5.66764 0.877974 7.78726 0 9.9974 0C12.2075 0 14.3271 0.877974 15.89 2.44078C17.4528 4.00358 18.3307 6.1232 18.3307 8.33333C18.3307 11.585 16.2605 14.4965 14.3524 16.5106C13.3812 17.5357 12.413 18.3692 11.6884 18.9462C11.3254 19.2352 11.0219 19.4612 10.8076 19.616C10.7003 19.6934 10.6153 19.7532 10.5561 19.7942C10.5265 19.8147 10.5034 19.8305 10.4871 19.8415L10.468 19.8544L10.4625 19.8581L10.4607 19.8593C10.4605 19.8595 10.4596 19.86 9.9974 19.1667ZM9.9974 19.1667L10.4596 19.86C10.1797 20.0467 9.81461 20.0464 9.53469 19.8597L9.9974 19.1667ZM9.9974 6.66667C9.07692 6.66667 8.33073 7.41286 8.33073 8.33333C8.33073 9.25381 9.07692 10 9.9974 10C10.9179 10 11.6641 9.25381 11.6641 8.33333C11.6641 7.41286 10.9179 6.66667 9.9974 6.66667ZM6.66406 8.33333C6.66406 6.49238 8.15645 5 9.9974 5C11.8383 5 13.3307 6.49238 13.3307 8.33333C13.3307 10.1743 11.8383 11.6667 9.9974 11.6667C8.15645 11.6667 6.66406 10.1743 6.66406 8.33333Z" fill="currentColor" />
+                            </svg>
+                      .company-2__box-address-price
+                        address.company-2__address
+                          p Адрес пункта выдачи:
+                          p Удмуртская Республика, г. Ижевск, ул. Ленина, д.100, кв.30
+                        p.company-2__price Стоимость: <span>500</span> руб.
+                      a(href="#").dflt-bttn.disabled Выбрать способ оплаты
+                  .company-3__box-delivery.company-2__box-courier(data-box-id="deliveryCompany3Courier")
+                    form(action="#").company-2__form-courier
+                      ul.company-2__list-pick-up-point
+                        li 
+                          +drop-down1('deliveryCompany3PickUpPointCity',"Город доставки","btnChoosingCity3")
+                        li 
+                          a(href="#").dflt-bttn.dflt-bttn_ghost
+                            span Выбрать пункт выдачи
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9974 1.66667C8.22929 1.66667 6.53359 2.36905 5.28335 3.61929C4.03311 4.86953 3.33073 6.56522 3.33073 8.33333C3.33073 10.915 5.01051 13.4202 6.85236 15.3644C7.75624 16.3185 8.66295 17.0996 9.34463 17.6424C9.59832 17.8444 9.81992 18.0127 9.9974 18.1438C10.1749 18.0127 10.3965 17.8444 10.6502 17.6424C11.3318 17.0996 12.2386 16.3185 13.1424 15.3644C14.9843 13.4202 16.6641 10.915 16.6641 8.33333C16.6641 6.56522 15.9617 4.86953 14.7114 3.61929C13.4612 2.36905 11.7655 1.66667 9.9974 1.66667ZM9.9974 19.1667C9.53515 19.86 9.53493 19.8599 9.53469 19.8597L9.53231 19.8581L9.52676 19.8544L9.50766 19.8415C9.49144 19.8305 9.46829 19.8147 9.43869 19.7942C9.3795 19.7532 9.29445 19.6934 9.18722 19.616C8.97285 19.4612 8.66936 19.2352 8.30642 18.9462C7.58184 18.3692 6.61355 17.5357 5.64244 16.5106C3.73428 14.4965 1.66406 11.585 1.66406 8.33333C1.66406 6.1232 2.54204 4.00358 4.10484 2.44078C5.66764 0.877974 7.78726 0 9.9974 0C12.2075 0 14.3271 0.877974 15.89 2.44078C17.4528 4.00358 18.3307 6.1232 18.3307 8.33333C18.3307 11.585 16.2605 14.4965 14.3524 16.5106C13.3812 17.5357 12.413 18.3692 11.6884 18.9462C11.3254 19.2352 11.0219 19.4612 10.8076 19.616C10.7003 19.6934 10.6153 19.7532 10.5561 19.7942C10.5265 19.8147 10.5034 19.8305 10.4871 19.8415L10.468 19.8544L10.4625 19.8581L10.4607 19.8593C10.4605 19.8595 10.4596 19.86 9.9974 19.1667ZM9.9974 19.1667L10.4596 19.86C10.1797 20.0467 9.81461 20.0464 9.53469 19.8597L9.9974 19.1667ZM9.9974 6.66667C9.07692 6.66667 8.33073 7.41286 8.33073 8.33333C8.33073 9.25381 9.07692 10 9.9974 10C10.9179 10 11.6641 9.25381 11.6641 8.33333C11.6641 7.41286 10.9179 6.66667 9.9974 6.66667ZM6.66406 8.33333C6.66406 6.49238 8.15645 5 9.9974 5C11.8383 5 13.3307 6.49238 13.3307 8.33333C13.3307 10.1743 11.8383 11.6667 9.9974 11.6667C8.15645 11.6667 6.66406 10.1743 6.66406 8.33333Z" fill="currentColor" />
+                            </svg>
+                      .company-2__box-address-price
+                        address.company-2__address
+                          p Адрес пункта выдачи:
+                          p Удмуртская Республика, г. Ижевск, ул. Ленина, д.100, кв.30
+                        p.company-2__price Стоимость: <span>500</span> руб.
+                      ul.company-2__list-courier
+                        li 
+                          +drop-down1("courierSelectionDateTime1","Выберите дату",'selectionDateTime1')
+                        li 
+                          +dflt-label-input("Улица","courierStreetCompany2")
+                        li 
+                          +dflt-label-input("Дом","courierHouseCompany2")
+                        li 
+                          +dflt-label-input("Квартира/Офис","courierOfficeCompany2")
+                        li 
+                          +dflt-label-input("Домофон","courierIntercomCompany2")
+                        li 
+                          +dflt-label-input("Комментарий для курьера","courierCommentCompany2")
+                      a(href="#").dflt-bttn.disabled Указать получателя
+            .page-order__box-details
+              include layouts/order-details-1.pug
+
+      include layouts/s-subscribe.pug
+
+      include layouts/footer.pug
+
+    include layouts/scripts.pug

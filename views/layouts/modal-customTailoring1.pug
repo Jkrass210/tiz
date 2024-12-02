@@ -1,0 +1,85 @@
+include mixins.pug
+.modal(data-modal-id="customTailoringModal1")
+  .modal__box-copy.modal__box(data-window-id="customTailoringWindowOrder")
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Пошив на заказ
+      p.modal__desc-name Костюм Снегурочки «Великий Устюг», мод. № 31
+      p.modal__desc Заполните общие данные о заказчике и желаемом изделии, чтобы мы могли Вас проконсультировать
+      +form-name-contacts("customTailoringSurname","customTailoringName","customTailoringLastname","customTailoringPhone","customTailoringEmail")
+      +dflt-label-textarea("Комментарий к заказу","customTailoringTextarea")
+      ul.modal__group-btn-row
+        li 
+          a(href="#").dflt-bttn Заказать звонок менеджера
+        li
+          a(href="#").dflt-bttn.dflt-bttn_ghost.modal__link-open#customTailoringWindowSize Заполнить анкету с мерками
+
+  .modal__box-copy.modal__box.none(data-window-id="customTailoringWindowSize")
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Пошив на заказ
+      p.modal__desc-name Костюм Снегурочки «Великий Устюг», мод. № 31
+      p.modal__desc Мы подготовили анкету с видео-инструкциями, чтобы вы смогли снять мерки легко и точно. Заполните форму с мерками в соответствии с нашими рекомендациями, либо подойдите в наш фирменный салон и наши менеджеры вам помогут.
+      .modal__swiper.swiper#swiper-10
+        .modal__swiper-wrapper.swiper-wrapper
+          .modal__swiper-slide.swiper-slide
+            +card-size("Измерение объема талии","Объем талии (см)","customTailoringSizeWaist1")
+          .modal__swiper-slide.swiper-slide
+            +card-size("Измерение ширины плеч","Ширина плеч (см)","customTailoringSizeShoulders1")
+          .modal__swiper-slide.swiper-slide
+            +card-size("Измерение объема груди","Объем груди (см)","customTailoringSizeBreast1")
+          .modal__swiper-slide.swiper-slide
+            +card-size("Измерение объема бедер","Объем бедер (см)","customTailoringSizeHip1")
+        .modal__swiper-pagination
+      ul.modal__group-btn-row
+        li 
+          a(href="#").dflt-bttn.dflt-bttn_ghost.modal__link-open#customTailoringWindowOrder Назад
+        li
+          a(href="#").dflt-bttn.modal__link-open#customTailoringWindowConfirmation Продолжить
+
+  .modal__box-copy.modal__box.none(data-window-id="customTailoringWindowConfirmation")
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    form(action="#").modal__form
+      h2.modal__title Пошив на заказ
+      p.modal__desc-name Костюм Снегурочки «Великий Устюг», мод. № 31
+      p.modal__desc Проверьте данные заявки перед отправкой. Наш менеджер свяжется с вами в ближайшее время, чтобы обсудить детали заказа.
+      +form-name-contacts("customTailoringSurname1","customTailoringName1","customTailoringLastname1","customTailoringPhone1","customTailoringEmail1")
+      h3.modal__caption.caption Мерки заказчика
+      ul.modal__list-customer
+        li 
+          +dflt-label-input("Ширина плеч (см)","customTailoringShoulders1")
+        li 
+          +dflt-label-input("Объем груди (см)","customTailoringBreast1")
+        li 
+          +dflt-label-input("Объем талии (см)","customTailoringWaist1")
+        li 
+          +dflt-label-input("Объем бедер (см)","customTailoringHip1")
+      +dflt-label-textarea("Комментарий к заказу","customTailoringTextarea1")
+      ul.modal__group-btn-row
+        li 
+          a(href="#").dflt-bttn.dflt-bttn_ghost.modal__link-open#customTailoringWindowSize Назад
+        li
+          a(href="#").dflt-bttn.modal__link-open#customTailoringWindowSent Отправить заявку
+
+  .modal__box-subs.modal__box.none(data-window-id="customTailoringWindowSent")
+    .modal__box-close 
+      button.modal__close
+        span
+        span
+    h2.modal__title Заявка отправлена
+    p.modal__desc
+      | Спасибо за обращение! Ожидайте звонка менеджера, для обсуждение деталей заказа, в течение 24 часов.
+    ul.modal__group-btn-row
+      li
+        a(href="/").dflt-bttn.dflt-bttn_ghost.modal__link-open Вернуться на главную
+      li
+        a(href="#").dflt-bttn.modal__link-open#customTailoringWindowOrder Оставить другую заявку

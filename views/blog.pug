@@ -1,0 +1,210 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		title Журнал - Сайт ТИЗ
+
+
+		link(rel="apple-touch-icon", sizes="180x180", href="img/apple-touch-icon.png")
+		link(rel="icon", type="image/png", sizes="32x32", href="img/favicon-32x32.png")
+		link(rel="icon", type="image/png", sizes="16x16", href="img/favicon-16x16.png")
+		
+
+		include layouts/styles.pug
+	body
+		.page-wrapper
+
+			include layouts/header.pug
+
+			.dflt-breadcrumbs
+				.container
+					ul
+						li
+							a(href="#") Главная
+						li
+							span Журнал
+			
+			section.blog-main
+				.container
+					h1.blog-main__title
+						| Новости фабрики
+					.blog-main__inner
+						.blog-main__nav
+							ul.blog-main__category
+								li
+									a(href="#") Новости
+								li
+									a(href="#") Лукбуки
+								li
+									a(href="#") Статьи
+							.blog-main__date-select
+								input.blog-main__date-select-current(type="hidden" value="")
+								button.blog-main__date-select-bttn
+									span За всё время
+									<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.08882 5.33736C3.31663 5.10955 3.68598 5.10955 3.91378 5.33736L7.0013 8.42488L10.0888 5.33736C10.3166 5.10955 10.686 5.10955 10.9138 5.33736C11.1416 5.56516 11.1416 5.93451 10.9138 6.16232L7.41378 9.66232C7.18598 9.89012 6.81663 9.89012 6.58882 9.66232L3.08882 6.16232C2.86102 5.93451 2.86102 5.56516 3.08882 5.33736Z" fill="#53818C"/>
+									</svg>
+								ul.blog-main__date-select-dropdown
+									li
+										button.blog-main__date-select-all За всё время
+									li
+										input.blog-main__date-select-range(type="text" placeholder="Выбрать период")
+										
+						.blog-main__list
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Поздравляем с премьерой!
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Каждый день — праздник
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Как выбрать ткань для костюма?
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Поздравляем с премьерой!
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Каждый день — праздник
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Как выбрать ткань для костюма?
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Поздравляем с премьерой!
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Каждый день — праздник
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Как выбрать ткань для костюма?
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Поздравляем с премьерой!
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Каждый день — праздник
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Как выбрать ткань для костюма?
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Поздравляем с премьерой!
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Каждый день — праздник
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							a.blog-main__item(href="#")
+								span.blog-main__item-img
+									img(src="img/content-img-7.jpg", alt="#")
+								span.blog-main__item-date 11.12.2023
+								span.blog-main__item-title
+									| Как выбрать ткань для костюма?
+								span.blog-main__item-desc
+									| Наша фабрика предоставляет услуги полного цикла по пошиву театральных и карнавальных костюмов, а так же уставной военной формы и сценической одежды.
+							
+							
+						.blog-main__pagination
+							.dflt-pagination
+								ul
+									li
+										a(href="#")
+											<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.9701 3.52851C11.2305 3.78886 11.2305 4.21097 10.9701 4.47132L7.44151 7.99992L10.9701 11.5285C11.2305 11.7889 11.2305 12.211 10.9701 12.4713C10.7098 12.7317 10.2876 12.7317 10.0273 12.4713L6.02729 8.47132C5.76694 8.21097 5.76694 7.78886 6.02729 7.52851L10.0273 3.52851C10.2876 3.26816 10.7098 3.26816 10.9701 3.52851Z" fill="#53818C"/>
+											</svg>
+									li
+										a(href="#") 1
+									li
+										span 2
+									li
+										a(href="#") 3
+									li
+										a(href="#") 4
+									li
+										| ...
+									li
+										a(href="#") 10
+									li
+										a(href="#")
+											<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M6.02729 3.52851C6.28764 3.26816 6.70975 3.26816 6.9701 3.52851L10.9701 7.52851C11.2305 7.78886 11.2305 8.21097 10.9701 8.47132L6.9701 12.4713C6.70975 12.7317 6.28764 12.7317 6.02729 12.4713C5.76694 12.211 5.76694 11.7889 6.02729 11.5285L9.55589 7.99992L6.02729 4.47132C5.76694 4.21097 5.76694 3.78886 6.02729 3.52851Z" fill="#53818C"/>
+											</svg>
+
+								
+			
+			include layouts/s-subscribe.pug
+
+			include layouts/footer.pug
+
+		include layouts/scripts.pug

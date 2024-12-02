@@ -1,0 +1,166 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    title Отзывы о фабрике - Сайт ТИЗ
+
+    link(rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png")
+
+    include layouts/styles.pug
+  body
+    .page-wrapper
+
+      include layouts/header.pug
+
+      .dflt-breadcrumbs
+        .container
+          ul
+            li
+              a(href="#") Главная
+            li
+              a(href="#") Отзывы
+            li
+              span Театры и организации
+
+      section.reviews-content.reviews-2
+        .container
+          .reviews-content__add-more
+            a.dflt-bttn(href="#") 
+              span Добавить отзыв
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9987 3.3335C10.4589 3.3335 10.832 3.70659 10.832 4.16683V9.16683H15.832C16.2923 9.16683 16.6654 9.53993 16.6654 10.0002C16.6654 10.4604 16.2923 10.8335 15.832 10.8335H10.832V15.8335C10.832 16.2937 10.4589 16.6668 9.9987 16.6668C9.53846 16.6668 9.16536 16.2937 9.16536 15.8335V10.8335H4.16536C3.70513 10.8335 3.33203 10.4604 3.33203 10.0002C3.33203 9.53993 3.70513 9.16683 4.16536 9.16683H9.16536V4.16683C9.16536 3.70659 9.53846 3.3335 9.9987 3.3335Z" fill="white"/>
+              </svg>
+
+          .reviews-content__orgs
+            h3.reviews-content__subtitle
+              | Театры и организации
+              span 
+                | (
+                span 10 
+                | отзывов)
+            .reviews-content__orgs-item
+              .reviews-content__orgs-item-top
+                .reviews-content__orgs-item-icon
+                  img(src="img/reviews-icon-1.png" alt="#")
+                .reviews-content__orgs-item-info
+                  span.reviews-content__orgs-item-author
+                    | Сергеев Петр Иванович 
+                  span.reviews-content__orgs-item-name
+                    | Мариинский театр
+              p.reviews-content__orgs-item-text
+                | Выражаю благодарность за продуктивну работу! Сложившаяся структура организации позволяет оценить значение новых предложений. Приятно, граждане, наблюдать, как ключевые особенности структуры проекта представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть указаны как претенденты на роль ключевых факторов. В рамках.
+            .reviews-content__orgs-item
+              .reviews-content__orgs-item-top
+                .reviews-content__orgs-item-icon
+                  img(src="img/reviews-icon-2.png" alt="#")
+                .reviews-content__orgs-item-info
+                  span.reviews-content__orgs-item-author
+                    | Сергеев Петр Иванович 
+                  span.reviews-content__orgs-item-name
+                    | Детский ледовый театр
+              p.reviews-content__orgs-item-text
+                | Приятно, граждане, наблюдать, как ключевые особенности структуры проекта представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть указаны как претенденты на роль ключевых факторов.
+                br
+                br
+                | Ношу размер 50, взяла 52, надо брать больше, если планировать что-то под костюм надеть. Костюм состоит из юбки на резинке с подъюбником, верхней блузки с молнией сзади (по всей спине до конца расстегивается; пояс на талии не на резинке).
+            .reviews-content__orgs-item
+              .reviews-content__orgs-item-top
+                .reviews-content__orgs-item-icon
+                  img(src="img/reviews-icon-3.png" alt="#")
+                .reviews-content__orgs-item-info
+                  span.reviews-content__orgs-item-author
+                    | Сергеев Петр Иванович 
+                  span.reviews-content__orgs-item-name
+                    | Театр комедианты
+              p.reviews-content__orgs-item-text
+                | Выражаю благодарность за продуктивну работу! Сложившаяся структура организации позволяет оценить значение новых предложений. Приятно, граждане, наблюдать, как ключевые особенности структуры проекта представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть указаны как претенденты на роль ключевых факторов. В рамках.
+            .reviews-content__orgs-item
+              .reviews-content__orgs-item-top
+                .reviews-content__orgs-item-icon
+                  img(src="img/reviews-icon-4.png" alt="#")
+                .reviews-content__orgs-item-info
+                  span.reviews-content__orgs-item-author
+                    | Сергеев Петр Иванович 
+                  span.reviews-content__orgs-item-name
+                    | Мариинский театр
+              p.reviews-content__orgs-item-text
+                | Приятно, граждане, наблюдать, как ключевые особенности структуры проекта представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть указаны как претенденты на роль ключевых факторов.
+                br
+                br
+                | Ношу размер 50, взяла 52, надо брать больше, если планировать что-то под костюм надеть. Костюм состоит из юбки на резинке с подъюбником, верхней блузки с молнией сзади (по всей спине до конца расстегивается; пояс на талии не на резинке).
+
+          .main-catalog-list__pagination
+            .dflt-pagination
+              ul
+                li
+                  a(href="#")
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9701 3.52851C11.2305 3.78886 11.2305 4.21097 10.9701 4.47132L7.44151 7.99992L10.9701 11.5285C11.2305 11.7889 11.2305 12.211 10.9701 12.4713C10.7098 12.7317 10.2876 12.7317 10.0273 12.4713L6.02729 8.47132C5.76694 8.21097 5.76694 7.78886 6.02729 7.52851L10.0273 3.52851C10.2876 3.26816 10.7098 3.26816 10.9701 3.52851Z" fill="#53818C"/>
+                    </svg>
+                li
+                  a(href="#") 1
+                li
+                  span 2
+                li
+                  a(href="#") 3
+                li
+                  a(href="#") 4
+                li
+                  | ...
+                li
+                  a(href="#") 10
+                li
+                  a(href="#")
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.02729 3.52851C6.28764 3.26816 6.70975 3.26816 6.9701 3.52851L10.9701 7.52851C11.2305 7.78886 11.2305 8.21097 10.9701 8.47132L6.9701 12.4713C6.70975 12.7317 6.28764 12.7317 6.02729 12.4713C5.76694 12.211 5.76694 11.7889 6.02729 11.5285L9.55589 7.99992L6.02729 4.47132C5.76694 4.21097 5.76694 3.78886 6.02729 3.52851Z" fill="#53818C"/>
+                    </svg>
+
+                    
+      section.posters-plates
+        .container
+          h2.posters-plates__title Грамоты и благодарности
+          .posters-plates__slider.swiper
+            .swiper-wrapper
+              .posters-plates__slider-item.swiper-slide
+                a.posters-plates__slider-item-link(href="img/reviews-diplom-1.jpg" data-fancybox="20")
+                  img(src="img/reviews-diplom-1.jpg" alt="")
+              .posters-plates__slider-item.swiper-slide
+                a.posters-plates__slider-item-link(href="img/reviews-diplom-2.jpg" data-fancybox="20")
+                  img(src="img/reviews-diplom-2.jpg" alt="")
+              .posters-plates__slider-item.swiper-slide
+                a.posters-plates__slider-item-link(href="img/reviews-diplom-3.jpg" data-fancybox="20")
+                  img(src="img/reviews-diplom-3.jpg" alt="")
+              .posters-plates__slider-item.swiper-slide
+                a.posters-plates__slider-item-link(href="img/reviews-diplom-4.jpg" data-fancybox="20")
+                  img(src="img/reviews-diplom-4.jpg" alt="")
+              .posters-plates__slider-item.swiper-slide
+                a.posters-plates__slider-item-link(href="img/reviews-diplom-1.jpg" data-fancybox="20")
+                  img(src="img/reviews-diplom-1.jpg" alt="")
+              .posters-plates__slider-item.swiper-slide
+                a.posters-plates__slider-item-link(href="img/reviews-diplom-2.jpg" data-fancybox="20")
+                  img(src="img/reviews-diplom-2.jpg" alt="")
+              .posters-plates__slider-item.swiper-slide
+                a.posters-plates__slider-item-link(href="img/reviews-diplom-3.jpg" data-fancybox="20")
+                  img(src="img/reviews-diplom-3.jpg" alt="")
+              .posters-plates__slider-item.swiper-slide
+                a.posters-plates__slider-item-link(href="img/reviews-diplom-4.jpg" data-fancybox="20")
+                  img(src="img/reviews-diplom-4.jpg" alt="")
+            .posters-plates__slider-nav
+              .swiper-button-prev
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9714 3.52876C11.2317 3.78911 11.2317 4.21122 10.9714 4.47157L7.44279 8.00016L10.9714 11.5288C11.2317 11.7891 11.2317 12.2112 10.9714 12.4716C10.711 12.7319 10.2889 12.7319 10.0286 12.4716L6.02858 8.47157C5.76823 8.21122 5.76823 7.78911 6.02858 7.52876L10.0286 3.52876C10.2889 3.26841 10.711 3.26841 10.9714 3.52876Z" fill="#53818C"/>
+                </svg>
+              .swiper-button-next
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.02858 3.52876C6.28892 3.26841 6.71103 3.26841 6.97138 3.52876L10.9714 7.52876C11.2317 7.78911 11.2317 8.21122 10.9714 8.47157L6.97138 12.4716C6.71103 12.7319 6.28892 12.7319 6.02858 12.4716C5.76823 12.2112 5.76823 11.7891 6.02858 11.5288L9.55717 8.00016L6.02858 4.47157C5.76823 4.21122 5.76823 3.78911 6.02858 3.52876Z" fill="#53818C"/>
+                </svg>
+
+      include layouts/s-subscribe.pug
+
+      include layouts/footer.pug
+
+    include layouts/scripts.pug
